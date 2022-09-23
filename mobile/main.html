@@ -1,0 +1,111 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Custom fonts for this template-->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template-->
+
+		<!--고객문진스타일 css-->
+		<link href="css/reset.css?v=2" rel="stylesheet">
+		 <link href="css/new_style.css?v=3" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+		<link rel="stylesheet" type="text/css" href="module/popupoverlay/popupoverlay.css">
+			<script src="module/popupoverlay/jquery.popupoverlay.js"></script>
+
+		<!-- jquery-->
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+
+		<title>큐브메카</title>
+	</head>
+	<body>
+
+		<div class="interview_wrap">
+			<div class="interview_cont">
+				<div class="txt-c m_40"><img src="images/common/logo_intro.svg" alt="준차트"></div>
+				<div class="f32 bold1 txt-c m_80">사전문진시스템</div>
+
+				<div class="login_form">
+					<label for="userName">이름</label>
+					<input type="text" name="" id="userName" placeholder="이름을 입력해주세요." class="form_control">
+					<label for="userNumber">전화번호</label>
+					<input type="text" name="" id="userNumber" placeholder="전화번호를 입력해주세요." class="form_control">
+				</div>
+
+
+
+				<ul class="c_box3 agree">
+					<li class='c_box3_c1'>
+						<input type="checkbox" name='c_box3' id="c_box3" onclick="c_box3(this.name,0);">
+						<label for="c_box3" class="f18">연구목적 데이터수집 및 이용동의 <a href="#" class="open_modal">자세히</a></label>
+					</li>
+				</ul>
+
+
+			</div>
+
+			
+			<a href="./interviewProcess.html" class="start_btn">
+				시작하기
+			</a>
+		</div>
+
+
+
+		<div class="modal agree1">
+			<div class="top clearfix">
+				연구목적 데이터수집 및 이용동의
+
+				<span class="lnr lnr-cross close_modal"></span>
+			</div>
+			
+			<div class="agree_cont agree1">
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.<br>
+				연구목적 데이터수집 및 이용동의에 대한 내용이 들어갑니다.
+			</div>
+		</div>
+		<div class="modal_filter"></div><!--모달창 띄울시 검은배경-->
+
+		<script>
+			$(function(){
+				$(".open_modal").click(function(){
+					$(".modal.agree1").show();
+					$(".modal_filter").addClass("open");
+					$("html").css("overflow","hidden");
+				});
+
+				$(".close_modal").click(function(){
+					$(".modal.agree1").hide();
+					$(".modal_filter").removeClass("open");
+					$("html").css("overflow","auto");
+				});
+				
+			});
+			function c_box3(obj,chk){
+				eChk = document.getElementsByName(obj);
+
+				if(eChk[0].checked){
+					$('.'+obj+' label').addClass('active');
+				}else{
+					$('.'+obj+' label').removeClass('active');
+				}
+			}
+			
+		</script>
+	</body>
+</html>

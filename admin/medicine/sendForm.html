@@ -1,0 +1,291 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Custom fonts for this template-->
+		<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template-->
+
+		<!--관리자페이지 css-->
+		<link href="../css/reset.css?v=1" rel="stylesheet">
+		<link href="../css/style.css?v=1" rel="stylesheet">
+		<link href="../css/style02.css?v=1" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+		<!-- jquery-->
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script src="../js/jquery.easing.1.3.js"></script>
+
+
+		<title>큐브메카</title>
+	</head>
+	<body>
+        <div style="width: 800px; margin: 50px auto;">
+            <table style="width: 800px; border: 1px solid #333; border-bottom: none;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table style="width: 100%;">
+                                <colgroup>
+                                    <col style="width:10%;">
+                                    <col style="width:14.5%;">
+                                    <col style="width:18%;">
+                                    <col style="width:13%;">
+                                    <col style="width:13%;">
+                                    <col style="width:15%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr style="height: 50px;">
+                                        <th colspan="6"><span style="font-size: 30px;">처방전</span> [공동이용탕전실]</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6">
+                                            <span>양기관기호:</span>
+                                            <span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">발급 연월일 및 번호</th>
+                                        <td><span>2021년 12월 7일</span> - 제<span></span>호</td>
+                                        <th rowspan="3">의료기관</th>
+                                        <th>명칭</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">환자</th>
+                                        <th>성명</th>
+                                        <td></td>
+                                        <th>전화번호</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>주민등록번호</th>
+                                        <td></td>
+                                        <th>팩스번호</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">질병분류기호</th>
+                                        <td rowspan="2" style="color: #939393;">첩약시범사업대상 해당 질병분류번호 기재</td>
+                                        <th rowspan="2">처방 의료인의 성명</th>
+                                        <td rowspan="2" style="color: #939393; text-align: right; font-size: 13px;">(서명 또는 날인)</td>
+                                        <th>면허종류</th>
+                                        <td>한의사</td>
+                                    </tr>
+                                    <tr style="border-bottom: none;">
+                                        <th>면허번호</th>
+                                        <td>제 호</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="dayDetail" style="width: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <th>기준처방명 및 코드</th>
+                                        <th>1회 투약량</th>
+                                        <th>1일 투여횟수</th>
+                                        <th>총 투약일수</th>
+                                        <th>조제시 참고사항</th>
+                                        <th>용법</th>
+                                        <th>본인부담률코드</th>
+                                    </tr>
+                                    <tr style="border-bottom: none;">
+                                        <td><input type="text" style="width: 80px;">님 보기화위방</td>
+                                        <td>37.33</td>
+                                        <td>3</td>
+                                        <td>10</td>
+                                        <td style="padding: 20px 0; text-align:left; font-size: 11px; line-height: 1.3;">가. 1일 복용 팩수(3)<br>나. 팩당 용량 (120ml)<br> 다. 최종 산출량( )</td>
+                                        <td style="text-align:left; font-size: 11px; line-height: 1.3;">매 식<br>(전, 간, 후)<br>시 분 복용</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="width: 100%;">
+                                <colgroup>
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="6">한약재 세부사항</th>
+                                        <th rowspan="2">본인부담률 구분기호</th>
+                                    </tr>
+                                    <tr>
+                                        <th>한약재 명칭 및 코드</th>
+                                        <th>1회 투약량</th>
+                                        <th>1일 투여횟수</th>
+                                        <th>총 투약일수</th>
+                                        <th>가감</th>
+                                        <th style="border-right: 1px solid #333;">원산지</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr style="border-bottom: none;">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: none;">
+                        <td>
+                            <table style="width: 100%;">
+                                <colgroup>
+                                    <col style="width:10%;">
+                                    <col style="width:15%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:15%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>사용기간</th>
+                                        <td>발급일로부터 7일간</td>
+                                        <td>공동이용탕전</td>
+                                        <th>기관명</th>
+                                        <td>교감한의원</td>
+                                        <th>기관기호</th>
+                                        <td>31950167</td>
+                                        <th>전화번호</th>
+                                        <td>02-598-1088</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="9">(16) 첩약 조제명세</th>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="4">조제명세</th>
+                                        <th colspan="2">조제기관의 명칭</th>
+                                        <td colspan="2">바른한약(교감한의원 부속원외탕전실)</td>
+                                        <th colspan="2">전화번호</th>
+                                        <td colspan="3">02-598-1088</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">조제(한)약사</th>
+                                        <td colspan="2">806</td>
+                                        <td colspan="4" rowspan="3">
+                                            처방의 변경, 수정, 확인, 대체시 그 내용)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">조제량(조제일수)</th>
+                                        <td colspan="2" style="border-right: 1px solid #333;">560g(10)</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">조제연월일</th>
+                                        <td colspan="2" style="border-right: 1px solid #333;">2021년 12월 7일</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <style>
+            table {border-collapse:collapse; border-spacing:0;}
+            table tr {border-bottom: 1px solid #333; height: 40px;}
+            table tr th,
+            table tr td {
+                border-right: 1px solid #333;
+                font-size: 14px;
+            }
+            table tr th {background-color: #ddd;}
+            table tr th:last-child,
+            table tr td:last-child {
+                border-right: none;
+            }
+            table .dayDetail tr td {text-align: center;}
+        </style>
+    </body>
+</html>

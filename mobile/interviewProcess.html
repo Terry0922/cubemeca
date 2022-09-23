@@ -1,0 +1,183 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Custom fonts for this template-->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template-->
+
+		<!--고객문진스타일 css-->
+		<link href="css/reset.css?v=2" rel="stylesheet">
+		 <link href="css/new_style.css?v=3" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+		<link rel="stylesheet" type="text/css" href="module/popupoverlay/popupoverlay.css">
+			<script src="module/popupoverlay/jquery.popupoverlay.js"></script>
+
+		<!-- jquery-->
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+
+		<title>큐브메카</title>
+	</head>
+	<body>
+		<div class="interview_wrap">
+			<div class="interview_cont">
+				<h2 class="m_40">신규등록</h2>
+
+				<div class="f18 lh15 m_20">
+					안녕하세요. <span id="nameTxt">XXX</span> 님!<br>
+					우리한의원 에 처음으로 방문하신 것을 환영합니다.<br>
+					본 원에서는 보다 체계적인 의료서비스를 제공하기 위해서
+					사전문진을 진행하고 있습니다.<br>
+					가볍게, 기본정보부터 알려주시겠어요?
+				</div>
+
+				<div class="confirm_form">
+					<label for="birth">
+						<span class="confirm_tit">이름</span>
+						<input type="text" name="" id="birth" placeholder="2022-01-01" class="form_control">
+					</label>
+					<label for="stature">
+						<span class="confirm_tit">키</span>
+						<input type="text" name="" id="stature" placeholder="숫자만 입력해주세요." class="form_control">
+						<span class="confirm_tag">cm</span>
+					</label>
+					<label for="weight">
+						<span class="confirm_tit">몸무게</span>
+						<input type="text" name="" id="weight" placeholder="숫자만 입력해주세요." class="form_control">
+						<span class="confirm_tag">Kg</span>
+					</label>
+
+					<label>
+						<span class="confirm_tit">성별</span>
+						<ul class="confirm_2box inputNone sex">
+							<li><label for="male" class="active"><input type="radio" name='sex' id="male"  onclick="c_box2(this.name,0);">남자</label></li>
+							<li><label for="female"><input type="radio" name='sex' id="female"  onclick="c_box2(this.name,1);">여자</label></li>
+						</ul>
+					</label>
+				</div>
+
+				<ul class="c_box3 agree p_80">
+					<li class='c_box3_c1 m_10 agree2'>
+						<input type="checkbox" name='agree2' id="agree2" onclick="c_box3(this.name,0);">
+						<label for="agree2" class="f18">준차트 서비스 이용약관 동의 (필수) <a href="#" class="open_modal agree2">자세히</a></label>
+					</li>
+					<li class='c_box3_c1 agree3'>
+						<input type="checkbox" name='agree3' id="agree3" onclick="c_box3(this.name,0);">
+						<label for="agree3" class="f18">개인정보수집활용 동의 (필수)<a href="#" class="open_modal agree3">자세히</a></label>
+					</li>
+				</ul>
+			</div>
+
+			<a href="./visitPurpose.html" class="start_btn">
+				시작하기
+			</a>
+		</div>
+
+
+
+		<div class="modal agree2">
+			<div class="top clearfix">
+				준차트 서비스 이용약관 동의 (필수)
+
+				<span class="lnr lnr-cross close_modal"></span>
+			</div>
+			
+			<div class="agree_cont agree1">
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.<br>
+				준차트 서비스 이용약관 동의에 대한 내용이 들어갑니다.
+			</div>
+		</div>
+
+		<div class="modal agree3">
+			<div class="top clearfix">
+				개인정보수집활용 동의 (필수)
+
+				<span class="lnr lnr-cross close_modal"></span>
+			</div>
+			
+			<div class="agree_cont agree1">
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.<br>
+				개인정보수집활용 동의에 대한 내용이 들어갑니다.
+			</div>
+		</div>
+		<div class="modal_filter"></div><!--모달창 띄울시 검은배경-->
+
+		<script>
+			$(function(){
+				$(".open_modal.agree2").click(function(){
+					$(".modal.agree2").show();
+					$(".modal_filter").addClass("open");
+					$("html").css("overflow","hidden");
+				});
+
+				$(".close_modal").click(function(){
+					$(".modal.agree2").hide();
+					$(".modal_filter").removeClass("open");
+					$("html").css("overflow","auto");
+				});
+
+
+				$(".open_modal.agree3").click(function(){
+					$(".modal.agree3").show();
+					$(".modal_filter").addClass("open");
+					$("html").css("overflow","hidden");
+				});
+
+				$(".close_modal").click(function(){
+					$(".modal.agree3").hide();
+					$(".modal_filter").removeClass("open");
+					$("html").css("overflow","auto");
+				});
+				
+			});
+			
+			function c_box2(obj,chk){
+				eChk = document.getElementsByName(obj);
+
+				for(var i=0;i<eChk.length;i++){
+					var j=i+1
+					if(i == chk){
+						eChk[i].checked = true;
+						$('.'+obj+' li:nth-child('+j+') > label').addClass('active');
+					}else{
+						eChk[i].checked = false;
+						$('.'+obj+' li:nth-child('+j+') > label').removeClass('active');
+					}
+				}
+
+			}
+			function c_box3(obj,chk){
+				eChk = document.getElementsByName(obj);
+
+				if(eChk[0].checked){
+					$('.'+obj+' label').addClass('active');
+				}else{
+					$('.'+obj+' label').removeClass('active');
+				}
+			}
+		</script>
+	</body>
+</html>
+
+

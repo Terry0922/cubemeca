@@ -1,0 +1,161 @@
+/*환자관리*/
+#wholeWrap .addrText {
+	background-color: transparent;
+	width: 100%;
+	color: #000;
+	font-family: 'Pretendard';
+	font-weight: 400;
+}
+/*환자관리*/
+
+/*처방관리*/
+#wholeWrap  .typeBtn {background-color: #f9f9f9; border-radius: 4px; padding: 15px 20px; box-sizing: border-box;}
+#wholeWrap  .typeBtn li::after {content:""; display: inline-block; margin: 0 10px; width: 1px; height: 10px; background-color: #000;}
+#wholeWrap  .typeBtn li:last-child::after {display: none;}
+#wholeWrap  .typeBtn li.on a {color: #ff0000; font-weight: 700;}
+#wholeWrap .personView .mediDate {font-weight: 700;}
+#wholeWrap .mediDetWrap {margin-top: 30px; border-top: 1px solid #eeeeee; }
+/*처방관리*/
+
+/*설정*/
+#wholeWrap .interactBoxWrap .interactBox {
+	display: none;
+}
+#wholeWrap .interactBoxWrap .interactBox:nth-child(1) {
+	display: block;
+}
+#wholeWrap .munjin_type span {margin: 0 3px; padding: 5px; border-radius: 4px;}
+/*설정*/
+
+
+/*로그인 첫화면*/
+.login_wrap {
+	width: 450px;
+	min-height: 100vh; 
+	margin: 0 auto; 
+	box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login_wrap .login_form input[type="text"].form_control{
+	width:100%; 
+	height:49px; 
+	border:1px solid #054391; 
+	border-radius:4px; 
+	box-sizing:border-box;
+}
+.login_wrap .login_form input[type="text"].form_control:focus {
+	outline:0; 
+	border:1px solid #eee; 
+	box-shadow: 0 0 0 0.1rem rgba(5, 67, 145, .1);
+}
+.login_wrap .login_form input[type="text"].form_control::placeholder {
+	font-size:0.875rem; 
+	color:#707070;
+}
+
+.login_wrap .login_form label {
+	display:block; 
+	margin:20px 0 10px 0;
+}
+.login_wrap .interview_wrap .start_btn {
+	position:fixed; 
+	bottom:0; 
+	display:block; 
+	min-width:300px; 
+	max-width:1024px; 
+	width:100%; 
+	height:48px; 
+	line-height:48px; 
+	text-align:center; 
+	background-color:#054391; 
+	color:#fff;
+}
+.login_wrap .login_btn {
+	width: 100%; 
+	height: 50px; 
+	margin: 40px auto 20px; 
+	border-radius: 4px;
+}
+
+/*아이디 비밀번호 찾기*/
+.idpwBtn {
+	border-bottom: 1px solid #000;
+}
+.idpwBtn li {
+	position: relative; 
+	width: 50%; 
+	height: 35px;
+}
+.idpwBtn li.on::after {
+	display: block; 
+	content: ""; 
+	width: 100%; 
+	height: 5px; 
+	position: absolute; 
+	bottom: -3px; 
+	background-color: #054391;
+}
+
+.idpwBtn li.on a {
+	color: #064EAA;
+}
+
+.idChkShow {
+	margin: 40px 0 70px;
+}
+
+.login_wrap .idshow {
+	background-color: #d1ddff;
+	height: 100px;
+}
+
+.login_form select {
+	width: 100%;
+	height: 49px;
+	border: 1px solid #054391;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.login_form select:focus {
+	outline:0; 
+	border:1px solid #eee; 
+	box-shadow: 0 0 0 0.1rem rgba(5, 67, 145, .1);
+}
+
+.login_wrap .boxWrap {
+	border: 1px solid #a1a1a1;
+	padding: 20px 10px;
+	box-sizing: border-box;
+}
+
+/*초이스박스 3*/
+.c_box3_wrap {width:95%; border:2px solid #ffffff; background-color:#ffffff; padding:0 10px; /*margin:24px auto;*/ border-radius:4px; box-sizing:border-box;margin:10px auto;}
+.c_box3_wrap_a{border:2px solid #054391; background-color:#23467333;padding-top:10px;}
+.c_box3 li.c_box3_c1 {display:flex; align-items:center;   box-sizing:border-box;}
+.c_box3 li.c_box3_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; word-break:keep-all;}
+.c_box3 li label.active {border:1px solid #34557d; background-color:#5e7898; color:#fff; font-weight:300;}
+
+/*체크박스 스타일링*/
+.c_box3 input[type="checkbox"]{display:block; position:relative; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: 0; background: #fff; border-radius: 4px; cursor: pointer; width: 24px; height: 24px; border:1px solid #707070; margin-right:10px;}
+.c_box3 input[type="checkbox"]::after {content: '✔'; display: none; width: 24px; height: 24px; position: absolute; top:0; left:0; text-align:center; color:#fff; font-size: 16px;}
+.c_box3 input[type="checkbox"]:checked::after {display: block;}
+
+/*동의 label css추가*/
+.c_box3.agree {margin-top:50px;}
+.c_box3.agree li label {position:relative;}
+.c_box3.agree li label > a {position:absolute; right:20px; text-decoration:underline;}
+
+/*동의 모달창*/
+.open_modal, .close_modal {cursor:pointer;}
+.modal {position:fixed; width:500px; background:#fff; top: 50%;  left: 50%; transform: translate(-50%, -50%); z-index:99991; display:none;}
+.modal .top {background:#2c3137; color:#fff; padding:10px 20px 10px 30px; box-sizing:border-box; font-size:1.125rem; line-height:32px;}
+.modal .close_modal {float:right; width:32px; height:32px; line-height:32px; box-sizing:border-box; font-size:1.875rem;}
+.modal_filter{position:fixed; top:0; right:-100%; width: 100%; height: 100%; background: rgba(0,0,0,.6); opacity: 0; transition: opacity .4s; z-index: 9999;}
+.modal_filter.open{opacity: 1; right:0;}
+.modal .agree_cont {padding:20px; box-sizing:border-box;}
+
+
+/*회원가입 */

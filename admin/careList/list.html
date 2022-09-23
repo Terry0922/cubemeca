@@ -1,0 +1,628 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Custom fonts for this template-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template-->
+
+		<!--관리자페이지 css-->
+		<link href="../css/reset.css?v=1" rel="stylesheet">
+		<link href="../css/style.css?v=2" rel="stylesheet">
+		<link href="../css/style02.css?v=1" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+		<!-- jquery-->
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script src="../js/jquery.easing.1.3.js"></script>
+
+
+		<title>큐브메카</title>
+	</head>
+	<body>
+		<style>
+			/*sidemenu css*/
+			#wholeWrap .sidemenu .sideList li:nth-child(2) a {
+				background-color: #054391;
+				color: #fff;
+			}
+			#wholeWrap .sidemenu .sideList li:nth-child(2) .sideIcon {
+				background-image: url("../img/icon02_on.png");
+			}
+		</style>
+
+		<div id="wholeWrap">
+
+			<!---사이드메뉴 바--->
+			<div class="sidemenu">
+				<h1 class="logo">
+					<a href="../patient/list.html" title="logo">
+						<img src="../img/logo.svg" alt="">
+					</a>
+				</h1>
+				<ul class="sideList">
+					<li>
+						<a class="dp_f dp_c" href="../patient/list.html" title="환자관리">
+							<span class="sideIcon"><!--아이콘 background 처리--></span>
+							<span>환자관리</span>
+						</a>
+					</li>
+					<li>
+						<a class="dp_f dp_c" href="../careList/list.html" title="진료관리">
+							<span class="sideIcon"><!--아이콘 background 처리--></span>
+							<span>진료관리</span>
+						</a>
+					</li>
+					<li>
+						<a class="dp_f dp_c" href="../medicine/list.html" title="처방관리">
+							<span class="sideIcon"><!--아이콘 background 처리--></span>
+							<span>처방관리</span>
+						</a>
+					</li>
+					<li>
+						<a class="dp_f dp_c" href="../munjinSet/list.html" title="문진관리">
+							<span class="sideIcon"><!--아이콘 background 처리--></span>
+							<span>문진관리</span>
+						</a>
+					</li>
+					<li>
+						<a class="dp_f dp_c" href="../showGraph/list.html" title="통계">
+							<span class="sideIcon"><!--아이콘 background 처리--></span>
+							<span>통계</span>
+						</a>
+					</li>
+					<li>
+						<a class="setBtn dp_f dp_c dp_f dp_cc blue02" href="../setting_manage/list.html" title="설정">
+							설정
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="rightCont">
+				<!--topNav 바---->
+				<div class="topNav dp_f dp_c dp_cc">
+					<nav class="dp_sb dp_c">
+						<span class="times dp_f dp_c">
+							<img src="../img/lnr-clock.png" style="margin-right: 10px;">
+							2022-06-17 09:00
+						</span>
+				
+						<div class="admin_chk">
+							<div class="dp_f dp_c" style="cursor: pinter;">
+								<span class="admin_nm">관리자</span>
+								<i class="fas fa-user-circle" style="font-size:2.1em; color: #F1F1F4;"></i>
+							</div>
+							<div class="admin_drop">
+								<a class="dropdown-item" href="">
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<!---- 내용-->
+				<div class="innerCont">
+					<div class="inTit dp_f dp_c">
+						<h4>진료관리</h4>
+						<span>환자를 조회할 수 있는 메뉴입니다.</span>
+					</div>
+					<div class="chartWrap">
+						<div class="datesrchWrap dp_f">
+							<div class="datesrch dp_f">
+								<div class="datesrch_tit dp_f dp_c">진료 일자</div>
+								<div class="dateSel dp_f dp_c">
+									<div class="dateTo">
+										<input type="date" required aria-required="ture">
+									</div>
+									<span style="margin: 0 10px;">~</span>
+									<div class="dateTo">
+										<input type="date" required aria-required="ture">
+									</div>
+								</div>
+							</div>
+							<div class="srchName">
+								<input type="text" placeholder="검색하실 환자이름을 입력해주세요." autocomplete="off">
+								<button>
+									<img src="../img/search_icon.png">
+								</button>
+							</div>
+						</div>
+						<div class="listContTop dp_sb">
+							<div class="selWrap">
+								<select>
+									<option>10개씩보기</option>
+									<option>10개씩보기</option>
+								</select>	
+								<span>(10/320)</span>
+							</div>
+							<div class="submitBtn_wrap dp_f">
+								<div class="submitBtn">
+									<a class="dp_f qrShow" href="" title="사전문진QR">
+										<div class="s_box gry01 dp_f dp_c dp_cc"><img src="../img/qr_icon.png" alt=""></div>
+										<div class="b_box gry02 dp_f dp_c dp_cc">사전문진QR</div>
+									</a>
+								</div>
+								<div class="submitBtn">
+									<a class="dp_f infoRegi" href="" title="">
+										<div class="s_box blue01 dp_f dp_c dp_cc"><img src="../img/chk_icon.png" alt=""></div>
+										<div class="b_box blue02 dp_f dp_c dp_cc">신환등록</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="listCon_result">
+							<table>
+								<colgroup>
+									<col width="3%">
+									<col width="8%">
+									<col width="14%">
+									<col width="3%">
+									<col width="14%">
+									<col width="14%">
+									<col width="14%">
+									<col width="14%">
+									<col width="14%">
+								</colgroup>
+								<tbody>
+									<tr class="skyblue01">
+										<th>NO</th>
+										<th>이름</th>
+										<th>생년월일</th>
+										<th>성별</th>
+										<th>연락처</th>
+										<th>방문목적</th>
+										<th>문진상태</th>
+										<th>진료일자</th>
+										<th>관리</th>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">10</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">9</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">8</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">7</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">6</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">5</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">4</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">3</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">2</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn grn01">유효</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td onClick="location.href='view.html'">1</td>
+										<td onClick="location.href='view.html'">이하나</td>
+										<td onClick="location.href='view.html'">1985-12-17</td>
+										<td onClick="location.href='view.html'">여자</td>
+										<td onClick="location.href='view.html'">010-1234-5678</td>
+										<td onClick="location.href='view.html'">기타</td>
+										<td onClick="location.href='view.html'"><span class="statusBtn gry03">기간경과</span></td>
+										<td onClick="location.href='view.html'">2022-06-10</td>
+										<td>
+											<div class="dp_f dp_cc wid100">
+												<a class="s_btn infoEdit" href="" title="">수정</a>
+												<a class="s_btn" href="" title="">삭제</a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+						<div class="pageNum dp_f dp_cc">
+							<a class="prev" href="" title=""><span class="lnr lnr-chevron-left"></span></a>
+							<a class="num on" href="" title="">1</a>
+							<a class="num" href="" title="">2</a>
+							<a class="num" href="" title="">3</a>
+							<a class="next" href="" title=""><span class="lnr lnr-chevron-right"></span></a>
+						</div>
+						
+						<style>
+							.pageNum {
+								margin: 45px 0 40px 0;
+							}
+						
+							.pageNum a {
+								display: block;
+								margin: 0 5px;
+								width: 24px;
+								height: 24px;
+								border-radius: 50%;
+								line-height: 24px;
+								text-align: center;
+								font-size: 0.875rem;
+							}
+						
+							.pageNum .num.on {
+								background-color: #054391;
+								color: #fff;
+							}
+						
+							.pageNum .lnr {
+								font-weight: bold;
+							}
+						
+							.pageNum .num:hover {
+								background-color: #054391;
+								color: #fff;
+							}
+						</style>
+						<!---사전문진 QR--->
+						<div class="popUpwrap qrPopup">
+							<div class="popUpBox">
+								<div class="popUpTop blue02 dp_sb dp_c">
+									<span>사전문진 QR</span>
+									<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
+								</div>
+								<div class="popUpBot">
+									<p class="qrDetail">아래 QR을 디바이스 카메라로 촬영 시<br>
+											사전문진서비스로 연결됩니다.
+									</p>
+									<div class="qrImg"><img src="../img/QR.png" alt="QR"></div>
+									<div class="dp_f dp_cc">
+										<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="등록">등록</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---사전문진 QR--->
+
+						<!---신환등록--->
+						<div class="popUpwrap regiPopup regiPop">
+							<div class="popUpBox">
+								<div class="popUpTop blue02 dp_sb dp_c">
+									<span>신환등록</span>
+									<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
+								</div>
+								<div class="popUpBot">
+									<div class="dp_sb m_20">
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>이름</span>
+											</p>
+											<input type="text" name="" id="" class="" placeholder='' onkeypress="" autocomplete="off">
+										</div>
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>생년월일</span>
+											</p>
+											<input type="text" name="" id="" class="" placeholder='ex)20220101' onkeypress="" autocomplete="off">
+										</div>
+									</div>
+									<div class="dp_sb m_20">
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>키</span>
+											</p>
+											<input type="text" name="" id="" class="" placeholder='숫자만 입력해주세요.' onkeypress="" autocomplete="off">
+										</div>
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>몸무게</span>
+											</p>
+											<input type="text" name="" id="" class="" placeholder='숫자만 입력해주세요.' onkeypress="" autocomplete="off">
+										</div>
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>성별</span>
+										</p>
+										<div class="dp_f">
+											<div class="radiowrap dp_f dp_c">
+												<input id="male" type="radio">
+												<label for="male">남자</label>
+											</div>
+											<div class="radiowrap dp_f dp_c">
+												<input id="male" type="radio">
+												<label for="female">여자</label>
+											</div>
+										</div>
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>연락처</span>
+										</p>
+										<input type="text" name="" id="" class="" placeholder='(-)없이 숫자만 입력해주세요.' onkeypress="" autocomplete="off">
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>주소</span>
+										</p>
+										<div class="adrWrap dp_f m_20">
+											<input type="text" name="" id="" class="" placeholder='' onkeypress="" autocomplete="off">
+											<a class="adrBtn gry02 dp_f dp_c dp_cc" href="" title="주소찾기">주소찾기</a>
+										</div>
+										<input type="text" name="" id="" class="" placeholder='상세주소 입력' onkeypress="" autocomplete="off">
+										<span class="inputDet">※ 한약배송을 위한 필수 정보입니다.</span>
+									</div>
+									<div class="dp_f dp_cc">
+										<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="등록">등록</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---신환등록--->
+						
+						<!---환자정보 수정--->
+						<div class="popUpwrap regiPopup editPop">
+							<div class="popUpBox">
+								<div class="popUpTop blue02 dp_sb dp_c">
+									<span>환자정보</span>
+									<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
+								</div>
+								<div class="popUpBot">
+									<div class="dp_sb m_20">
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>이름</span>
+											</p>
+											<input type="text" name="" id="" class="" value="이하나" onkeypress="" autocomplete="off">
+										</div>
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>생년월일</span>
+											</p>
+											<input type="text" name="" id="" class="" value="20220101" onkeypress="" autocomplete="off">
+										</div>
+									</div>
+									<div class="dp_sb m_20">
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>키</span>
+											</p>
+											<input type="text" name="" id="" class="" value="168" onkeypress="" autocomplete="off">
+										</div>
+										<div class="halfInputWrap">
+											<p class="popupTit m_10">
+												<span class="red">*</span>
+												<span>몸무게</span>
+											</p>
+											<input type="text" name="" id="" class="" value="48" onkeypress="" autocomplete="off">
+										</div>
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>성별</span>
+										</p>
+										<div class="dp_f">
+											<div class="radiowrap dp_f dp_c">
+												<input id="male" type="radio">
+												<label for="male">남자</label>
+											</div>
+											<div class="radiowrap dp_f dp_c">
+												<input id="male" type="radio">
+												<label for="female">여자</label>
+											</div>
+										</div>
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>연락처</span>
+										</p>
+										<input type="text" name="" id="" class="" value="01012341234" onkeypress="" autocomplete="off">
+									</div>
+									<div class="inputWrap m_20">
+										<p class="popupTit m_10">
+											<span class="red">*</span>
+											<span>주소</span>
+										</p>
+										<div class="adrWrap dp_f m_20">
+											<input type="text" name="" id="" class="" value="서울시 강남구 청담동 123" onkeypress="" autocomplete="off">
+											<a class="adrBtn gry02 dp_f dp_c dp_cc" href="" title="주소찾기">주소찾기</a>
+										</div>
+										<input type="text" name="" id="" class="" value="하나아파트 1208동 403호" onkeypress="" autocomplete="off">
+										<span class="inputDet">※ 한약배송을 위한 필수 정보입니다.</span>
+									</div>
+									<div class="dp_f dp_cc">
+										<a class="cancelBtn blue01 dp_f dp_c dp_cc" href="" title="취소">취소</a>
+										<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="등록">등록</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---환자정보 수정--->
+						
+						<script>
+							$(function(){
+						
+								$(".qrShow").on("click",function(event){
+									event.preventDefault();
+									$(".popUpwrap.qrPopup").stop().fadeIn();
+								});
+						
+								$(".infoRegi").on("click",function(event){
+									event.preventDefault();
+									$(".popUpwrap.regiPop").stop().fadeIn();
+								});
+						
+								$(".infoEdit").on("click",function(event){
+									event.preventDefault();
+									$(".popUpwrap.editPop").stop().fadeIn();
+								});
+						
+								$(".popUpTop .popClose").on("click",function(event){
+									event.preventDefault();
+									$(".popUpwrap").stop().fadeOut();
+								});
+						
+								$(".popUpwrap.editPop .cancelBtn").on("click",function(event){
+									event.preventDefault();
+									$(".popUpwrap").stop().fadeOut();
+								});
+						
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---관리자에 mouseenter 하면 로그아웃 버튼 생성--->
+		<script>
+			$(function(){
+				
+				$(".admin_chk").on("mouseenter",function(){
+
+					$("#wholeWrap .topNav .admin_drop").stop().fadeIn();
+
+				});
+		
+				$(".admin_chk").on("mouseleave",function(){
+
+					$("#wholeWrap .topNav .admin_drop").stop().fadeOut();
+
+				});
+		
+			});
+		</script>
+	</body>
+</html>
+
