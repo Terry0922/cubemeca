@@ -38,48 +38,6 @@
 		</style>
 
 		<div id="wholeWrap">
-
-			<!--topNav 바---->
-			<div class="topNav dp_f dp_c">
-				<nav class="dp_sb dp_c">
-					<span class="times dp_f dp_c">
-						<img src="../img/lnr-clock.png" style="margin-right: 10px;">
-						2022-06-17 09:00
-					</span>
-			
-					<div class="admin_chk">
-						<div class="dp_f dp_c" style="cursor: pinter;">
-							<span class="admin_nm">관리자</span>
-							<i class="fas fa-user-circle" style="font-size:2.1em; color: #F1F1F4;"></i>
-						</div>
-						<div class="admin_drop">
-							<a class="dropdown-item" href="">
-								<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-								<span>로그아웃</span>
-							</a>
-						</div>
-					</div>
-				</nav>
-			</div>
-			<!---관리자에 mouseenter 하면 로그아웃 버튼 생성--->
-			<script>
-				$(function(){
-					
-					$(".admin_chk").on("mouseenter",function(){
-
-						$("#wholeWrap .topNav .admin_drop").stop().fadeIn();
-
-					});
-			
-					$(".admin_chk").on("mouseleave",function(){
-
-						$("#wholeWrap .topNav .admin_drop").stop().fadeOut();
-
-					});
-			
-				});
-			</script>
-
 			<!---사이드메뉴 바--->
 			<div class="sidemenu">
 				<h1 class="logo">
@@ -120,17 +78,59 @@
 					</li>
 				</ul>
 			</div>
-
-			<!---- 내용-->
-			<div class="innerCont">
-				<div class="inTit dp_f dp_c">
-					<h4>문진항목관리</h4>
-					<span>사전문진 항목을 관리하는 메뉴입니다.</span>
+			<div class="rightCont">
+				<!--topNav 바---->
+				<div class="topNav dp_f dp_c">
+					<nav class="dp_sb dp_c">
+						<span class="times dp_f dp_c">
+							<img src="../img/lnr-clock.png" style="margin-right: 10px;">
+							2022-06-17 09:00
+						</span>
+				
+						<div class="admin_chk">
+							<div class="dp_f dp_c" style="cursor: pinter;">
+								<span class="admin_nm">관리자</span>
+								<i class="fas fa-user-circle" style="font-size:2.1em; color: #F1F1F4;"></i>
+							</div>
+							<div class="admin_drop">
+								<a class="dropdown-item" href="">
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</nav>
 				</div>
-				<div class="chartWrap" style="height: 700px;">
+				<!---- 내용-->
+				<div class="innerCont">
+					<div class="inTit dp_f dp_c">
+						<h4>문진항목관리</h4>
+						<span>사전문진 항목을 관리하는 메뉴입니다.</span>
+					</div>
+					<div class="chartWrap" style="height: 700px;">
 
+					</div>
 				</div>
 			</div>
+			<!---관리자에 mouseenter 하면 로그아웃 버튼 생성--->
+			<script>
+				$(function(){
+					
+					$(".admin_chk").on("mouseenter",function(){
+
+						$("#wholeWrap .topNav .admin_drop").stop().fadeIn();
+
+					});
+			
+					$(".admin_chk").on("mouseleave",function(){
+
+						$("#wholeWrap .topNav .admin_drop").stop().fadeOut();
+
+					});
+			
+				});
+			</script>
+
 		</div>
 	</body>
 </html>
