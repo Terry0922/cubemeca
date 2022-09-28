@@ -226,6 +226,19 @@
 			
 				});
 			</script>
+			<script>
+				//문진항목관리 fixed되는 메뉴
+				$(window).scroll(function(){
+					if (matchMedia("screen and (min-width: 1200px)").matches) {
+						var height = $(document).scrollTop(); //실시간으로 스크롤의 높이를 측정
+						if(height <= 0){
+							$('.inTitFixBar').removeClass('scroll_bar');
+						}else if(height > 0){
+							$('.inTitFixBar').addClass('scroll_bar')
+						};
+					};
+				});
+			</script>
 
 		</div>
 	</body>
