@@ -182,7 +182,7 @@
 												<div><input type="radio"></div>
 											</div>
 										</div>
-										<div class="rowDet dp_f dp_cc wid10"><span class="statuToggl01 c_blue02">▼</span></div>
+										<div class="rowDet dp_f dp_cc wid10"><span class="statuToggl03 c_blue02">▼</span></div>
 									</div>
 									<div class="depth2Wrap">
 										<div class="row_depth2 dp_sb dp_c">
@@ -202,7 +202,7 @@
 													<div><input type="radio"></div>
 												</div>
 											</div>
-											<div class="rowDet dp_f dp_c dp_cc wid10"><span class="statuToggl02 c_blue02">▼</span></div>
+											<div class="rowDet dp_f dp_c dp_cc wid10"><span class="statuToggl04 c_blue02">▼</span></div>
 										</div>
 										<div class="depth3Wrap">
 											<div class="row_depth3 dp_sb dp_c">
@@ -386,10 +386,10 @@
 
 					if($(this).parent().parent().hasClass("on")){
 						$(this).parent().siblings().children(".depth2Wrap > .row_depth2").stop().slideUp();
-						$(this).siblings().children(".statuToggl01").text("▼");
+						$(this).siblings().children(".statuToggl03").text("▼");
 						$(this).parent().parent().removeClass("on");
 					} else {
-						$(this).siblings().children(".statuToggl01").text("▲");
+						$(this).siblings().children(".statuToggl03").text("▲");
 						$(this).parent().siblings().children(".depth2Wrap > .row_depth2").stop().slideDown();
 						$(this).parent().parent().addClass("on");
 					}
@@ -400,12 +400,12 @@
 
 					if($(this).parent().hasClass("on")){
 						$(this).parent().siblings(".depth3Wrap").stop().slideUp();
-						$(this).siblings().children(".statuToggl02").text("▼");
+						$(this).siblings().children(".statuToggl04").text("▼");
 						$(this).parent().removeClass("on");
 
 					} else {
 						$(this).parent().siblings(".depth3Wrap").stop().slideDown();
-						$(this).siblings().children(".statuToggl02").text("▲");
+						$(this).siblings().children(".statuToggl04").text("▲");
 						$(this).parent().addClass("on");
 
 					}
@@ -415,8 +415,8 @@
 				$(".filterBtn .openAll").on("click",function(event){
 					event.preventDefault();
 
-					$(".statuToggl02").text("▲");
-					$(".statuToggl01").text("▲");
+					$(".statuToggl04").text("▲");
+					$(".statuToggl03").text("▲");
 					$(".depth2Wrap > .row_depth2").stop().slideDown();
 					$(".depth3Wrap").stop().slideDown();
 					$("#wholeWrap .rowWrap").addClass("on");
@@ -427,8 +427,8 @@
 				$(".filterBtn .closeAll").on("click",function(event){
 					event.preventDefault();
 
-					$(".statuToggl02").text("▼");
-					$(".statuToggl01").text("▼");
+					$(".statuToggl04").text("▼");
+					$(".statuToggl03").text("▼");
 					$(".depth2Wrap > .row_depth2").stop().slideUp();
 					$(".depth3Wrap").stop().slideUp();
 					$("#wholeWrap .rowWrap").removeClass("on");
