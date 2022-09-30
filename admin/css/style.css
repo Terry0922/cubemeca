@@ -6,9 +6,15 @@
 }
 
 #wholeWrap .sidemenu {
+	position: fixed;
+	top:0;
+	left:0;
 	width: 240px; 
+	height: 100vh;
 	box-shadow: 0px 3px 16px #00000029;
 	background-color: #fff;
+	background-color: #fff;
+	z-index: 100;
 }
 
 #wholeWrap .sidemenu .logo {
@@ -104,6 +110,7 @@
 }
 
 #wholeWrap .rightCont {
+	margin-left: 240px;
 	width: calc(100% - 240px);
 }
 
@@ -148,8 +155,12 @@
 }
 
 #wholeWrap .innerCont {
-	padding: 50px 0 100px 0;
+	padding: 50px 0 0 0;
 	box-sizing: border-box;
+}
+
+#wholeWrap .innerCont.fixPadd {
+	padding: 50px 0 80px 0;
 }
 
 #wholeWrap .inTit {
@@ -233,7 +244,7 @@
 
 .srchName {
     position: relative;
-	margin-left: 20px;
+	margin-right: 20px;
     height: 43px;
     width: 320px;
 }
@@ -926,7 +937,6 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .popUpwrap.alertWin .popUpBox {
-	padding-top: 15px;
 	width: 350px;
 	height: 230px;
 	border-radius: 4px;
@@ -1092,7 +1102,6 @@ html .ui-button.ui-state-disabled:active {
 
 #addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff;}
 #tblAdd {margin-top: 20px; width: 100%;}
-#tblAdd tr {height: 40px;}
 #tblAdd tr {border: 1px solid #eee;}
 #tblAdd tr th, 
 #tblAdd tr td {
@@ -1100,11 +1109,18 @@ html .ui-button.ui-state-disabled:active {
 	border-right: 1px solid #eee;
     text-align: center;
     padding-left: 0;
-    font-size: 15px;
+    font-size: 16px;
+}
+
+#tblAdd tr th {
+	padding: 10px 0;
+}
+
+#tblAdd tr td textarea {
+	resize: vertical;
 }
 
 #tblAdd tr {background-color: #fff;}
-#tblAdd tr td input {height: 30px; width: 80%;}
 #tblAdd:first-child th .delBtn {display: none;}
 #tblAdd tr th .delBtn {
 	position: absolute;
@@ -1169,7 +1185,7 @@ html .ui-button.ui-state-disabled:active {
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-position: center 64%;
-	background-size: auto;
+	background-size: inherit;
 	background-image: url("../img/body21.png");
 	border-radius: 4px;
 	overflow: hidden;
@@ -1289,11 +1305,11 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .metiAmt_tit {background-color: #e7e7e7; border-radius: 4px; padding: 10px;}
 .prescriptWrap .interactBox .tableWrap tr {height: 40px;}
 .prescriptWrap .interactBox .tableWrap tr th, 
-.prescriptWrap .interactBox .tableWrap tr td {border-right: 1px solid #eee; text-align: center; padding-left: 0; font-size: 15px;}
+.prescriptWrap .interactBox .tableWrap tr td {border-right: 1px solid #eee; text-align: center; padding-left: 0; font-size: 16px;}
 .prescriptWrap .interactBox .tableWrap tr th:last-child, 
 .prescriptWrap .interactBox .tableWrap tr td:last-child {border-right: none;}
 .prescriptWrap .interactBox .tableWrap tr td {font-weight: 400;}
-.prescriptWrap .interactBox .tableWrap tr .delBtn {border-radius: 4px; padding: 2px 4px; font-size: 14px; color:#fff; background-color: #ff0000;}
+.prescriptWrap .interactBox .tableWrap tr .delBtn {border-radius: 4px; padding: 2px 4px; font-size: 14px; color:#fff; background-color: #043677;}
 .prescriptWrap .interactBox .tableWrap select {border: none; font-size: 15px; font-weight: 400;}
 .prescriptWrap .interactBox .tableWrap .upDown_box span {margin: 0 15px;}
 .interactBox .dayAmount label {margin: 0 10px;}
@@ -1310,6 +1326,8 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .multiBtn a:nth-child(1) input,
 .prescriptWrap .multiBtn a:nth-child(2) input {color: #fff;}
 .prescriptWrap .multiBtn input {width: auto; background: transparent; width: 40px; color: #000; font-family: 'Pretendard'; font-weight: 400; text-align: center;}
+.prescriptWrap .multiBtn .multiBtn_s.on {background-color: #043677;}
+.upDown_box a {display: block; width: 60px;}
 
 .p_contentwrap .totalAmt {margin-top: 10px; padding: 20px; background-color: #e7e7e7;}
 .p_contentwrap .totalAmt .tt_inputWrap label {margin: 0 10px;}
@@ -1317,6 +1335,8 @@ html .ui-button.ui-state-disabled:active {
 
 .p_contentwrap .totalAmt .tt_inputWrap .whtBox {display: block; background-color: #fff; width: 80px; text-align: center;}
 .p_contentwrap .interactBox .memoresult {padding: 20px; box-sizing:border-box; background-color: #fff; border: 1px solid #ddd;}
+
+.p_contentwrap .totalAmt .multiBtn .multiBtn_s.on {background-color: #043677; }
 
 .mediBtnWrap,
 .mediBtnWrap02 {
@@ -1467,6 +1487,10 @@ html .ui-button.ui-state-disabled:active {
 	width: 100%;
 	height: 100%;
 	border-radius: 40px;
+}
+
+.p_meWrap .moreBtn .secondClick {
+	display: none;
 }
 
 .chartWrap .chartBox .graphBox {

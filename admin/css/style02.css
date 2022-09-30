@@ -19,7 +19,7 @@
 
 /*문진항목관리 & 처방기준관리*/
 #wholeWrap .innerCont.diPadd {
-	padding: 186px 0 100px 0;
+	padding: 140px 0 0 0;
 }
 #wholeWrap .inTitFixBar {
 	position: fixed;
@@ -36,7 +36,7 @@
 #wholeWrap .inTitFixBar .inTit {
 	margin: 0 auto;
 }
-#wholeWrap .selectWrap .selectBox:nth-child(1) {
+#wholeWrap .selectWrap .selectBox.mr20 {
 	margin-right: 20px;
 }
 #wholeWrap .selectWrap .selectBox select {

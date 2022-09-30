@@ -111,7 +111,7 @@
 					</nav>
 				</div>
 				<!---- 내용-->
-				<div class="innerCont">
+				<div class="innerCont fixPadd">
 					<div class="inTit dp_f dp_c">
 						<h4>진료관리</h4>
 						<span>환자의 진료화면입니다.</span>
@@ -2035,38 +2035,41 @@
 													</tr>
 													<tr>
 														<th class="gry04">Check</th>
-														<td><input type="text"></td>
+														<td class="dp_f dp_c"><textarea></textarea></td>
 													</tr>
 													<tr>
 														<th class="gry04">From</th>
-														<td><input type="text"></td>
+														<td class="dp_f dp_c"><textarea></textarea></td>
 													</tr>
 													<tr>
 														<th class="gry04">Progress</th>
-														<td><input type="text"></td>
+														<td class="dp_f dp_c"><textarea></textarea></td>
 													</tr>
 													<tr>
 														<th class="gry04">악화요인</th>
-														<td><input type="text"></td>
+														<td class="dp_f dp_c"><textarea></textarea></td>
 													</tr>
 													<tr>
 														<th class="gry04">악화요인</th>
-														<td><input type="text"></td>
+														<td class="dp_f dp_c"><textarea></textarea></td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
 										<script>
 											$(function(){
+												//주증상 table 삭제
 												$(".delBtn").click(function(){
 													$(this).closest("table").hide();								
 												});
-		
+
+												//주증상 table 추가
 												$("#addBtnWrap .addBtn").on("click",function(event){
 													event.preventDefault();	
 		
 													$("#tblAdd").clone(true, true).insertAfter("#tblAdd");							
 												});
+
 											});
 										</script>
 										<p class="anjinTit">감정</p>
@@ -2249,7 +2252,7 @@
 																						<td>1</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							반하사심탕
+																							<a href="" title="">반하사심탕</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2265,7 +2268,7 @@
 																						<td>1a</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							소청룡탕
+																							<a href="" title="">소청룡탕</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2276,7 +2279,7 @@
 																						<td>2</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							처방명
+																							<a href="" title="">처방명</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2287,7 +2290,7 @@
 																						<td>2</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							처방명
+																							<a href="" title="">처방명</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2298,7 +2301,7 @@
 																						<td>2a</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							처방명
+																							<a href="" title="">처방명</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2308,7 +2311,7 @@
 																						<td>2a</td>
 																						<td class="txt-l pad20">
 																							<span class="useTi"><span>7</span>+</span>
-																							처방명
+																							<a href="" title="">처방명</a>
 																						</td>
 																						<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																						<td>
@@ -2319,7 +2322,8 @@
 																			</table>
 																		</div>
 																		<div class="moreBtn">
-																			<a class="dp_f dp_c dp_cc blue01 c_w" href="" title="더보기">더보기</a>
+																			<a class="firstClick dp_f dp_c dp_cc blue01 c_w" href="" title="더보기">더보기</a> <!---첫번째 클릭 시 나타남--->
+																			<a class="secondClick dp_f dp_c dp_cc blue01 c_w" href="" title="더보기">더보기</a> <!---두번째 클릭 시 나타남--->
 																		</div>
 																	</div>
 																</div>
@@ -2335,13 +2339,31 @@
 														</div>
 
 														<script>
-														$(".interactBox .moreBtn").on("click",function(event){
+														//정인적방 탭에서 더보기 첫번째 눌렀을 시
+														$(".interactBox .moreBtn .firstClick").on("click",function(event){
+															event.preventDefault();
+															$(".interactBox .moreBtn .firstClick").css({"display":"none"});
+															$(".interactBox .moreBtn .secondClick").css({"display":"flex"});
+														});
+
+														//정인적방 탭에서 더보기 두번째 눌렀을 시
+														$(".interactBox .moreBtn .secondClick").on("click",function(event){
 															event.preventDefault();
 															$(".popUpwrap.alertWin").stop().fadeIn();
 														});
 												
+														//문진,안진 내용을 다시 한번 확인해주세요 팝업창 닫기
 														$(".popUpTop .popClose").on("click",function(event){
 															event.preventDefault();
+															$(".popUpwrap").stop().fadeOut();
+														});
+
+														//문진,안진 내용을 다시 한번 확인해주세요 팝업창 확인
+														$(".popUpwrap .popUpBox  .chkeBtn ").on("click",function(event){
+															event.preventDefault();
+
+															$(".interactBox .moreBtn .firstClick").css({"display":"flex"});
+															$(".interactBox .moreBtn .secondClick").css({"display":"none"});
 															$(".popUpwrap").stop().fadeOut();
 														});
 														</script>
@@ -2363,11 +2385,11 @@
 																			</div>
 																		</div>
 																		<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="muti05 wht01" href="" title="0.5배">x 0.5</a>
-																			<a class="muti10 gry04" href="" title="1.0배">x 1.0</a>
-																			<a class="muti15 gry03" href="" title="1.5배">x 1.5</a>
-																			<a class="muti20 blue03 c_w" href="" title="2배">x 2</a>
-																			<a class="muti30 blue01 c_w" href="" title="3배">x 3</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5배">x 0.5</a>
+																			<a class="multiBtn_s muti10 blue05 c_w on" href="" title="1.0배">x 1.0</a>
+																			<a class="multiBtn_s muti15 blue05 c_w" href="" title="1.5배">x 1.5</a>
+																			<a class="multiBtn_s muti20 blue05 c_w" href="" title="2배">x 2</a>
+																			<a class="multiBtn_s muti30 blue05 c_w" href="" title="3배">x 3</a>
 																			<span>배</span>
 																		</div>
 																	</div>
@@ -2385,9 +2407,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2399,9 +2421,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2413,9 +2435,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2427,9 +2449,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2441,9 +2463,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2665,11 +2687,11 @@
 																			</div>
 																		</div>
 																		<div id="totalAmtBtn02" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="muti05 wht01" href="" title="0.5배">x 0.5</a>
-																			<a class="muti10 gry04" href="" title="1.0배">x 1.0</a>
-																			<a class="muti15 gry03" href="" title="1.5배">x 1.5</a>
-																			<a class="muti20 blue03 c_w" href="" title="2배">x 2</a>
-																			<a class="muti30 blue01 c_w" href="" title="3배">x 3</a>
+																			<a class="muti05 blue05 c_w" href="" title="0.5배">x 0.5</a>
+																			<a class="muti10 blue05 c_w on" href="" title="1.0배">x 1.0</a>
+																			<a class="muti15 blue05 c_w" href="" title="1.5배">x 1.5</a>
+																			<a class="muti20 blue05 c_w" href="" title="2배">x 2</a>
+																			<a class="muti30 blue05 c_w" href="" title="3배">x 3</a>
 																			<span>배</span>
 																		</div>
 																	</div>
@@ -2687,9 +2709,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2701,9 +2723,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2715,9 +2737,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2729,9 +2751,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2743,9 +2765,9 @@
 																					<td>인삼(人蔘)</td>
 																					<td>
 																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue" href="" title="▼">▼</a>
+																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
 																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue" href="" title="▲">▲</a>
+																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
 																						</div>
 																					</td>
 																					<td>
@@ -2867,6 +2889,140 @@
 																
 																totalFn();
 															});
+
+															//정인적방 0.5배 
+															$('#totalAmtBtn01 .muti05').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 0.5;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+															//프로토콜 0.5배
+															$('#totalAmtBtn02 .muti05').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 0.5;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+                                                            //정인적방 1배
+															$('#totalAmtBtn01 .muti10').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 1;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+                                                            //프로토콜 1배
+															$('#totalAmtBtn02 .muti10').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 1;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+                                                            //정인적방 1.5배
+															$('#totalAmtBtn01 .muti15').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 1.5;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+                                                            //프로토콜 1.5배
+															$('#totalAmtBtn02 .muti15').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 1.5;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+
+                                                           //정인적방 2배
+															$('#totalAmtBtn01 .muti20').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 2;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+																
+															//프로토콜 2배
+															$('#totalAmtBtn02 .muti20').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 2;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+
+															//정인적방 3배
+															$('#totalAmtBtn01 .muti30').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 3;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
+															//프로토콜 3배
+															$('#totalAmtBtn02 .muti30').click(function(e){
+																	e.preventDefault();
+
+																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+																		tmp = Number($(this).text());
+																		tmp2 = parseInt(tmp) * 3;
+
+																		$(this).text(tmp2);
+
+																	});
+
+																});
 															
 															//처방 탭 약재 총량 , 배수 버튼
 															function totalFn(){
@@ -2897,14 +3053,21 @@
 																$('#totalAmtBtn01 .muti05').click(function(e){
 																	e.preventDefault();
 
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
+
 																	multiple01 = total01 * 0.5;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
+
 																});
 
 																//프로토콜
 																$('#totalAmtBtn02 .muti05').click(function(e){
 																	e.preventDefault();
+
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
 
 																	multiple02 = total02 * 0.5;
 
@@ -2917,6 +3080,9 @@
 																$('#totalAmtBtn01 .muti10').click(function(e){
 																	e.preventDefault();
 
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
+
 																	multiple01 = total01 * 1;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
@@ -2925,6 +3091,9 @@
 																//프로토콜
 																$('#totalAmtBtn02 .muti10').click(function(e){
 																	e.preventDefault();
+
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
 
 																	multiple02 = total02 * 1;
 
@@ -2937,6 +3106,9 @@
 																$('#totalAmtBtn01 .muti15').click(function(e){
 																	e.preventDefault();
 
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
+
 																	multiple01 = total01 * 1.5;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
@@ -2945,6 +3117,9 @@
 																//프로토콜
 																$('#totalAmtBtn02 .muti15').click(function(e){
 																	e.preventDefault();
+
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
 
 																	multiple02 = total02 * 1.5;
 
@@ -2957,6 +3132,9 @@
 																$('#totalAmtBtn01 .muti20').click(function(e){
 																	e.preventDefault();
 
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
+
 																	multiple01 = total01 * 2.0;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
@@ -2965,6 +3143,9 @@
 																//프로토콜
 																$('#totalAmtBtn02 .muti20').click(function(e){
 																	e.preventDefault();
+
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
 
 																	multiple02 = total02 * 2.0;
 
@@ -2977,6 +3158,9 @@
 																$('#totalAmtBtn01 .muti30').click(function(e){
 																	e.preventDefault();
 
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
+
 																	multiple01 = total01 * 3.0;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
@@ -2985,6 +3169,9 @@
 																//프로토콜
 																$('#totalAmtBtn02 .muti30').click(function(e){
 																	e.preventDefault();
+
+																	$('.multiBtn .multiBtn_s').removeClass("on");
+																	$(this).addClass("on");
 
 																	multiple02 = total02 * 3.0;
 
