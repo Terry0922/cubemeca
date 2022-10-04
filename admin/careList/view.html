@@ -2405,16 +2405,18 @@
 
 														<script>
 														//1~2c 까지 기본으로 보이고 3 ~ 3c 안보이게 처리
-														$(".plusTr tr").each(function(){
+														$(".plusTr tr").not(".gry04").each(function(){
 															pro = $(this).data('pro');
 															prevTxt = $(this).prev().children(".proNm").text();
 															thisTxt = $(this).children(".proNm").text();
+															
 
 															if (pro == 1 || pro == 2) {
 																$(this).show();
 															} else if (pro == 3) {
 																$(this).hide();
-															} else if (prevTxt != thisTxt) {
+															} 
+															if (prevTxt != thisTxt) {
 																$(this).addClass("brbold");
 															}
 														});
