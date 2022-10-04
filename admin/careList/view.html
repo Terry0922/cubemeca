@@ -3061,6 +3061,31 @@
 															});
 															
 														</script>
+
+														<!-- <script>
+																													$(".amountStar > a").on("click",function(event){
+															event.preventDefault();
+															
+															let tabNumber = $(this).parent().parent().parent().index();
+														
+															if($(this).attr('data-star') == $(this).attr('data-star-a')){
+
+																$(this).parent().children('a').attr('data-star-a','');
+																$(this).parent().children('a').removeClass('showon');
+																$(".treat_detail_anjin_body_part02 > li").eq(tabNumber).hide();
+
+
+															}else{
+																$(this).parent().children('a').attr('data-star-a','');
+																$(this).attr('data-star-a',$(this).attr('data-star'));
+																$(this).parent().children('a').removeClass('showon');
+																$(this).addClass('showon').prevAll('a').addClass('showon');
+																$(".treat_detail_anjin_body_part02 > li").eq(tabNumber).show();
+
+															}
+
+														});
+														</script> -->
 											
 													</div>
 												</div>
