@@ -124,7 +124,7 @@
 
 #wholeWrap .topNav nav {
 	margin: 0 auto;
-	width: 1500px;
+	width: 94%;
 }
 
 #wholeWrap .topNav .times {
@@ -164,7 +164,7 @@
 }
 
 #wholeWrap .inTit {
-	width: 1500px;
+	width: 94%;
 	margin: 0 auto 30px;
 }
 
@@ -186,7 +186,7 @@
 #wholeWrap .chartWrap {
 	padding: 20px;
 	margin: 0 auto;
-	width: 1500px;
+	width: 94%;
 	box-sizing: border-box;
 	box-shadow: 0px 3px 16px #00000029;
 	background-color: #fff;
@@ -495,7 +495,7 @@
 
 #wholeWrap .chartBotBtn .chartbotIne {
 	margin: 0 auto;
-	width: 1500px;
+	width: 94%;
 	height: 100%;
 }
 
@@ -1530,4 +1530,10 @@ html .ui-button.ui-state-disabled:active {
 
 .chartWrap .chartBox .kindBox li a.nobor {
 	border-right: none;
+}
+
+@media screen and (max-width:1200px) {
+	#wholeWrap .innerCont {
+		overflow-x:scroll;
+	}
 }

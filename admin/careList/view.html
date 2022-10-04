@@ -2385,11 +2385,11 @@
 																			</div>
 																		</div>
 																		<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5배">x 0.5</a>
-																			<a class="multiBtn_s muti10 blue05 c_w on" href="" title="1.0배">x 1.0</a>
-																			<a class="multiBtn_s muti15 blue05 c_w" href="" title="1.5배">x 1.5</a>
-																			<a class="multiBtn_s muti20 blue05 c_w" href="" title="2배">x 2</a>
-																			<a class="multiBtn_s muti30 blue05 c_w" href="" title="3배">x 3</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
+																			<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1.0" data-dp='1.0'>x 1.0</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
 																			<span>배</span>
 																		</div>
 																	</div>
@@ -2687,11 +2687,11 @@
 																			</div>
 																		</div>
 																		<div id="totalAmtBtn02" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="muti05 blue05 c_w" href="" title="0.5배">x 0.5</a>
-																			<a class="muti10 blue05 c_w on" href="" title="1.0배">x 1.0</a>
-																			<a class="muti15 blue05 c_w" href="" title="1.5배">x 1.5</a>
-																			<a class="muti20 blue05 c_w" href="" title="2배">x 2</a>
-																			<a class="muti30 blue05 c_w" href="" title="3배">x 3</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
+																			<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1.0" data-dp='1.0'>x 1.0</a> <!---- 기본값-->
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
+																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
 																			<span>배</span>
 																		</div>
 																	</div>
@@ -2890,139 +2890,39 @@
 																totalFn();
 															});
 
-															//정인적방 0.5배 
+															//정인적방 개별 배량 계산
 															$('#totalAmtBtn01 .muti05').click(function(e){
+																	dp1 = $(this).attr('title');
+																	dp2 = $(this).data('dp');
+
 																	e.preventDefault();
 
 																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
 																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 0.5;
+																		tmp2 = parseInt(tmp) * dp1;
 
 																		$(this).text(tmp2);
 
 																	});
 
 																});
-															//프로토콜 0.5배
+															//프로토콜  개별 배량 계산
 															$('#totalAmtBtn02 .muti05').click(function(e){
 																	e.preventDefault();
 
-																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 0.5;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-                                                            //정인적방 1배
-															$('#totalAmtBtn01 .muti10').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 1;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-                                                            //프로토콜 1배
-															$('#totalAmtBtn02 .muti10').click(function(e){
-																	e.preventDefault();
+																	dp1 = $(this).attr('title');
+																	dp2 = $(this).data('dp');
 
 																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
 																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 1;
+																		tmp2 = parseInt(tmp) * dp1;
 
 																		$(this).text(tmp2);
 
 																	});
 
 																});
-                                                            //정인적방 1.5배
-															$('#totalAmtBtn01 .muti15').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 1.5;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-                                                            //프로토콜 1.5배
-															$('#totalAmtBtn02 .muti15').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 1.5;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-
-                                                           //정인적방 2배
-															$('#totalAmtBtn01 .muti20').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 2;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-																
-															//프로토콜 2배
-															$('#totalAmtBtn02 .muti20').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 2;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-
-															//정인적방 3배
-															$('#totalAmtBtn01 .muti30').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 3;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
-															//프로토콜 3배
-															$('#totalAmtBtn02 .muti30').click(function(e){
-																	e.preventDefault();
-
-																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = parseInt(tmp) * 3;
-
-																		$(this).text(tmp2);
-
-																	});
-
-																});
+                                                         
 															
 															//처방 탭 약재 총량 , 배수 버튼
 															function totalFn(){
@@ -3048,15 +2948,17 @@
 																let multiple01 = 0; //정인적방
 																let multiple02 = 0; //프로토콜
 
-																//0.5배
 																//정인적방
 																$('#totalAmtBtn01 .muti05').click(function(e){
 																	e.preventDefault();
 
+																	dp1 = $(this).attr('title');
+																	dp2 = $(this).data('dp');
+
 																	$('.multiBtn .multiBtn_s').removeClass("on");
 																	$(this).addClass("on");
 
-																	multiple01 = total01 * 0.5;
+																	multiple01 = total01 * dp1;
 
 																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
 
@@ -3066,117 +2968,17 @@
 																$('#totalAmtBtn02 .muti05').click(function(e){
 																	e.preventDefault();
 
+																	dp1 = $(this).attr('title');
+																	dp2 = $(this).data('dp');
+
 																	$('.multiBtn .multiBtn_s').removeClass("on");
 																	$(this).addClass("on");
 
-																	multiple02 = total02 * 0.5;
+																	multiple02 = total02 * dp2;
 
 																	$("#totalAmtTbl02 .updowntotal").text(multiple02);
 																});
 
-
-																//1.0배
-																//정인적방
-																$('#totalAmtBtn01 .muti10').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple01 = total01 * 1;
-
-																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
-																});
-
-																//프로토콜
-																$('#totalAmtBtn02 .muti10').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple02 = total02 * 1;
-
-																	$("#totalAmtTbl02 .updowntotal").text(multiple02);
-																});
-
-
-																//1.5배
-																//정인적방
-																$('#totalAmtBtn01 .muti15').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple01 = total01 * 1.5;
-
-																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
-																});
-
-																//프로토콜
-																$('#totalAmtBtn02 .muti15').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple02 = total02 * 1.5;
-
-																	$("#totalAmtTbl02 .updowntotal").text(multiple02);
-																});
-
-
-																//2배
-																//정인적방
-																$('#totalAmtBtn01 .muti20').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple01 = total01 * 2.0;
-
-																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
-																});
-
-																//프로토콜
-																$('#totalAmtBtn02 .muti20').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple02 = total02 * 2.0;
-
-																	$("#totalAmtTbl02 .updowntotal").text(multiple02);
-																});
-
-
-																//3배
-																//정인적방
-																$('#totalAmtBtn01 .muti30').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple01 = total01 * 3.0;
-
-																	$("#totalAmtTbl01 .updowntotal").text(multiple01);
-																});
-
-																//프로토콜
-																$('#totalAmtBtn02 .muti30').click(function(e){
-																	e.preventDefault();
-
-																	$('.multiBtn .multiBtn_s').removeClass("on");
-																	$(this).addClass("on");
-
-																	multiple02 = total02 * 3.0;
-
-																	$("#totalAmtTbl02 .updowntotal").text(multiple02);
-																});
 															};
 
 															//약재 table tr 삭제

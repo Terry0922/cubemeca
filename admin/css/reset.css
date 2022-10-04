@@ -199,7 +199,7 @@ textarea {font-size: 16px; font-family:'Pretendard'; padding: 10px; box-sizing: 
 .c_blue02 {color: #054391;}
 .cogrn {color: #75C553;}
 
-.tabInner {margin:0 auto; padding: 40px 0; width: 1240px;}
+.tabInner {margin:0 auto; padding: 40px 0; width:90%;}
 .tableWrap table {margin: 0 auto; width: 100%; background-color: #fff;}
 .tableWrap table tr {border: 1px solid #eee; height: 50px;}
 .tableWrap table td {padding-left: 20px; color: #000;}
