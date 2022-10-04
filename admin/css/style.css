@@ -1198,6 +1198,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .check_body_part {
+	display: none;
     position: absolute;
 }
 
@@ -1227,6 +1228,43 @@ html .ui-button.ui-state-disabled:active {
     width: 80px;
     text-align: center;
 }
+
+#wholeWrap .check_body_part_active_1 {
+	display: flex;
+}
+
+#wholeWrap .check_body_part_q07.check_body_part_active_1 > div {
+	background-image: url("../img/upgol_01.png");
+}
+
+#wholeWrap .check_body_part_active_1 > div {
+	opacity: 0.2;
+}
+
+#wholeWrap .check_body_part_active_2 {
+	display: flex;
+}
+
+#wholeWrap .check_body_part_q07.check_body_part_active_2 > div {
+	background-image: url("../img/upgol_02.png");
+}
+
+#wholeWrap .check_body_part_active_2 > div {
+	opacity: 0.45;
+}
+
+#wholeWrap .check_body_part_active_3 {
+	display: flex;
+}
+
+#wholeWrap .check_body_part_q07.check_body_part_active_3 > div {
+	background-image: url("../img/upgol_03.png");
+}
+
+#wholeWrap .check_body_part_active_3 > div {
+	opacity: 0.7;
+}
+
 
 .check_star {
 	width: 18px;
