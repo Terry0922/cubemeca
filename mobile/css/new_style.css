@@ -49,19 +49,67 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .inputNone input{display:none;}
 
 /*초이스박스 1*/
-.c_box1 {display:flex; width: 100%; margin:20px 0 24px 0;}
-.c_box1 li {height:49px; line-height:49px; text-align: center; box-sizing: border-box; cursor:pointer;}
-.c_box1 li label {display:block; width:100%; height:100%; border:1px solid #054391; background-color:#fff; transition:all .2s;}
-.c_box1 li label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
-.c_box1 li label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
-.c_box1 li:first-child label {border-radius:4px 0 0 4px;}
-.c_box1 li:last-child label {border-radius:0 4px 4px 0;}
+.c_box1,
+.c_box11,
+.c_box12,
+.c_box13,
+.c_box14 {display:flex; width: 100%; margin:20px 0 24px 0;}
+.c_box1 li,
+.c_box11 li,
+.c_box12 li,
+.c_box13 li,
+.c_box14 li {height:49px; line-height:49px; text-align: center; box-sizing: border-box; cursor:pointer;}
+.c_box1 li label,
+.c_box11 li label,
+.c_box12 li label,
+.c_box13 li label,
+.c_box14 li label {display:block; width:100%; height:100%; border:1px solid #054391; background-color:#fff; transition:all .2s;}
+.c_box1 li label.active,
+.c_box11 li label.active,
+.c_box12 li label.active,
+.c_box13 li label.active,
+.c_box14 li label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box1 li label:hover,
+.c_box11 li label:hover,
+.c_box12 li label:hover,
+.c_box13 li label:hover,
+.c_box14 li label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box1 li:first-child label,
+.c_box11 li:first-child label,
+.c_box12 li:first-child label,
+.c_box13 li:first-child label,
+.c_box14 li:first-child label {border-radius:4px 0 0 4px;}
+.c_box1 li:last-child label,
+.c_box11 li:last-child label,
+.c_box12 li:last-child label,
+.c_box13 li:last-child label,
+.c_box14 li:last-child label {border-radius:0 4px 4px 0;}
 
-.c_box1.col1 li {width: 50%;} /* 초이스박스1 탭 컬럼1개 */
-.c_box1.col2 li {width: 50%;} /* 초이스박스1 탭 컬럼2개 */
-.c_box1.col3 li {width: 33.33%;} /* 초이스박스1 탭 컬럼3개 */
-.c_box1.col4 li {width: 25%;} /* 초이스박스1 탭 컬럼4개 */
-.c_box1.col5 li {width: 20%;} /* 초이스박스1 탭 컬럼5개 */
+.c_box1.col1 li,
+.c_box11.col1 li,
+.c_box12.col1 li,
+.c_box13.col1 li,
+.c_box14.col1 li {width: 50%;} /* 초이스박스1 탭 컬럼1개 */
+.c_box1.col2 li,
+.c_box11.col2 li,
+.c_box12.col2 li,
+.c_box13.col2 li,
+.c_box14.col2 li {width: 50%;} /* 초이스박스1 탭 컬럼2개 */
+.c_box1.col3 li,
+.c_box11.col3 li,
+.c_box12.col3 li,
+.c_box13.col3 li,
+.c_box14.col3 li {width: 33.33%;} /* 초이스박스1 탭 컬럼3개 */
+.c_box1.col4 li,
+.c_box11.col4 li,
+.c_box12.col4 li,
+.c_box13.col4 li,
+.c_box14.col4 li {width: 25%;} /* 초이스박스1 탭 컬럼4개 */
+.c_box1.col5 li,
+.c_box11.col5 li,
+.c_box12.col5 li,
+.c_box13.col5 li,
+.c_box14.col5 li {width: 20%;} /* 초이스박스1 탭 컬럼5개 */
 
 /*초이스박스 2*/
 .c_box2 li.c_box2_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
@@ -69,6 +117,25 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .c_box2 li.c_box2_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box2 li.c_box2_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
+.c_box21 li.c_box21_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
+.c_box21 li.c_box21_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box21 li.c_box21_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box21 li.c_box21_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
+
+.c_box22 li.c_box22_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
+.c_box22 li.c_box22_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box22 li.c_box22_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box22 li.c_box22_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
+
+.c_box23 li.c_box23_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
+.c_box23 li.c_box23_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box23 li.c_box23_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box23 li.c_box23_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
+
+.c_box24 li.c_box24_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
+.c_box24 li.c_box24_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box24 li.c_box24_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
+.c_box24 li.c_box24_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
 
 /*초이스박스 3*/
@@ -107,7 +174,38 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .c_box5 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
 .c_box5 li label input {display: none;}
 .c_box5 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
-.halflabel label {margin-top: 15px; width: 49% !important; box-sizing: border-box;}
+.level3label label {margin-top: 15px; box-sizing: border-box;}
+.level3label.onelabel label {width: 100% !important;}
+.level3label.halflabel label {width: 49% !important;}
+.level3label.threelabel label {width: 32.333% !important;}
+
+
+.c_box51 li.c_box51_c1 {display:flex; align-items:center;   box-sizing:border-box;}
+.c_box51 li.c_box51_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
+.c_box51 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box51 li label input {display: none;}
+.c_box51 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
+
+
+.c_box52 li.c_box52_c1 {display:flex; align-items:center;   box-sizing:border-box;}
+.c_box52 li.c_box52_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
+.c_box52 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box52 li label input {display: none;}
+.c_box52 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
+
+
+.c_box53 li.c_box53_c1 {display:flex; align-items:center;   box-sizing:border-box;}
+.c_box53 li.c_box53_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
+.c_box53 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box53 li label input {display: none;}
+.c_box53 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
+
+
+.c_box54 li.c_box54_c1 {display:flex; align-items:center;   box-sizing:border-box;}
+.c_box54 li.c_box54_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
+.c_box54 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box54 li label input {display: none;}
+.c_box54 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
 
 .c_box5_c1_tit {
 	display: flex;
@@ -129,6 +227,25 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .c_box6 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
 .c_box6 li label.active {border:1px solid #054391; background-color:#054391;}
 
+.c_box61 {width:95%; margin:0 auto;}
+.c_box61 li{display:flex; align-items:center; justify-content:center; background-color:#fff; border-radius:4px; margin:10px 0;  box-sizing:border-box;  text-align:center;}
+.c_box61 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box61 li label.active {border:1px solid #054391; background-color:#054391;}
+
+.c_box62 {width:95%; margin:0 auto;}
+.c_box62 li{display:flex; align-items:center; justify-content:center; background-color:#fff; border-radius:4px; margin:10px 0;  box-sizing:border-box;  text-align:center;}
+.c_box62 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box62 li label.active {border:1px solid #054391; background-color:#054391;}
+
+.c_box63 {width:95%; margin:0 auto;}
+.c_box63 li{display:flex; align-items:center; justify-content:center; background-color:#fff; border-radius:4px; margin:10px 0;  box-sizing:border-box;  text-align:center;}
+.c_box63 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box63 li label.active {border:1px solid #054391; background-color:#054391;}
+
+.c_box64 {width:95%; margin:0 auto;}
+.c_box64 li{display:flex; align-items:center; justify-content:center; background-color:#fff; border-radius:4px; margin:10px 0;  box-sizing:border-box;  text-align:center;}
+.c_box64 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box64 li label.active {border:1px solid #054391; background-color:#054391;}
 
 
 
