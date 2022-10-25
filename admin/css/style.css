@@ -936,7 +936,8 @@ html .ui-button.ui-state-disabled:active {
 	height: 0px !important;
 }
 
-.popUpwrap.alertWin .popUpBox {
+.popUpwrap.alertWin .popUpBox,
+.popUpwrap.alertWin02 .popUpBox {
 	width: 350px;
 	height: 230px;
 	border-radius: 4px;
@@ -1530,19 +1531,22 @@ html .ui-button.ui-state-disabled:active {
 	padding: 10px;
 }
 
-.p_meWrap .moreBtn {
+.p_meWrap .moreBtn,
+.p_meWrap .moreBtn02 {
 	margin: 30px auto 0;
 	width: 150px;
 	height: 40px;
 }
 
-.p_meWrap .moreBtn a {
+.p_meWrap .moreBtn a,
+.p_meWrap .moreBtn02 a {
 	width: 100%;
 	height: 100%;
 	border-radius: 40px;
 }
 
-.p_meWrap .moreBtn .secondClick {
+.p_meWrap .moreBtn .secondClick,
+.p_meWrap .moreBtn02 .secondClick  {
 	display: none;
 }
 
