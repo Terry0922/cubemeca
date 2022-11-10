@@ -60,7 +60,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .c_box11 li,
 .c_box12 li,
 .c_box13 li,
-.c_box14 li {height:49px; line-height:49px; text-align: center; box-sizing: border-box; cursor:pointer;}
+.c_box14 li {height:49px; line-height: 1.3; display: flex; align-items: center; text-align: center; box-sizing: border-box; cursor:pointer;}
 .c_box1 li label,
 .c_box11 li label,
 .c_box12 li label,
@@ -115,27 +115,27 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 
 /*초이스박스 2*/
 .c_box2 li.c_box2_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
-.c_box2 li.c_box2_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box2 li.c_box2_c1 > label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
 .c_box2 li.c_box2_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box2 li.c_box2_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
 .c_box21 li.c_box21_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
-.c_box21 li.c_box21_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box21 li.c_box21_c1 > label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
 .c_box21 li.c_box21_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box21 li.c_box21_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
 .c_box22 li.c_box22_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
-.c_box22 li.c_box22_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box22 li.c_box22_c1 > label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
 .c_box22 li.c_box22_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box22 li.c_box22_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
 .c_box23 li.c_box23_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
-.c_box23 li.c_box23_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box23 li.c_box23_c1 > label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
 .c_box23 li.c_box23_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box23 li.c_box23_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
 .c_box24 li.c_box24_c1 {height:49px; line-height:49px; text-align: center; margin:10px 0; box-sizing: border-box; cursor:pointer;}
-.c_box24 li.c_box24_c1 > label {display:block; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
+.c_box24 li.c_box24_c1 > label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #054391; border-radius:4px; background-color:#fff; transition:all .2s;}
 .c_box24 li.c_box24_c1 > label.active {background-color:#054391; border:1px solid #054391; color: #fff;}
 .c_box24 li.c_box24_c1 > label:hover {background-color:#054391; border:1px solid #054391; color: #fff;}
 
@@ -173,7 +173,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 .c_box5_wrap_a{border:2px solid #054391; background-color:#23467333;padding-top:10px;}
 .c_box5 li.c_box5_c1 {display:flex; align-items:center;   box-sizing:border-box;}
 .c_box5 li.c_box5_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
-.c_box5 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box5 li label {text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.3; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
 .c_box5 li label input {display: none;}
 .c_box5 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300;}
 .level3label label {margin-top: 15px; box-sizing: border-box;}
@@ -205,13 +205,15 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 
 .c_box54 li.c_box54_c1 {display:flex; align-items:center;   box-sizing:border-box;}
 .c_box54 li.c_box54_c1 > label {display:flex; align-items:center; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 40px; word-break:keep-all;}
-.c_box54 li label {width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
+.c_box54 li label {display:flex; align-items:center; justify-content: center; text-align: center; line-height: 1.3; width:100%; height:100%; border:1px solid #707070; border-radius:4px; background-color:#fff; padding:20px 10px; justify-content: center;}
 .c_box54 li label input {display: none;}
 .c_box54 li label.active {border: 1px solid #054391; background-color: #054391; color:#fff; font-weight:300; text-align: center;}
 
 .c_box5_c1_tit {
 	display: flex;
     align-items: center;
+	text-align: center; 
+	line-height: 1.3;
     width: 100%;
     height: 100%;
 	border: 1px solid #34557d;

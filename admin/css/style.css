@@ -1186,7 +1186,7 @@ html .ui-button.ui-state-disabled:active {
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-position: center 64%;
-	background-size: inherit;
+    background-size: 264px 600px;
 	background-image: url("../img/body21.png");
 	border-radius: 4px;
 	overflow: hidden;
@@ -1589,8 +1589,9 @@ html .ui-button.ui-state-disabled:active {
 	border-right: none;
 }
 
-@media screen and (max-width:1200px) {
-	#wholeWrap .innerCont {
-		overflow-x:scroll;
+@media screen and (max-width:1500px) {
+	#wholeWrap .chartWrap {
+		margin: 0 30px;
+		width: 1500px;
 	}
 }
