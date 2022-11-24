@@ -2496,139 +2496,402 @@
 														</script>
 
 														<div class="p_contentwrap">
-															<div class="wid100">
-																<p class="anjinTit dp_f dp_c">약재</p>
-																<div class="interactBox p-12">
-																	<div class="metiAmt_tit dp_sb m_10">
-																		<div class="dp_f dp_c">
-																			첩당약재량 
-																			<div class="help_wrap">
-																				<div class="excla_mark help_point">
-																					<span>!</span>
-																				</div>
-																				<div class="helpbox" style="display: none;">
-																					<p>첩당약재량 설명입니다.</p>
+															<div class="wid100 dp_sb">
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">약재</p>
+																	<div class="interactBox p-12">
+																		<div class="metiAmt_tit dp_sb m_10">
+																			<div class="dp_f dp_c">
+																				첩당약재량 
+																				<div class="help_wrap">
+																					<div class="excla_mark help_point">
+																						<span>!</span>
+																					</div>
+																					<div class="helpbox" style="display: none;">
+																						<p>첩당약재량 설명입니다.</p>
+																					</div>
 																				</div>
 																			</div>
+																			<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
+																				<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1" data-dp='1'>x 1.0</a>
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
+																				<span>배</span>
+																			</div>
 																		</div>
-																		<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
-																			<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1" data-dp='1'>x 1.0</a>
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
-																			<span>배</span>
+																		<div id="totalAmtTbl01" class="tableWrap totalAmtTbl">
+																			<table>
+																				<tbody>
+																					<tr class="gry04">
+																						<th></th>
+																						<th>약재명</th>
+																						<th>첩당사용량</th>
+																						<th></th>
+																					</tr>
+																					<tr>
+																						<td>1</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>2</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>3</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>4</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>5</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td></td>
+																						<td></td>
+																						<td></td>
+																						<td></td>
+																					</tr>
+																					<tr class="blue04">
+																						<td></td>
+																						<td style="font-weight: 700;">총량</td>
+																						<td colspan="2"><span class="red updowntotal">0</span> g</td>
+																					</tr>
+																				</tbody>
+																			</table>
 																		</div>
-																	</div>
-																	<div id="totalAmtTbl01" class="tableWrap totalAmtTbl">
-																		<table>
-																			<tbody>
-																				<tr class="gry04">
-																					<th></th>
-																					<th>약재명</th>
-																					<th>첩당사용량</th>
-																					<th></th>
-																				</tr>
-																				<tr>
-																					<td>1</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>2</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>3</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>4</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>5</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td></td>
-																					<td></td>
-																					<td></td>
-																					<td></td>
-																				</tr>
-																				<tr class="blue04">
-																					<td></td>
-																					<td style="font-weight: 700;">총량</td>
-																					<td colspan="2"><span class="red updowntotal">0</span> g</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
 
-																	<div class="totalAmt dp_sb">
-																		<div class="totalAmt_tit red bold2">처방총량</div>
-																		<div class="t_tit_input">
-																			<div class="tt_inputWrap dp_f">
-																				<label for="tt_amt">
-																					<input type="text" id="tt_amt" value="0">
-																					첩
-																				</label>
-																				,
-																				<label for="tt_date">
-																					<input type="text" id="tt_date" value="0">
-																					일
-																				</label>
-																				<span>분</span>
+																	</div>
+																</div>
+																<div class="wid49">
+																	<div class="anjinTit dp_f dp_c">
+																		복약지시
+																		<div class="help_wrap">
+																			<div class="excla_mark help_point">
+																				<span>!</span>
 																			</div>
+																			<div class="helpbox" style="display: none;">
+																				<p>환자에게 한약과 함께 발송될 복약지시 내용이에요.
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="interactBox p-12">
+																		<div class="totalAmt dp_sb">
+																			<div class="totalAmt_tit">처방총량</div>
+																			<div class="t_tit_input">
+																				<div class="tt_inputWrap dp_f">
+																					<label for="tt_amt01">
+																						<input type="text" id="tt_amt01" placeholder="0" onkeyup="tt_amt01()">
+																						첩
+																					</label>
+																					,
+																					<label for="tt_date">
+																						<input type="text" id="tt_date" placeholder="0" onkeyup ="tt_date()">
+																						일
+																					</label>
+																					<span>분</span>
+																				</div>
+																			</div>
+																		</div>																		
+																		<div class="dayAmount dp_f dp_c m_20">
+																			하루
+																			<label for="tt_date_count">
+																				<input type="text" id="tt_date_count" placeholder="0" onkeyup="tt_date()">
+																			</label>
+																			회
+																			<label for="tt_date_rst">
+																				<input type="text" id="tt_date_rst" placeholder="0" class="readon" readonly/>
+																			</label>
+																			일간 복용하시는 양입니다.
+																		</div>
+																		<div class="dayDetail dp_f dp_c m_28">
+																			<div class="btnWrap02 dp_f">
+																				<a class="on dp_f dp_c dp_cc" href="" title="관계없음">관계없음</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="식전">식전</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="식후">식후</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="공복">공복</a>
+																			</div>
+																			에
+																			<a class="hotor on dp_f dp_c dp_cc" href="" title="데워서">데워서</a>
+																			드세요.
+																		</div>
+																		<script>
+																			$(function () {
+																				//식전식후공복 선택
+																				$(".btnWrap02 a").on("click",function(event){
+																					event.preventDefault();
+														
+																					$(".btnWrap02 a").removeClass("on");
+																					$(this).addClass("on");
+																				});
+														
+																				//데워서 토글
+																				$(".hotor").on("click",function(event){
+																					event.preventDefault();
+														
+																					$(this).toggleClass("on");
+																				});
+																			});
+																		</script>
+																		<div class="textHgt03  p_r">
+																			<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
+																			<div class="letterChk dp_f dp_c">
+																				(<span>0</span>/<span>100</span>)
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="wid100 dp_sb">
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">조제</p>
+																	<div class="interactBox p-12">
+																		<ul class="mediBtnWrap">
+																			<li class="on"><a href="" title="탕전">탕전</a></li>
+																			<li><a href="" title="환제">환제</a></li>
+																		</ul>
+																		<div class="mediContWrap">
+																			<div class="mediCont">
+																				<!--첩수-->
+																				<p class="anjinTit dp_f dp_c" style="margin-top: 0;">첩수</p>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					1첩
+																					<label for="totalgram01_1">
+																						<input type="text" id="totalgram01_1" class="readon" readonly/>
+																					</label>
+																					G * 총
+																					<label for="tt_amt_rst01_1">
+																						<input type="text" id="tt_amt_rst01_1" class="readon" readonly/>
+																					</label>
+																					첩
+																				</div>
+																				<!--용량/팩수(초탕)-->
+																				<div class="anjinTit dp_f dp_c">
+																					용량 / 팩수(초탕)
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="display: none;">
+																							<p>[기본용량 및 팩 수]<br>
+																							- 성인 : 20첩 / 120ml / 30팩<br>
+																							- 유아 : 20첩 / 80ml / 30팩
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					팩
+																					<label for="">
+																						<input type="text" id="" name="" value="120">
+																					</label>
+																					ml * 총
+																					<label for="tt_pack_rst">
+																						<input type="text" id="tt_pack_rst" placeholder="0">
+																					</label>
+																					팩
+																				</div>
+																				<!--탕전방식-->
+																				<div class="anjinTit dp_f dp_c">
+																					탕전방식
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="width: 350px; display: none;">
+																							<p><b>탕전방식안내</b><br>
+																								* 달이는 방식에 따라 같은 처방이라도 향미가 달라질 수
+																								있습니다.<br>
+																								- 옹기탕전 : 옛방식의 옹기약탕기에 약을 달입니다.<br>
+																								- 일반탕전 : 스텐레스 압력약탕기에 약을다립니다.<br>
+																								(녹용,동물성,보음제 등의 보약 탕전시)<br>
+																								- 증류한약(통) : 탕전 후에 증류하여 200cc통에 담아<br>
+																								드립니다. (성인 1일분 1통 기준)<br>
+																								- 증류한약(파우치) : 증류한 후에 파우치에 담아 드립니다.<br>
+																								(파우치 용량선택)<br>
+																								- 농축탕전 : 일반 탕전 후 저온진공 농축과정을 통해 수분만<br>
+																								제거하여 파우치에 담아드립니다. (농축배율선택)<br>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="on wid23 dp_f dp_c dp_cc" href="" title="옹기탕전">옹기탕전</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="일반탕전">일반탕전</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="증류">증류</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="농축">농축</a>
+																				</div>
+
+																			</div>
+																			<div class="mediCont">
+																				<!--첩수-->
+																				<p class="anjinTit dp_f dp_c" style="margin-top: 0;">첩수</p>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					1첩
+																					<label for="totalgram01_2">
+																						<input type="text" id="totalgram01_2" class="readon" readonly/>
+																					</label>
+																					G * 총
+																					<label for="tt_amt_rst01_2">
+																						<input type="text" id="tt_amt_rst01_2" class="readon" readonly/>
+																					</label>
+																					첩
+																				</div>
+																				<!--제분/제환선택-->
+																				<p class="anjinTit dp_f dp_c">
+																					제분/제환선택
+																				</p>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="on wid23 dp_f dp_c dp_cc" href="" title="호환(찹쌀풀)">호환(찹쌀풀)</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="밀환(국산꿀)">밀환(국산꿀)</a>
+																				</div>
+																				<!--환제의 크기-->
+																				<div class="anjinTit dp_f dp_c">
+																					환제의 크기
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="display: none;">
+																							<p><b>환제 크기 비교</b><br>
+																								* 탄자대 4.5g 은 5g을 선택 후 조제지시에 4.5g 이라고 알려주세요.<br>
+																								<img style="width: 100%;" src="../img/mediSize.jpg">
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="on wid18 dp_f dp_c dp_cc" href="" title="大은단대">大은단대</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="녹두대">녹두대</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="오자대">오자대</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="탄자대">탄자대<br>(4g공진단)</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="탄자대">탄자대<br>(5g청심원)</a>
+																				</div>
+																			</div>
+																		</div>
+														
+																		<script>
+																			$(function () {
+
+																				// 조제 tab버튼 눌렀을 때 style 변경
+																				$(".mediBtnWrap > li").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(".mediBtnWrap > li").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+	
+																				// RIO 처방방식 버튼 눌렀을 때 style 변경 / 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".rioKindBtn > li").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(this).siblings(".rioKindBtn > li").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+														
+																				// 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".jozaeBtn > a").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(this).siblings(".jozaeBtn > a").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+																																							// 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".interactBox .hotor").click(function(event){
+																					event.preventDefault();
+																			
+																					$(this).toggleClass("on");
+																			
+																				});
+														
+																				// 조제 tab버튼 눌렀을때 나타나기
+																				$(".mediBtnWrap > li").on("click",function(event){
+														
+																					event.preventDefault();
+														
+																					let tabNumber = $(this).index();
+														
+																					$(".mediBtnWrap > li").removeClass("on");
+																					$(this).addClass("on");
+														
+																					$(".mediContWrap .mediCont").hide();;
+																					$(".mediContWrap .mediCont").eq(tabNumber).show();
+														
+																				});
+																			});
+																		</script>
+																	</div>
+																</div>
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">조제지시</p>
+																	<div class="p_r interactBox m-12">
+																		<textarea style="height: 372px;"></textarea>
+																		<div class="letterChk dp_f dp_c">
+																			(<span>0</span>/<span>300</span>)
 																		</div>
 																	</div>
 																</div>
@@ -2636,9 +2899,9 @@
 
 															<div class="wid100">
 																<p class="anjinTit dp_f dp_c">처방메모</p>
-																<div class="interactBox p-12">
+																<div class="interactBox p-12 p_r">
 																	<textarea style="height: 200px;"></textarea>
-																	<div class="txt-r">
+																	<div class="letterChk dp_f dp_c">
 																		(<span>0</span>/<span>1000</span>)
 																	</div>
 																</div>
@@ -2897,148 +3160,411 @@
 														});
 														</script>
 														<div class="p_contentwrap">
-															<div class="wid100">
-																<p class="anjinTit dp_f dp_c">약재</p>
-																<div class="interactBox p-12">
-																	<div class="metiAmt_tit dp_sb m_10">
-																		<div class="dp_f dp_c">
-																			첩당약재량 
-																			<div class="help_wrap">
-																				<div class="excla_mark help_point">
-																					<span>!</span>
-																				</div>
-																				<div class="helpbox" style="display: none;">
-																					<p>첩당약재량 설명입니다.</p>
+															<div class="wid100 dp_sb">
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">약재</p>
+																	<div class="interactBox p-12">
+																		<div class="metiAmt_tit dp_sb m_10">
+																			<div class="dp_f dp_c">
+																				첩당약재량 
+																				<div class="help_wrap">
+																					<div class="excla_mark help_point">
+																						<span>!</span>
+																					</div>
+																					<div class="helpbox" style="display: none;">
+																						<p>첩당약재량 설명입니다.</p>
+																					</div>
 																				</div>
 																			</div>
+																			<div id="totalAmtBtn02" class="multiBtn dp_f dp_c dp_cc">
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
+																				<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1.0" data-dp='1'>x 1.0</a> <!---- 기본값-->
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
+																				<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
+																				<span>배</span>
+																			</div>
 																		</div>
-																		<div id="totalAmtBtn02" class="multiBtn dp_f dp_c dp_cc">
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
-																			<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1.0" data-dp='1'>x 1.0</a> <!---- 기본값-->
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
-																			<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
-																			<span>배</span>
+																		<div id="totalAmtTbl02" class="tableWrap">
+																			<table>
+																				<tbody>
+																					<tr class="gry04">
+																						<th></th>
+																						<th>약재명</th>
+																						<th>첩당사용량</th>
+																						<th></th>
+																					</tr>
+																					<tr>
+																						<td>1</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>2</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>3</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>4</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>5</td>
+																						<td>인삼(人蔘)</td>
+																						<td>
+																							<div class="upDown_box dp_f dp_c dp_cc">
+																								<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																								<span class="numberUpdown" style="width: 16px;">0</span>
+																								<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																							</div>
+																						</td>
+																						<td>
+																							<a class="delBtn" href="" title="삭제">X</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td></td>
+																						<td></td>
+																						<td></td>
+																						<td></td>
+																					</tr>
+																					<tr class="blue04">
+																						<td></td>
+																						<td style="font-weight: 700;">총량</td>
+																						<td colspan="2"><span class="red updowntotal">0</span> g</td>
+																					</tr>
+																				</tbody>
+																			</table>
 																		</div>
-																	</div>
-																	<div id="totalAmtTbl02" class="tableWrap">
-																		<table>
-																			<tbody>
-																				<tr class="gry04">
-																					<th></th>
-																					<th>약재명</th>
-																					<th>첩당사용량</th>
-																					<th></th>
-																				</tr>
-																				<tr>
-																					<td>1</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>2</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>3</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>4</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>5</td>
-																					<td>인삼(人蔘)</td>
-																					<td>
-																						<div class="upDown_box dp_f dp_c dp_cc">
-																							<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																							<span class="numberUpdown" style="width: 16px;">0</span>
-																							<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																						</div>
-																					</td>
-																					<td>
-																						<a class="delBtn" href="" title="삭제">X</a>
-																					</td>
-																				</tr>
-																				<tr>
-																					<td></td>
-																					<td></td>
-																					<td></td>
-																					<td></td>
-																				</tr>
-																				<tr class="blue04">
-																					<td></td>
-																					<td style="font-weight: 700;">총량</td>
-																					<td colspan="2"><span class="red updowntotal">0</span> g</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
 
-																	<div class="totalAmt dp_sb">
-																		<div class="totalAmt_tit red bold2">처방총량</div>
-																		<div class="t_tit_input">
-																			<div class="tt_inputWrap dp_f">
-																				<label for="tt_amt02">
-																					<input type="text" id="tt_amt02" value="0">
-																					첩
-																				</label>
-																				,
-																				<label for="tt_date02">
-																					<input type="text" id="tt_date02" value="0">
-																					일
-																				</label>
-																				<span>분</span>
+																	</div>
+																</div>
+																<div class="wid49">
+																	<div class="anjinTit dp_f dp_c">
+																		복약지시
+																		<div class="help_wrap">
+																			<div class="excla_mark help_point">
+																				<span>!</span>
+																			</div>
+																			<div class="helpbox" style="display: none;">
+																				<p>환자에게 한약과 함께 발송될 복약지시 내용이에요.
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="interactBox p-12">
+																		<div class="totalAmt dp_sb">
+																			<div class="totalAmt_tit">처방총량</div>
+																			<div class="t_tit_input">
+																				<div class="tt_inputWrap dp_f">
+																					<label for="tt_amt">
+																						<input type="text" id="tt_amt02" placeholder="0" onkeyup="tt_amt02()">
+																						첩
+																					</label>
+																					,
+																					<label for="tt_date02">
+																						<input type="text" id="tt_date02" onkeyup="tt_date02()" placeholder="0">
+																						일
+																					</label>
+																					<span>분</span>
+																				</div>
+																			</div>
+																		</div>																		
+																		<div class="dayAmount dp_f dp_c m_20">
+																			하루
+																			<label for="tt_date_count02">
+																				<input type="text" id="tt_date_count02" placeholder="0" onkeyup="tt_date02()">
+																			</label>
+																			회
+																			<label for="tt_date_rst02">
+																				<input type="text" id="tt_date_rst02" placeholder="0" class="readon" readonly/>
+																			</label>
+																			일간 복용하시는 양입니다.
+																		</div>
+																		<div class="dayDetail dp_f dp_c m_28">
+																			<div class="btnWrap02 dp_f">
+																				<a class="on dp_f dp_c dp_cc" href="" title="관계없음">관계없음</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="식전">식전</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="식후">식후</a>
+																				<a class="dp_f dp_c dp_cc" href="" title="공복">공복</a>
+																			</div>
+																			에
+																			<a class="hotor on dp_f dp_c dp_cc" href="" title="데워서">데워서</a>
+																			드세요.
+																		</div>
+																		<script>
+																			$(function () {
+																				//식전식후공복 선택
+																				$(".btnWrap02 a").on("click",function(event){
+																					event.preventDefault();
+														
+																					$(".btnWrap02 a").removeClass("on");
+																					$(this).addClass("on");
+																				});
+														
+																				//데워서 토글
+																				$(".hotor").on("click",function(event){
+																					event.preventDefault();
+														
+																					$(this).toggleClass("on");
+																				});
+																			});
+																		</script>
+																		<div class="textHgt03  p_r">
+																			<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
+																			<div class="letterChk dp_f dp_c">
+																				(<span>0</span>/<span>100</span>)
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
+															<div class="wid100 dp_sb">
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">조제</p>
+																	<div class="interactBox p-12">
+																		<ul class="mediBtnWrap02">
+																			<li class="on"><a href="" title="탕전">탕전</a></li>
+																			<li><a href="" title="환제">환제</a></li>
+																		</ul>
+																		<div class="mediContWrap">
+																			<div class="mediCont02">
+																				<!--첩수-->
+																				<p class="anjinTit dp_f dp_c" style="margin-top: 0;">첩수</p>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					1첩
+																					<label for="totalgram02_1">
+																						<input type="text" id="totalgram02_1" class="readon" readonly/>
+																					</label>
+																					G * 총
+																					<label for="tt_amt_rst02_1">
+																						<input type="text" id="tt_amt_rst02_1" class="readon" readonly/>
+																					</label>
+																					첩
+																				</div>
+																				<!--용량/팩수(초탕)-->
+																				<div class="anjinTit dp_f dp_c">
+																					용량 / 팩수(초탕)
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="display: none;">
+																							<p>[기본용량 및 팩 수]<br>
+																							- 성인 : 20첩 / 120ml / 30팩<br>
+																							- 유아 : 20첩 / 80ml / 30팩
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					팩
+																					<label for="">
+																						<input type="text" id="" name="" value="120">
+																					</label>
+																					ml * 총
+																					<label for="tt_pack_rst02">
+																						<input type="text" id="tt_pack_rst02" placeholder="0">
+																					</label>
+																					팩
+																				</div>
+																				<!--탕전방식-->
+																				<div class="anjinTit dp_f dp_c">
+																					탕전방식
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="width: 350px; display: none;">
+																							<p><b>탕전방식안내</b><br>
+																								* 달이는 방식에 따라 같은 처방이라도 향미가 달라질 수
+																								있습니다.<br>
+																								- 옹기탕전 : 옛방식의 옹기약탕기에 약을 달입니다.<br>
+																								- 일반탕전 : 스텐레스 압력약탕기에 약을다립니다.<br>
+																								(녹용,동물성,보음제 등의 보약 탕전시)<br>
+																								- 증류한약(통) : 탕전 후에 증류하여 200cc통에 담아<br>
+																								드립니다. (성인 1일분 1통 기준)<br>
+																								- 증류한약(파우치) : 증류한 후에 파우치에 담아 드립니다.<br>
+																								(파우치 용량선택)<br>
+																								- 농축탕전 : 일반 탕전 후 저온진공 농축과정을 통해 수분만<br>
+																								제거하여 파우치에 담아드립니다. (농축배율선택)<br>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="wid23 dp_f dp_c dp_cc on" href="" title="옹기탕전">옹기탕전</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="일반탕전">일반탕전</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="증류">증류</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="농축">농축</a>
+																				</div>
+
+																			</div>
+																			<div class="mediCont02">
+																				<!--첩수-->
+																				<p class="anjinTit dp_f dp_c" style="margin-top: 0;">첩수</p>
+																				<div class="dayAmount dp_f dp_c m_20 m-12">
+																					1첩
+																					<label for="totalgram02_2">
+																						<input type="text" id="totalgram02_2" class="readon" readonly/>
+																					</label>
+																					G * 총
+																					<label for="tt_amt_rst02_2">
+																						<input type="text" id="tt_amt_rst02_2" class="readon" readonly/>
+																					</label>
+																					첩
+																				</div>
+																				<!--제분/제환선택-->
+																				<p class="anjinTit dp_f dp_c">
+																					제분/제환선택
+																				</p>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="on wid23 dp_f dp_c dp_cc" href="" title="호환(찹쌀풀)">호환(찹쌀풀)</a>
+																					<a class="wid23 dp_f dp_c dp_cc" href="" title="밀환(국산꿀)">밀환(국산꿀)</a>
+																				</div>
+																				<!--환제의 크기-->
+																				<div class="anjinTit dp_f dp_c">
+																					환제의 크기
+																					<div class="help_wrap">
+																						<div class="excla_mark help_point">
+																							<span>!</span>
+																						</div>
+																						<div class="helpbox" style="display: none;">
+																							<p><b>환제 크기 비교</b><br>
+																								* 탄자대 4.5g 은 5g을 선택 후 조제지시에 4.5g 이라고 알려주세요.<br>
+																								<img style="width: 100%;" src="../img/mediSize.jpg">
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="jozaeBtn dp_f m-12">
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="大은단대">大은단대</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="녹두대">녹두대</a>
+																					<a class="wid18 dp_f dp_c dp_cc on" href="" title="오자대">오자대</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="탄자대">탄자대<br>(4g공진단)</a>
+																					<a class="wid18 dp_f dp_c dp_cc" href="" title="탄자대">탄자대<br>(5g청심원)</a>
+																				</div>
+																			</div>
+																		</div>
+														
+																		<script>
+																			$(function () {
+																				// 조제 tab버튼 눌렀을 때 style 변경
+																				$(".mediBtnWrap02 > li").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(".mediBtnWrap02 > li").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+	
+																				// RIO 처방방식 버튼 눌렀을 때 style 변경 / 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".rioKindBtn > li").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(this).siblings(".rioKindBtn > li").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+														
+																				// 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".jozaeBtn > a").click(function(event){
+																					event.preventDefault();
+																			
+																					let tabNumber = $(this).index();
+																			
+																					$(this).siblings(".jozaeBtn > a").removeClass("on");
+																					$(this).addClass("on");
+																			
+																				});
+																																							// 탕전방식 버튼 눌렀을 때 style 변경
+																				$(".interactBox .hotor").click(function(event){
+																					event.preventDefault();
+																			
+																					$(this).toggleClass("on");
+																			
+																				});
+														
+																				// 조제 tab버튼 눌렀을때 나타나기
+																				$(".mediBtnWrap02 > li").on("click",function(event){
+														
+																					event.preventDefault();
+														
+																					let tabNumber = $(this).index();
+														
+																					$(".mediBtnWrap02 > li").removeClass("on");
+																					$(this).addClass("on");
+														
+																					$(".mediContWrap .mediCont02").hide();;
+																					$(".mediContWrap .mediCont02").eq(tabNumber).show();
+														
+																				});
+																			});
+																		</script>
+																	</div>
+																</div>
+																<div class="wid49">
+																	<p class="anjinTit dp_f dp_c">조제지시</p>
+																	<div class="p_r interactBox m-12">
+																		<textarea style="height: 372px;"></textarea>
+																		<div class="letterChk dp_f dp_c">
+																			(<span>0</span>/<span>300</span>)
+																		</div>
+																	</div>
+																</div>
+															</div>
+
 															<div class="wid100">
 																<p class="anjinTit dp_f dp_c">처방메모</p>
-																<div class="interactBox p-12">
+																<div class="interactBox p-12 p_r">
 																	<textarea style="height: 200px;"></textarea>
-																	<div class="txt-r">
+																	<div class="letterChk dp_f dp_c">
 																		(<span>0</span>/<span>1000</span>)
 																	</div>
 																</div>
@@ -3090,6 +3616,65 @@
 														</script>
 
 														<script>
+															//정인적방 복약지시 처방 총량 일분 
+															function tt_date(){
+
+																var tt_date = $("#tt_date").val();
+																var tt_date_count = Number($("#tt_date_count").val());
+																var tt_date_rst = Number($("#tt_date_rst").val());
+
+																console.log(tt_date_count);
+
+																var totalpack = tt_date_rst * tt_date_count
+
+
+																	$("#tt_date_rst").val(tt_date);
+																	$("#tt_pack_rst").val(totalpack);
+
+																	return true;
+
+
+															}
+															//프로토콜 복약지시 처방 총량 일분 
+															function tt_date02(){
+
+																var tt_date02 = $("#tt_date02").val();
+																var tt_date_count02 = Number($("#tt_date_count02").val());
+																var tt_date_rst02 = Number($("#tt_date_rst02").val());
+
+																var totalpack02 = tt_date_rst02 * tt_date_count02
+
+																$("#tt_date_rst02").val(tt_date02);
+																$("#tt_pack_rst02").val(totalpack02);
+
+																return true;
+
+															}
+															//정인적방 복약지시 처방 총량 첩 
+															function tt_amt01(){
+
+																var tt_amt01 = $("#tt_amt01").val();
+
+
+																$("#tt_amt_rst01_1").val(tt_amt01);
+																$("#tt_amt_rst01_2").val(tt_amt01);
+
+																return true;
+
+															}
+															//프로토콜 복약지시 처방 총량 첩 
+															function tt_amt02(){
+
+																var tt_amt02 = $("#tt_amt02").val();
+
+																$("#tt_amt_rst02_1").val(tt_amt02);
+																$("#tt_amt_rst02_2").val(tt_amt02);
+
+																return true;
+															}
+
+
+
 															//처방 탭 약재 첩당사용량 화살표 +1 -1
 															$('.minus1').click(function(e){
 																e.preventDefault();
@@ -3177,9 +3762,12 @@
 																});
 																$("#totalAmtTbl01 .updowntotal").text(total01); //정인적방
 																$("#totalAmtTbl02 .updowntotal").text(total02); //프로토콜
+																
+																$("#totalgram01_1").val(total01); //정인적방
+																$("#totalgram01_2").val(total01); //정인적방
 
-
-
+																$("#totalgram02_1").val(total02); //프로토콜
+																$("#totalgram02_2").val(total02); //프로토
 															};
 
 															//약재 table tr 삭제

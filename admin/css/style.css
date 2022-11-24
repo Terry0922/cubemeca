@@ -510,6 +510,10 @@
 	width: 100%;
 }
 
+#wholeWrap .personView02 {
+	width: 78%;
+}
+
 #wholeWrap .basicInfo_tbl {
 	padding: 10px 20px;
 	border-radius: 4px; 
@@ -1354,8 +1358,8 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .dropDwn {position: absolute; top: 43px; left: 0; width: 100%; padding: 20px; border:1px solid #ddd; border-radius: 4px; box-sizing: border-box;}
 .prescriptWrap .dropDwn a {margin: 4px; padding: 3px; color: #fff; border-radius: 4px; font-size: 14px;}
 .prescriptWrap .botFix span {margin-right: 20px;}
-.prescriptWrap .interactBox .letterChk {position: absolute; right: 10px; bottom: 10px; font-size: 14px;}
-.prescriptWrap .interactBox .letterChk span {font-size: 14px;}
+.interactBox .letterChk {position: absolute; right: 10px; bottom: 10px; font-size: 14px;}
+.interactBox .letterChk span {font-size: 14px;}
 .prescriptWrap .metiAmt_tit {background-color: #e7e7e7; border-radius: 4px; padding: 10px;}
 .prescriptWrap .interactBox .tableWrap tr {height: 40px;}
 .prescriptWrap .interactBox .tableWrap tr th, 
@@ -1368,14 +1372,18 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .interactBox .tableWrap .upDown_box span {margin: 0 15px;}
 .interactBox .dayAmount label {margin: 0 10px;}
 .interactBox .dayAmount input {border: 1px solid #ddd; width: 80px; height: 30px; text-align: center;}
+.interactBox .dayAmount input.readon {border-top: none; border-left: 0; border-right: 0; background-color: transparent; color: #053f87; font-weight: 700;}
+
 .prescriptWrap .interactBox .dayDetail .btnWrap02 {border: 1px solid #ddd; overflow: hidden; height: 35px; border-radius: 4px;}
-.prescriptWrap .interactBox .dayDetail .btnWrap02 a {width: 80px; border-right: 1px solid #ddd;}
+.prescriptWrap .interactBox .dayDetail .btnWrap02 a {width: 80px; background-color: #fff; border-right: 1px solid #ddd;}
 .prescriptWrap .interactBox .dayDetail .btnWrap02 a:last-child {border-right: none;}
 .prescriptWrap .interactBox .dayDetail .btnWrap02 a.on {background-color: #043677; color: #fff;}
 .prescriptWrap .interactBox .hotor {margin: 0 10px; width: 80px; height: 35px; border-radius: 4px; border: 1px solid #ddd;}
 .prescriptWrap .interactBox .hotor.on {background-color: #043677; color: #fff;}
 .prescriptWrap .interactBox .textHgt01 {height: 150px;}
 .prescriptWrap .interactBox .textHgt02 {height: 268px;}
+.prescriptWrap .interactBox .textHgt03 {height: 205px;}
+.prescriptWrap .interactBox .textHgt04 {height: 325px;}
 .prescriptWrap .multiBtn a {margin: 0 5px; padding: 2px 4px; border-radius: 4px;}
 .prescriptWrap .multiBtn a:nth-child(1) input,
 .prescriptWrap .multiBtn a:nth-child(2) input {color: #fff;}
@@ -1383,7 +1391,7 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .multiBtn .multiBtn_s.on {background-color: #043677;}
 .upDown_box a {display: block; width: 60px;}
 
-.p_contentwrap .totalAmt {margin-top: 10px; padding: 20px; background-color: #e7e7e7;}
+.p_contentwrap .totalAmt {border-radius: 4px; margin-bottom: 10px; padding: 11px 20px; background-color: #e7e7e7;}
 .p_contentwrap .totalAmt .tt_inputWrap label {margin: 0 10px;}
 .p_contentwrap .totalAmt .tt_inputWrap label input {width: 80px; text-align: center;}
 
@@ -1399,9 +1407,10 @@ html .ui-button.ui-state-disabled:active {
     justify-content: flex-end;
 	box-sizing: border-box;
 	border-bottom: 1px solid #c5c5c5;
-	margin: 0 auto 5px; 
+	margin: 0 auto; 
 	width: 100%;
 }
+
 .mediBtnWrap li,
 .mediBtnWrap02 li {
 	position: relative;
@@ -1410,7 +1419,7 @@ html .ui-button.ui-state-disabled:active {
 	border-right: 1px solid #c5c5c5;
 	border-left: 1px solid #c5c5c5;
 	margin-right: 5px;
-	background-color: transparent;
+	background-color: #fff;
 	width: 80px;
 	height: 35px;
 	line-height: 35px;
@@ -1420,6 +1429,7 @@ html .ui-button.ui-state-disabled:active {
 	font-weight: 700;
 	cursor: pointer;
 }
+
 .mediBtnWrap li.on,
 .mediBtnWrap02 li.on {    
 	color: #fff;
@@ -1453,6 +1463,10 @@ html .ui-button.ui-state-disabled:active {
 .mediContWrap .mediCont,
 .mediContWrap .mediCont02 {
 	display: none;
+	border: 1px solid #ddd;
+	border-top: none;
+	background-color: #fff;
+	border-radius: 0;
 }
 
 .mediContWrap .mediCont:nth-child(1),
