@@ -3775,6 +3775,12 @@
 															$('#totalAmtTbl01 table tr td .delBtn').click(function(e){
 																e.preventDefault();
 																$(this).parent().parent().remove();
+																let totalgram01 = Number($("#totalAmtTbl01 .updowntotal").text());
+																let minusAmt01 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
+																let totalgcal01 = totalgram01 - minusAmt01;
+
+																$("#totalAmtTbl01 .updowntotal").text(totalgcal01);
+
 
 															});
 
@@ -3782,7 +3788,11 @@
 															$('#totalAmtTbl02 table tr td .delBtn').click(function(e){
 																e.preventDefault();
 																$(this).parent().parent().remove();
+																let totalgram02 = Number($("#totalAmtTbl02 .updowntotal").text());
+																let minusAmt02 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
+																let totalgcal02 = totalgram02 - minusAmt02;
 
+																$("#totalAmtTbl02 .updowntotal").text(totalgcal02);
 															});
 															
 														</script>
