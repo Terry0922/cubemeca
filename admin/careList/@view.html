@@ -269,79 +269,35 @@
 										<span>내원목적</span>
 										<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
 									</div>
-									<div class="popUpBot" style="width: 560px;">
-
+									<div class="popUpBot">
 										<div class="purposeCheck">
 											<p class="txt-c f15">※드래그해서 순서를 바꿀수 있습니다.</p>
-											<ul id="sortable" class="c_box3 purposeChk agree" style="margin-top:20px;">
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk1">
-														<label for="chk1" class="f18">증상명 증상명 증상명 증상명 증상명 증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">정신병</span>
+											<ul id="sortable" class="c_box3 agree" style="margin-top:20px;">
+												<li class='c_box3_c1 m_10 ui-state-default'>
+													<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+													<input type="checkbox" name='c_box7' id="chk1" onclick="c_box7(this.name,0);">
+													<label for="chk1" class="f18">프로토콜명</label>
 												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk2">
-														<label for="chk2" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">비염</span>
+												<li class='c_box3_c1 m_10 ui-state-default'>
+													<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+													<input type="checkbox" name='c_box7' id="chk2" onclick="c_box7(this.name,1);">
+													<label for="chk2" class="f18">프로토콜명</label>
 												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk3">
-														<label for="chk3" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">소화장애</span>
+												<li class='c_box3_c1 m_10 ui-state-default'>
+													<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+													<input type="checkbox" name='c_box7' id="chk3" onclick="c_box7(this.name,2);">
+													<label for="chk3" class="f18">프로토콜명</label>
 												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk4">
-														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
-												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk4">
-														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
-												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk4">
-														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
-												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk4">
-														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
-												</li>
-												<li class='c_box3_c1 m_10 dp_sb ui-state-default'>
-													<div class="chkBoxWrap dp_f dp_c">
-														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-														<input type="checkbox" name='purposeChk' id="chk4">
-														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-													</div>
-													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
+												<li class='purp_show c_box3_c1 m_10 ui-state-default'>
+													<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+													<input type="checkbox" name='c_box7' id="chk4" onclick="c_box7(this.name,3);">
+													<label for="chk4" class="f18">기타</label>
 												</li>
 											</ul>
+											<div class="purp_text">
+												<textarea></textarea>
+											</div>
 										</div>
-
-
 										<script>
 											$(function() {
 												$("#sortable").sortable();
