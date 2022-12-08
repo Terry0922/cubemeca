@@ -29,12 +29,14 @@
 	</head>
 	<body>
 		<div class="interview_wrap">
-			<div class="interview_cont" style="display: flex; flex-direction: column; justify-content: space-between;">
-				<h2 class="m_40 m-40">내원목적</h2>
+			<div class="interview_cont purpose_cont" style="display: flex; flex-direction: column; justify-content: space-between;">
+				<div>
+					<h2 class="m_28 m-40" style="font-size: 1.75rem;">내원목적</h2>
 
-				<div class="f18 lh15 m_20">
-					오늘은 어떤 일로 오셨나요?<br>
-					목적에 맞는 문진내용을 준비해 드릴께요.
+					<div class="f18 lh15 m_20 c_gry">
+						오늘은 어떤 일로 오셨나요?<br>
+						목적에 맞는 문진내용을 준비해 드릴께요.
+					</div>
 				</div>
 
 				<div class="purposeCheck">
@@ -42,35 +44,35 @@
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
 								<input type="checkbox" name='purposeChk' id="chk1" onclick="purposeChk(this.name,0);">
-								<label for="chk1" class="f18">증상명 증상명 증상명 증상명 증상명 증상명 증상명 증상명입니다.</label>
+								<label for="chk1" class="f18">증상명 증상명 증상명입니다.</label>
 							</div>
-							<span class="dp_f dp_c dp_end02 categoryTit">정신병</span>
+							<span class="dp_f dp_c dp_cc categoryTit">정신병</span>
                         </li>
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
 								<input type="checkbox" name='purposeChk' id="chk2" onclick="purposeChk(this.name,1);">
 								<label for="chk2" class="f18">증상명 증상명 증상명입니다.</label>
 							</div>
-							<span class="dp_f dp_c dp_end02 categoryTit">비염</span>
+							<span class="dp_f dp_c dp_cc categoryTit">비염</span>
                         </li>
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
 								<input type="checkbox" name='purposeChk' id="chk3" onclick="purposeChk(this.name,2);">
 								<label for="chk3" class="f18">증상명 증상명 증상명입니다.</label>
 							</div>
-							<span class="dp_f dp_c dp_end02 categoryTit">소화장애</span>
+							<span class="dp_f dp_c dp_cc categoryTit">소화장애</span>
                         </li>
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
 								<input type="checkbox" name='purposeChk' id="chk4" onclick="purposeChk(this.name,3);">
 								<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
 							</div>
-                            <span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
+                            <span class="dp_f dp_c dp_cc categoryTit">불면증</span>
                         </li>
                     </ul>
 				</div>
 
-				<ul class="c_box3 agree p_80">
+				<ul class="c_box3 agree p_20 purposeAgree">
 					<li class='c_box3_c1 m_10 agree2'>
 						<input type="checkbox" name='agree2' id="agree2" onclick="c_box3(this.name,0);">
 						<label for="agree2" class="f18">준차트 서비스 이용약관 동의 (필수) <a href="#" class="open_modal agree2">자세히</a></label>

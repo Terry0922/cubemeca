@@ -259,7 +259,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 /*동의 label css추가*/
 .c_box3.agree {margin-top:50px;}
 .c_box3.agree li label {position:relative;}
-.c_box3.agree li label > a {position:absolute; right:20px; text-decoration:underline;}
+.c_box3.agree li label > a {position:absolute; right:20px; text-decoration:underline; color: #000;}
 
 
 /*동의 모달창*/
@@ -290,6 +290,8 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 	.modal {width:90%;}
 	.interview_cont h2 {margin-top:20px; text-align:center;}
 	.interview_cont .f18.lh15 {text-align:center; font-size:1rem;}
+	.purpose_cont h2 {text-align:left;}
+	.purpose_cont .f18.lh15 {text-align:left;}
 	.interview_cont .f18.lh15 .noshow {display: none;}
 	.level3label.threelabel label {height: 100px; text-align: center;}
 	.level3label.halflabel label {height: 100px; text-align: center;}
@@ -312,7 +314,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 	cursor:pointer;
 }
 .purposeCheck ul li.active {
-	border: 1px solid #054391;
+	border: 1px solid #4e83c7;
 	background-color:#eaf3ff;
 }
 .purposeCheck ul li.active .chkBoxWrap label {
@@ -324,6 +326,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 }
 .purposeCheck ul li .chkBoxWrap {
 	padding: 20px 0;
+	box-sizing: border-box;
 }
 .purposeCheck ul li input[type=checkbox] {
 	display: block;
@@ -334,7 +337,7 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 }
 .purposeCheck ul li .chkBoxWrap label {
 	padding-left: 0;
-	height: 37px;
+	height: auto;
 	background-position: 0px center;
 }
 .purposeCheck ul li .chkBoxWrap input[type=checkbox]:checked + label {
@@ -342,12 +345,25 @@ input[type="text"].form_control::placeholder {font-size:0.875rem; color:#707070;
 }
 .purposeCheck ul li .chkBoxWrap input[type=checkbox] + label {
 	background-image:url();
+	color: #000;
 }
 .purposeCheck ul li .categoryTit {
-	height: 80px;
-	padding: 20px 25px;
-	min-width: 130px;
-	border-radius: 50px 0 0 50px;
-	box-sizing: border-box;
+	padding: 20px;
+	min-width: 64px;
+	height: 21px;
 	background-color: #acc7e7;
+	color: #000;
+	font-size: 0.875rem;
+}
+.purposeAgree li > label {
+	padding: 20px 50px !important;
+}
+.purposeAgree li input[type=checkbox] + label {
+	background-size: 40px 24px;
+	color: #000;
+}
+.purposeAgree li label.active {
+	border: 1px solid #4e83c7;
+	background-color: #eaf3ff;
+	color: #000;
 }
