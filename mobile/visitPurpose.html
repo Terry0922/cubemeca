@@ -29,53 +29,82 @@
 	</head>
 	<body>
 		<div class="interview_wrap">
-			<div class="interview_cont purpose_cont" style="display: flex; flex-direction: column; justify-content: space-between;">
+			<div class="interview_cont purpose_cont" >
 				<div>
-					<h2 class="m_28 m-40" style="font-size: 2rem;">내원목적</h2>
-
-					<div class="f18 lh15 m_20 c_gry">
-						오늘은 어떤 일로 오셨나요?<br>
-						목적에 맞는 문진내용을 준비해 드릴께요.
-					</div>
+					<h2 class="m_60" style="font-size: 2rem;">어디가 아파서 오셨나요?</h2>
 				</div>
 
 				<div class="purposeCheck">
-                    <ul class="c_box3 purposeChk agree p_80">
+					<div class="interview_question f18">호흡기</div>
+                    <ul class="c_box3 purposeChk purposeChk01">
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
-								<input type="checkbox" name='purposeChk' id="chk1" onclick="purposeChk(this.name,0);">
-								<label for="chk1" class="f18">증상명 증상명 증상명입니다.</label>
+								<input type="checkbox" name='purposeChk01' id="chk1" onclick="purposeChk01(this.name,0);">
+								<label for="chk1" class="f18">비염</label>
 							</div>
-							<span class="dp_f dp_c dp_cc categoryTit">정신병</span>
                         </li>
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
-								<input type="checkbox" name='purposeChk' id="chk2" onclick="purposeChk(this.name,1);">
-								<label for="chk2" class="f18">증상명 증상명 증상명입니다.</label>
+								<input type="checkbox" name='purposeChk01' id="chk2" onclick="purposeChk01(this.name,1);">
+								<label for="chk2" class="f18">만성기침</label>
 							</div>
-							<span class="dp_f dp_c dp_cc categoryTit">비염</span>
                         </li>
                         <li class='c_box3_c1 m_10 dp_sb'>
 							<div class="chkBoxWrap dp_f dp_c">
-								<input type="checkbox" name='purposeChk' id="chk3" onclick="purposeChk(this.name,2);">
-								<label for="chk3" class="f18">증상명 증상명 증상명입니다.</label>
+								<input type="checkbox" name='purposeChk01' id="chk3" onclick="purposeChk01(this.name,2);">
+								<label for="chk3" class="f18">천식(숨참)</label>
 							</div>
-							<span class="dp_f dp_c dp_cc categoryTit">소화장애</span>
-                        </li>
-                        <li class='c_box3_c1 m_10 dp_sb'>
-							<div class="chkBoxWrap dp_f dp_c">
-								<input type="checkbox" name='purposeChk' id="chk4" onclick="purposeChk(this.name,3);">
-								<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
-							</div>
-                            <span class="dp_f dp_c dp_cc categoryTit">불면증</span>
                         </li>
                     </ul>
 				</div>
 
+				<div class="purposeCheck">
+					<div class="interview_question f18">정신과</div>
+                    <ul class="c_box3 purposeChk purposeChk02">
+                        <li class='c_box3_c1 m_10 dp_sb'>
+							<div class="chkBoxWrap dp_f dp_c">
+								<input type="checkbox" name='purposeChk02' id="chk4" onclick="purposeChk02(this.name,0);">
+								<label for="chk4" class="f18">감정장애 (공황장애, 불안장애, 우울증 등)</label>
+							</div>
+                        </li>
+                        <li class='c_box3_c1 m_10 dp_sb'>
+							<div class="chkBoxWrap dp_f dp_c">
+								<input type="checkbox" name='purposeChk02' id="chk5" onclick="purposeChk02(this.name,1);">
+								<label for="chk5" class="f18">불면</label>
+							</div>
+                        </li>
+                        <li class='c_box3_c1 m_10 dp_sb'>
+							<div class="chkBoxWrap dp_f dp_c">
+								<input type="checkbox" name='purposeChk02' id="chk6" onclick="purposeChk02(this.name,2);">
+								<label for="chk6" class="f18">흉부불편감 (가슴 두근거림, 가슴 답답함)</label>
+							</div>
+                        </li>
+						<li class='c_box3_c1 m_10 dp_sb'>
+							<div class="chkBoxWrap dp_f dp_c">
+								<input type="checkbox" name='purposeChk02' id="chk7" onclick="purposeChk02(this.name,3);">
+								<label for="chk7" class="f18">틱장애</label>
+							</div>
+                        </li>
+                    </ul>
+				</div>
+
+				<div class="purposeCheck purposeChk03">
+					<div class="interview_question f18">기타</div>
+                    <ul class="c_box3 purposeChk">
+                        <li class='c_box3_c1 m_10 dp_sb'>
+							<div class="chkBoxWrap dp_f dp_c">
+								<input type="checkbox" name='purposeChk03' id="chk8" onclick="purposeChk03(this.name,0);">
+								<label for="chk8" class="f18">다른 부분이 불편해서 왔어요.</label>
+							</div>
+                        </li>
+                    </ul>
+				</div>
+
+
 				<ul class="c_box3 agree p_20 purposeAgree">
 					<li class='c_box3_c1 m_10 agree2'>
 						<input type="checkbox" name='agree2' id="agree2" onclick="c_box3(this.name,0);">
-						<label for="agree2" class="f18">준차트 서비스 이용약관 동의 (필수) <a href="#" class="open_modal agree2">자세히</a></label>
+						<label for="agree2" class="f18">연구목적 데이터수집 및 이용동의 <a href="#" class="open_modal agree2">자세히</a></label>
 					</li>
 				</ul>
 			</div>
@@ -124,7 +153,7 @@
 				
 			});
 			
-			function purposeChk(obj,chk){
+			function purposeChk01(obj,chk){
 				eChk = document.getElementsByName(obj);
 
 				for(var i=0;i<eChk.length;i++){
@@ -139,19 +168,36 @@
 				}
 
 			}
+			function purposeChk02(obj,chk){
+				eChk = document.getElementsByName(obj);
 
-			// $(".purposeCheck ul li").click(function() {
-			// 	var checked = $(this).children().children("input:checkbox[name='purposeChk']").is(":checked");
+				for(var i=0;i<eChk.length;i++){
+					var jj=i+1
+					if(eChk[i].checked){
+						eChk[i].checked = true;
+						$('.'+obj+' li:nth-child('+jj+')').addClass('active');
+					}else{
+						eChk[i].checked = false;
+						$('.'+obj+' li:nth-child('+jj+')').removeClass('active');
+					}
+				}
 
-			// 	if(checked){
-			// 		$(this).children('.chkBoxWrap').children("input:checkbox[name='purposeChk']").prop("checked", true);
-			// 		$(this).addClass('active');
-			// 	} else {
-			// 		$(this).children('.chkBoxWrap').children("input:checkbox[name='purposeChk']").prop("checked", false);
-			// 		$(this).removeClass('active');
-			// 	}
-			// });
+			}
+			function purposeChk03(obj,chk){
+				eChk = document.getElementsByName(obj);
 
+				for(var i=0;i<eChk.length;i++){
+					var jjj=i+1
+					if(eChk[i].checked){
+						eChk[i].checked = true;
+						$('.'+obj+' li:nth-child('+jjj+')').addClass('active');
+					}else{
+						eChk[i].checked = false;
+						$('.'+obj+' li:nth-child('+jjj+')').removeClass('active');
+					}
+				}
+
+			}
 
 			function c_box3(obj,chk){
 				eChk = document.getElementsByName(obj);

@@ -1,0 +1,83 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Custom fonts for this template-->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<!-- Custom styles for this template-->
+
+		<!--고객문진스타일 css-->
+		<link href="css/reset.css?v=2" rel="stylesheet">
+		<link href="css/new_style.css?v=3" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+		<link rel="stylesheet" type="text/css" href="/module/popupoverlay/popupoverlay.css">
+			<script src="module/popupoverlay/jquery.popupoverlay.js"></script>
+
+		<!-- jquery-->
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+
+
+		<script src="module/js/jquery.placeholder.js"></script><!-- placeholder 태그처리용 -->
+		</head>
+		<title>Junchart</title>
+	</head>
+	<body>
+		<script>
+				$(function(){
+					var stickyOffset = $('.header').offset().top;
+
+					$(window).scroll(function(){
+						var sticky = $('.header'),
+						scroll = $(window).scrollTop();
+
+						if (scroll > stickyOffset){
+						$(".header").css("box-shadow","0px 10px 10px -10px rgba(0,0,0,0.5)");
+						
+						}else{
+
+						$(".header").css("box-shadow","none");
+						}
+					});
+				});
+			</script>
+
+
+
+			<div class="interview_wrap">
+				<div class="header">
+					<div class="header_top">
+						<img src="images/common/logo_top.svg">
+					</div>
+				</div>
+
+				<div class="interview_box">
+
+					<div class="progress_wrap"><!--진행율-->
+						<div class="progress col">
+							<div class="progress_bar w5"></div>
+						</div>
+						<div class="col">진행률 <span>5</span>%</div>
+					</div>
+
+                    <h2 class="m-36 m_28 m_60" style="font-size: 1.75rem;">프로토콜명</h2>
+
+				
+
+				</div>
+                <a href="" class="start_btn">
+                    <span>$내원목적</span>
+                    문진 시작하기
+                </a>
+			</div>
+
+	</body>
+</html>
