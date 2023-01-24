@@ -323,6 +323,3 @@
 .modal_filter{position:fixed; top:0; right:-100%; width: 100%; height: 100%; background: rgba(0,0,0,.6); opacity: 0; transition: opacity .4s; z-index: 9999;}
 .modal_filter.open{opacity: 1; right:0;}
 .modal .agree_cont {padding:20px; box-sizing:border-box;}
-
-
-/*회원가입 */

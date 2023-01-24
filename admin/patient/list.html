@@ -29,52 +29,66 @@
 
 			<style>
 				/*sidemenu css*/
-					#wholeWrap .sidemenu .sideList li:nth-child(1) a {
+					.wholeWrap .sidemenu .sideList li:nth-child(1) a {
 						background-color: #054391;
 						color: #fff;
 					}
-					#wholeWrap .sidemenu .sideList li:nth-child(1) .sideIcon {
+					.wholeWrap.active .sidemenu .sideList li:nth-child(3) a {
+						background-color: transparent;
+					}
+					.wholeWrap .sidemenu .sideList li:nth-child(1) .sideIcon {
 						background-image: url("../img/icon01_on.png");
+						background-color: #054391;
+						color: #fff;
 					}
 			</style>
-			<div id="wholeWrap">
+			<div id="wholeWrap" class="wholeWrap">
 
 				<!---사이드메뉴 바--->
 				<div class="sidemenu">
-					<h1 class="logo">
-						<a href="../patient/list.html" title="logo">
-							<img src="../img/logo.svg" alt="">
-						</a>
-					</h1>
+					<div class="dp_f dp_c p_r sidemenu_top">
+						<h1 class="logo">
+							<a href="../patient/list.html" title="logo">
+								<img src="../img/logo.svg" alt="">
+							</a>
+						</h1>
+						<span class="lnr lnr-menu"></span>
+					</div>
 					<ul class="sideList">
 						<li>
 							<a class="dp_f dp_c" href="../patient/list.html" title="환자관리">
 								<span class="sideIcon"><!--아이콘 background 처리--></span>
-								<span>환자관리</span>
+								<span class="sideTxt">환자관리</span>
 							</a>
 						</li>
 						<li>
 							<a class="dp_f dp_c" href="../careList/list.html" title="진료관리">
 								<span class="sideIcon"><!--아이콘 background 처리--></span>
-								<span>진료관리</span>
+								<span class="sideTxt">진료관리</span>
 							</a>
 						</li>
 						<li>
 							<a class="dp_f dp_c" href="../medicine/list.html" title="처방관리">
 								<span class="sideIcon"><!--아이콘 background 처리--></span>
-								<span>처방관리</span>
+								<span class="sideTxt">처방관리</span>
 							</a>
 						</li>
 						<li>
 							<a class="dp_f dp_c" href="../munjinSet/list.html" title="문진관리">
 								<span class="sideIcon"><!--아이콘 background 처리--></span>
-								<span>문진관리</span>
+								<span class="sideTxt">문진관리</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a class="dp_f dp_c" href="../showGraph/list.html" title="통계">
-								<span class="sideIcon"><!--아이콘 background 처리--></span>
+								<span class="sideIcon"></span>
 								<span>통계</span>
+							</a>
+						</li> -->
+						<li>
+							<a class="dp_f dp_c" href="" title="내원목적관리">
+								<span class="sideIcon"><!--아이콘 background 처리--></span>
+								<span class="sideTxt">내원목적관리</span>
 							</a>
 						</li>
 						<li>
@@ -83,6 +97,22 @@
 							</a>
 						</li>
 					</ul>
+					<script>
+						var toggleside = true;
+						$(".sidemenu_top .lnr-menu").on("click",function(){
+
+							if(toggleside){
+								$(".wholeWrap").addClass("active");
+
+								toggleside= false;
+							} else {
+								$(".wholeWrap").removeClass("active");
+
+								toggleside= true;
+							}
+
+						});
+					</script>
 				</div>
 				<div class="rightCont">
 					<!--topNav 바---->
