@@ -562,17 +562,24 @@
 	width: 100%;
 }
 
-#wholeWrap .chartBotBtn .chartbotC {
+.wholeWrap .chartBotBtn .chartbotC {
 	margin-left: 240px;
 	width: calc(100% - 240px);
 	height: 100%;
+	transition: all 0.4s ease;
+}
+
+.wholeWrap.active .chartBotBtn .chartbotC {
+	margin-left: 70px;
+	width: calc(100% - 70px);
 }
 
 #wholeWrap .chartBotBtn .chartbotIne {
 	margin: 0 auto;
-	width: 94%;
+	width: 97%;
 	height: 100%;
 }
+
 
 #wholeWrap .chartBotBtn a {
 	margin: 0 10px;
@@ -694,10 +701,36 @@
 #wholeWrap .perTabWrap .perTab {
 	display: none;
 	margin-top: 30px;
-	background-color: #f7f7f7;
-	border-radius: 10px;
 	width: 100%;
 }
+
+#wholeWrap .perTabWrap .perTab .tab_left_cont {
+	background-color: #f7f7f7;
+	border-radius: 4px;
+	padding: 40px; 
+	box-sizing: border-box;
+	width: 78%;
+}
+.perTab .fixed_sidemenu {
+	width: 312px;
+	border: 1px solid #efefef;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background-color: #fff;
+	transition: all 0.4s ease;
+}
+.perTab .fixed_sidemenu.on {
+	position: fixed;
+	top: 50px;
+	right: 46px;
+}
+#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll {
+    overflow-y: auto;
+    max-height: 600px;
+	padding: 0 15px 50px; 
+}
+#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
+#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar-thumb {background-color: #888; border-radius: 3px;}
 
 #wholeWrap .perTabBtn02 li {
 	border: 1px solid #DDDDDD;
@@ -1048,6 +1081,29 @@ html .ui-button.ui-state-disabled:active {
 	padding: 20px 20px 20px 0;
 }
 
+.usefulbtnWrap label {
+	margin-right: 15px;
+	width: 200px;
+	padding: 10px 0;
+	border-radius: 4px;;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: all .2s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.usefulbtnWrap label input {
+	display: none;
+}
+
+.usefulbtnWrap label.active {
+	background-color: #054391;
+    color: #fff;
+}
+
 #wholeWrap .purposeCheck {
 	padding: 0 20px;
 	width: 100%;
@@ -1196,7 +1252,8 @@ html .ui-button.ui-state-disabled:active {
 	margin: 0 10px;
 	border-radius: 4px;
 	padding: 5px;
-	width: 360px;
+	height: 30px;
+	box-sizing: border-box;
 }
 
 #wholeWrap .degreeCirWrap .cirsWrap li {
@@ -1212,8 +1269,11 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .degreeTxt {
-	width: 68px;
 	font-size: 14px;
+}
+
+#wholeWrap .degreeCirWrap {
+	width: 100%;
 }
 
 #wholeWrap .degreeSel {
@@ -1245,8 +1305,10 @@ html .ui-button.ui-state-disabled:active {
 .radioWrap label input {display: none;}
 .radioWrap label.active {background-color:#054391;color: #fff;}
 .radioWrap label:last-child {border-right: none;}
+.checkWrap .checkBox {margin: 0 7px;}
+.checkWrap {margin-left: 10px;}
 
-#addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff;}
+#addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff; font-size: 14px;}
 #tblAdd {margin-top: 20px; width: 100%;}
 #tblAdd tr {border: 1px solid #eee;}
 #tblAdd tr th, 
@@ -1255,7 +1317,7 @@ html .ui-button.ui-state-disabled:active {
 	border-right: 1px solid #eee;
     text-align: center;
     padding-left: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #tblAdd tr th {
@@ -1272,13 +1334,13 @@ html .ui-button.ui-state-disabled:active {
 	position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
+    right: 7px;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     color: #fff;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -1431,7 +1493,9 @@ html .ui-button.ui-state-disabled:active {
 	background-image: url("../img/icon_star_on.png");
 }
 
-#wholeWrap .emotionWrap .e_box li {
+#wholeWrap .emotionWrap .e_box > li {
+	width: 31.333%; 
+	box-sizing: border-box;
 	padding: 15px 0 15px 20px ;
 	border-bottom: 1px solid #ddd;
 }
@@ -1453,6 +1517,7 @@ html .ui-button.ui-state-disabled:active {
 
 #wholeWrap .p_tabTitBox {
 	padding: 20px;
+	box-sizing: border-box;
 	border-radius: 4px;
 	background-color: #e7e7e7;
 }
