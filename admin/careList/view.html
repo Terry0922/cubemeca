@@ -106,12 +106,10 @@
 
 						if(toggleside){
 							$(".wholeWrap").addClass("active");
-							$(".perTab .fixed_sidemenu").css({'width':'350px'});
 
 							toggleside= false;
 						} else {
 							$(".wholeWrap").removeClass("active");
-							$(".perTab .fixed_sidemenu").css({'width':'312px'});
 							toggleside= true;
 						}
 
@@ -312,11 +310,11 @@
 										<p class="symptom_tit m_10 bold2">사용여부</p>
 										<div class="usefulbtnWrap dp_f dp_c m_40">
 											<label for="pur_box1_1">
-												<input type="radio" name="pur_box1" id="pur_box1_1" onclick="pur_box1(this.name,1);">
+												<input type="radio" name="pur_box1" id="pur_box1_1" onclick="pur_box1(this.name,0);">
 												사용
 											</label>
 											<label for="pur_box1_2">
-												<input type="radio" name="pur_box1" id="pur_box1_2" onclick="pur_box1(this.name,2);">
+												<input type="radio" name="pur_box1" id="pur_box1_2" onclick="pur_box1(this.name,1);">
 												미사용
 											</label>
 										</div>
@@ -327,6 +325,23 @@
 									</div>
 								</div>
 							</div>
+							<script>
+								function pur_box1(obj,chk){
+									eChk = document.getElementsByName(obj);
+
+									for(var i=0;i<eChk.length;i++){
+										var k=i+1
+										if(i == chk){
+											eChk[i].checked = true;
+											$('#pur_box1_'+k).parent().addClass('active');
+										}else{
+											eChk[i].checked = false;
+											$('#pur_box1_'+k).parent().removeClass('active');
+										}
+									}
+
+								}
+							</script>
 
 							<script>
 								$(function(){
@@ -354,29 +369,13 @@
 										$(".popUpwrap.purposePop").stop().fadeIn();
 									});
 
-									function pur_box1(obj,chk){
-										eChk = document.getElementsByName(obj);
-
-										for(var i=0;i<eChk.length;i++){
-											var k=i+1
-											if(i == chk){
-												eChk[i].checked = true;
-												$('#pur_box1_'+k).parent().addClass('active');
-											}else{
-												eChk[i].checked = false;
-												$('#pur_box1_'+k).parent().removeClass('active');
-											}
-										}
-
-									}
 								});
 							</script>
-
-							<div class="perTabWrap">
-								<!----진료 탭 내용----->
-								<div class="perTab">
-									<div class="dp_sb">
-										<div class="tab_left_cont">
+							<div class="dp_sb">
+								<div class="tab_left_cont">
+									<div class="perTabWrap">
+										<!----진료 탭 내용----->
+										<div class="perTab">
 											<p class="anjinTit">체형</p>
 										
 											<ul class="bmiList dp_sb m-20">
@@ -452,13 +451,13 @@
 																<div class="degreeTxt txt-r">짙은편</div>
 																<div class="degreeCirWrap">
 																	<ul class="cirsWrap dp_sb dp_c">
-																		<li><a href="" title="매우"></a></li>
-																		<li><a href="" title="그렇다"></a></li>
-																		<li><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
 																		<li style="background-color: transparent; cursor:auto;"></li>
-																		<li><a href="" title="약간"></a></li>
-																		<li><a href="" title="그렇다"></a></li>
-																		<li><a href="" title="매우"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
 																	</ul>
 																</div>
 																<div class="degreeTxt">옅은편</div>
@@ -481,7 +480,7 @@
 																</div>
 															</div>
 															<div class="degreeSel dp_f dp_c m_100">
-																<div class="degreeTxt txt-r">기타(선택)</div>
+																<div class="degreeTxt txt-l">기타(다중선택)</div>
 																<div class="checkWrap dp_f dp_c">
 																	<div class="dp_f dp_c checkBox">
 																		<input type="checkbox" name="a_box2" id="a_box2_1" style="margin-right: 5px;">
@@ -504,13 +503,13 @@
 																<div class="degreeTxt txt-r">양적</div>
 																<div class="degreeCirWrap">
 																	<ul class="cirsWrap dp_sb dp_c">
-																		<li><a href="" title="매우"></a></li>
-																		<li><a href="" title="그렇다"></a></li>
-																		<li><a href="" title="약간"></a></li>
-																		<li style="width: 20px; height: 20px;"><a href="" title="중간"></a></li>
-																		<li><a href="" title="약간"></a></li>
-																		<li><a href="" title="그렇다"></a></li>
-																		<li><a href="" title="매우"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="중간" style="width: 20px; height: 20px;"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
 																	</ul>
 																</div>
 																<div class="degreeTxt">음적</div>
@@ -519,8 +518,9 @@
 													</div>
 
 													<script>
-														$(".cirsWrap > li").click(function(){
-										
+														$(".cirsWrap > li").click(function(event){
+															event.preventDefault();
+
 															$(this).siblings("li").removeClass("on");		
 															$(this).addClass("on");
 										
@@ -741,9 +741,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">상완 이두근 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="01" data-cid="286"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="01" data-cid="287"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="01" data-cid="288"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="01" data-cid="286"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="01" data-cid="287"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="01" data-cid="288"></span>
 																	</div>
 																</div>
 															</li>
@@ -751,9 +751,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">상완 삼두근 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="02" data-cid="289"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="02" data-cid="290"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="02" data-cid="291"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="02" data-cid="289"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="02" data-cid="290"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="02" data-cid="291"></span>
 																	</div>
 																</div>
 															</li>
@@ -761,9 +761,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">심하 좁은부위 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="03" data-cid="292"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="03" data-cid="293"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="03" data-cid="294"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="03" data-cid="292"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="03" data-cid="293"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="03" data-cid="294"></span>
 																	</div>
 																</div>
 															</li>
@@ -771,9 +771,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">심하 넓은부위 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="04" data-cid="295"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="04" data-cid="296"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="04" data-cid="297"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="04" data-cid="295"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="04" data-cid="296"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="04" data-cid="297"></span>
 																	</div>
 																</div>
 															</li>
@@ -781,9 +781,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">우 협하 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="05" data-cid="298"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="05" data-cid="299"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="05" data-cid="300"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="05" data-cid="298"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="05" data-cid="299"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="05" data-cid="300"></span>
 																	</div>
 																</div>
 															</li>
@@ -791,9 +791,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">좌 협하 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="06" data-cid="301"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="06" data-cid="302"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="06" data-cid="303"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="06" data-cid="301"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="06" data-cid="302"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="06" data-cid="303"></span>
 																	</div>
 																</div>
 															</li>
@@ -801,9 +801,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">늑골들림</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="07" data-cid="304"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="07" data-cid="305"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="07" data-cid="306"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="07" data-cid="304"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="07" data-cid="305"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="07" data-cid="306"></span>
 																	</div>
 																</div>
 															</li>
@@ -811,9 +811,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">복직근 경결 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="08" data-cid="307"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="08" data-cid="308"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="08" data-cid="309"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="08" data-cid="307"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="08" data-cid="308"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="08" data-cid="309"></span>
 																	</div>
 																</div>
 															</li>
@@ -821,9 +821,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">우 제하 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="09" data-cid="310"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="09" data-cid="311"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="09" data-cid="312"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="09" data-cid="310"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="09" data-cid="311"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="09" data-cid="312"></span>
 																	</div>
 																</div>
 															</li>
@@ -831,9 +831,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">좌 제하 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="10" data-cid="313"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="10" data-cid="314"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="10" data-cid="315"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="10" data-cid="313"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="10" data-cid="314"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="10" data-cid="315"></span>
 																	</div>
 																</div>
 															</li>
@@ -841,9 +841,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">복피 찰과 발적</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="11" data-cid="316"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="11" data-cid="317"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="11" data-cid="318"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="11" data-cid="316"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="11" data-cid="317"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="11" data-cid="318"></span>
 																	</div>
 																</div>
 															</li>
@@ -851,9 +851,9 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">비복근 압통</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="12" data-cid="319"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="12" data-cid="320"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="12" data-cid="321"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="12" data-cid="319"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="12" data-cid="320"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="12" data-cid="321"></span>
 																	</div>
 																</div>
 															</li>
@@ -861,89 +861,87 @@
 																<div class="check_star_unit dp_sb">
 																	<span class="check_star_name">경골상 함요 부종</span>
 																	<div class="amountStar treat_detail_anjin_list_check anjin_is_star_0 dp_cc" style="display: flex; width: auto;">
-																		<a class="check_star check_star1" href="javascript:void(0)" data-seq="1" data-qid="13" data-cid="322"></a>
-																		<a class="check_star check_star2" href="javascript:void(0)" data-seq="2" data-qid="13" data-cid="323"></a>
-																		<a class="check_star check_star3" href="javascript:void(0)" data-seq="3" data-qid="13" data-cid="324"></a>
+																		<span class="check_star check_star1" data-seq="1" data-qid="13" data-cid="322"></span>
+																		<span class="check_star check_star2" data-seq="2" data-qid="13" data-cid="323"></span>
+																		<span class="check_star check_star3" data-seq="3" data-qid="13" data-cid="324"></span>
 																	</div>
 																</div>
 															</li>			
 														</ul>
 													</div>
+
 													<script>
-														$(document).ready(function(){
-															var body=$('body');
-															var interviewIDX='703';
-															var customerCategory='남자';
-															console.log(customerCategory);
-															body.off('click','.check_star')
-															body.on('click','.check_star',function(){
-																// pLoadingOn();
-																var thisBtn=$(this);
-																var thisSeq=thisBtn.attr('data-seq');
-																var tmpQIDX=thisBtn.attr('data-qid');
-																var tmpParentBox=thisBtn.parent('.treat_detail_anjin_list_check');
-																if(thisBtn.hasClass('check_star_active')){//현재 엑티브가 있음 삭제하고 다운그레이드
+														
+														//별표 / 인체부위도 함수
+														$(".treat_detail_anjin_list_box > li").each(function(){
+															let count = 0;
+															$(this).on("click",function(){
 
-
-																	thisBtn.removeClass('check_star_active');
-																	$('.check_body_part_q'+tmpQIDX).removeClass('check_body_part_active_'+thisSeq);
-																	tmpParentBox.removeClass('anjin_is_star_'+thisSeq);
-																	if(thisSeq=='3'){
-																		tmpParentBox.find('.check_star2').trigger('click');
-																	}else if(thisSeq=='2'){
-																		tmpParentBox.find('.check_star1').trigger('click');
-																	}
-																}else{//엑티브가 없음
-																	if(tmpParentBox.find('.check_star_active').length>0){
-																		var tmp2Btn=tmpParentBox.find('.check_star_active');
-																		var tmp2Seq=tmp2Btn.attr('data-seq');
-																		var tmp2QIDX=tmp2Btn.attr('data-qid');
-																		var tmp2ParentBox=tmp2Btn.parent('.treat_detail_anjin_list_check');
-
-																		tmp2Btn.removeClass('check_star_active');
-																		$('.check_body_part_q'+tmp2QIDX).removeClass('check_body_part_active_'+tmp2Seq);
-																		tmp2ParentBox.removeClass('anjin_is_star_'+tmp2Seq);
-																	}
-
-																	thisBtn.addClass('check_star_active');
-																	$('.check_body_part_q'+tmpQIDX).addClass('check_body_part_active_'+thisSeq);
-																	tmpParentBox.addClass('anjin_is_star_'+thisSeq);
-																}
-															});
-														});
-													</script>
-													<script>
-														$(function(){
-															const count = 0;
-
-															$(".treat_detail_anjin_body_part > li").on("click",function(){
 																count++;
-																//조건문
-																if(count == 1 ){
-																	$(this).addClass("check_body_part_active_1");
+
+																console.log(count);
+
+																const thisSeq1 = $(this).children().children().children(".check_star1").attr('data-seq');
+																const thisSeq2 = $(this).children().children().children(".check_star2").attr('data-seq');
+																const thisSeq3 = $(this).children().children().children(".check_star3").attr('data-seq');
+
+																const tmpQIDX1 = $(this).children().children().children(".check_star1").attr('data-qid');
+																const tmpQIDX2 = $(this).children().children().children(".check_star2").attr('data-qid');
+																const tmpQIDX3 = $(this).children().children().children(".check_star3").attr('data-qid');
+
+																const tmpCheckStar = $(this).children().children().children(".check_star");
+																const tmpSelfBox = $(this).children().children(".treat_detail_anjin_list_check");
+																const tmpParentBox = $(this).children().children(".treat_detail_anjin_list_check");
+
+																if(count == 1){
+																	tmpCheckStar.removeClass("check_star_active");
+																	$(this).children().children().children(".check_star1").addClass("check_star_active");
+																	tmpParentBox.addClass("anjin_is_star_"+thisSeq1);
+
+																	$('.check_body_part_q'+tmpQIDX1).addClass('check_body_part_active_'+thisSeq1);
+																
 																}else if (count == 2) {
-																	$(this).addClass("check_body_part_active_2");
+																	tmpCheckStar.removeClass("check_star_active");
+																	$(this).children().children().children(".check_star2").addClass("check_star_active");
+																	tmpSelfBox.removeClass("anjin_is_star_"+thisSeq1);
+																	tmpParentBox.addClass("anjin_is_star_"+thisSeq2);
+																	
+																	$('.check_body_part_q'+tmpQIDX1).removeClass('check_body_part_active_'+thisSeq1);
+																	$('.check_body_part_q'+tmpQIDX2).addClass('check_body_part_active_'+thisSeq2);
+																
 																}else if (count == 3) {
-																	$(this).addClass("check_body_part_active_3");
-																}           
+																	tmpCheckStar.removeClass("check_star_active");
+																	$(this).children().children().children(".check_star3").addClass("check_star_active");
+																	tmpSelfBox.removeClass("anjin_is_star_"+thisSeq2);
+																	tmpParentBox.addClass("anjin_is_star_"+thisSeq3);
+																	
+																	$('.check_body_part_q'+tmpQIDX2).removeClass('check_body_part_active_'+thisSeq2);
+																	$('.check_body_part_q'+tmpQIDX3).addClass('check_body_part_active_'+thisSeq3);
+																
+																}else{
+																	tmpCheckStar.removeClass("check_star_active");
+																	tmpSelfBox.removeClass("anjin_is_star_"+thisSeq3);
+																	$('.check_body_part_q'+tmpQIDX3).removeClass('check_body_part_active_'+thisSeq3);
+																	
+																	count = 0;
+																} 
 															});
 														});
-													</script>
-													<script>
-															
+
+														//인체부위도 보이기
 														$(".bodyCheckBtn").on("click",function(event){
 															event.preventDefault();
 
 															$("#wholeWrap .treat_detail_anjin_body_pic_box").show();
 														});
 
+														//인체부위도 닫기
 														$(".popClose").on("click",function(event){
 															event.preventDefault();
 															
 															$("#wholeWrap .treat_detail_anjin_body_pic_box").hide();
 														});
 
-														
 														// 외부영역 클릭 시 팝업 닫기
 														$(document).mouseup(function (e){
 															var LayerPopup01 = $("#wholeWrap .treat_detail_anjin_body_pic_box");
@@ -951,6 +949,7 @@
 																LayerPopup01.hide();
 															}
 														});
+														
 														
 													</script>
 										
@@ -1250,7 +1249,7 @@
 													$(".popUpWrap").stop().fadeOut();
 											
 												});
-	
+
 												// 외부영역 클릭 시 팝업 닫기
 												$(document).mouseup(function (e){
 													var LayerPopup02 = $("#wholeWrap .popUpWrap");
@@ -1261,94 +1260,14 @@
 												
 											</script>
 										</div>
-										<div class="tab_right">
-											<div class="fixed_sidemenu">
-												<div class="pin_box_scroll">
-													<p class="anjinTit dp_sb">
-														주증상
-														<span id="addBtnWrap" class="dp_f">
-															<a class="addBtn" href="" title="">CC추가</a>
-														</span>
-													</p>
-													<div class="rowCont">
-														<!---추가되는 table--->
-														<table id="tblAdd" class="tbl">
-															<colgroup>
-																<col width="30%">
-																<col width="70%">
-															</colgroup>
-															<tbody>
-																<tr>
-																	<th class="gry04">CC</th>
-																	<th class="nobr gry04">
-																		내용
-																		<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
-																	</th>
-																</tr>
-																<tr>
-																	<th class="gry04">Check</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">From</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">Progress</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-													<p class="anjinTit dp_sb">
-														진료메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
-													<p class="anjinTit dp_sb">
-														처방메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
-
-													<script>
-														$('#textBox').keyup(function (e) {
-															let content = $(this).val();
-															
-															// 글자수 제한
-															if (content.length > 2000) {
-																// 2000자 부터는 타이핑 되지 않도록
-																$(this).val($(this).val().substring(0, 2000));
-																// 2000자 넘으면 알림창 뜨도록
-																alert('글자수는 2000자까지 입력 가능합니다.');
-															};
-														});
-													</script>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!---처방 탭 내용--->
-								<div class="perTab">
-									<div class="dp_sb">
-										<div class="tab_left_cont">
-											<ul class="dp_f dp_c dp_cc perTabBtn02">
-												<li class="wid50 on"><a class="dp_f dp_c dp_cc wid100" href="" title="">정인적방</a></li>
-												<li class="wid50"><a class="dp_f dp_c dp_cc wid100" href="" title="">프로토콜</a></li>
-											</ul>
-											<div class="s_tabContWrap">
+										<!---처방 탭 내용--->
+										<div class="perTab">
+											<div class="s_tabContWrap dp_sb">
 												<div class="s_tabCont">
+													<div class="s_tab_tit dp_f dp_c">
+														<span class="s_tab_tit_txt">정인적방</span>
+														<a class="verifi_btn" href="" title="검증">검증</a>
+													</div>
 													<div class="prescriptWrap">
 														<div class="p_Cont">
 															<div class="topShowWrap02">
@@ -1376,12 +1295,17 @@
 																						<tr data-pro="1">
 																							<td class="proNm">1</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">반하사심탕</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">반하사심탕</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="1">
@@ -1392,89 +1316,129 @@
 																						<tr data-pro="1">
 																							<td class="proNm">1a</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">소청룡탕</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">소청룡탕</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2a</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3a</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3b</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3c</td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																					</tbody>
@@ -1560,174 +1524,15 @@
 																$(".popUpwrap").stop().fadeOut();
 															});
 															</script>
-
-															<div class="p_contentwrap">
-																<div class="wid100 dp_sb">
-																	<div class="wid49">
-																		<p class="anjinTit dp_f dp_c">약재</p>
-																		<div class="interactBox p-12">
-																			<div class="metiAmt_tit dp_sb m_10">
-																				<div class="dp_f dp_c">
-																					첩당약재량 
-																					<div class="help_wrap">
-																						<div class="excla_mark help_point">
-																							<span>!</span>
-																						</div>
-																						<div class="helpbox" style="display: none;">
-																							<p>첩당약재량 설명입니다.</p>
-																						</div>
-																					</div>
-																				</div>
-																				<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
-																					<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
-																					<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1" data-dp='1'>x 1.0</a>
-																					<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
-																					<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
-																					<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
-																					<span>배</span>
-																				</div>
-																			</div>
-																			<div id="totalAmtTbl01" class="tableWrap totalAmtTbl">
-																				<table>
-																					<tbody>
-																						<tr class="gry04">
-																							<th></th>
-																							<th>약재명</th>
-																							<th>첩당사용량</th>
-																							<th></th>
-																						</tr>
-																						<tr>
-																							<td>1</td>
-																							<td>인삼(人蔘)</td>
-																							<td>
-																								<div class="upDown_box dp_f dp_c dp_cc">
-																									<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																									<span class="numberUpdown" style="width: 16px;">0</span>
-																									<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																								</div>
-																							</td>
-																							<td>
-																								<a class="delBtn" href="" title="삭제">X</a>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>2</td>
-																							<td>인삼(人蔘)</td>
-																							<td>
-																								<div class="upDown_box dp_f dp_c dp_cc">
-																									<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																									<span class="numberUpdown" style="width: 16px;">0</span>
-																									<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																								</div>
-																							</td>
-																							<td>
-																								<a class="delBtn" href="" title="삭제">X</a>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>3</td>
-																							<td>인삼(人蔘)</td>
-																							<td>
-																								<div class="upDown_box dp_f dp_c dp_cc">
-																									<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																									<span class="numberUpdown" style="width: 16px;">0</span>
-																									<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																								</div>
-																							</td>
-																							<td>
-																								<a class="delBtn" href="" title="삭제">X</a>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>4</td>
-																							<td>인삼(人蔘)</td>
-																							<td>
-																								<div class="upDown_box dp_f dp_c dp_cc">
-																									<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																									<span class="numberUpdown" style="width: 16px;">0</span>
-																									<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																								</div>
-																							</td>
-																							<td>
-																								<a class="delBtn" href="" title="삭제">X</a>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>5</td>
-																							<td>인삼(人蔘)</td>
-																							<td>
-																								<div class="upDown_box dp_f dp_c dp_cc">
-																									<a class="minus1 c_blue01" href="" title="▼">▼</a>
-																									<span class="numberUpdown" style="width: 16px;">0</span>
-																									<a class="plus1 c_blue01" href="" title="▲">▲</a>
-																								</div>
-																							</td>
-																							<td>
-																								<a class="delBtn" href="" title="삭제">X</a>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td></td>
-																							<td></td>
-																							<td></td>
-																							<td></td>
-																						</tr>
-																						<tr class="blue04">
-																							<td></td>
-																							<td style="font-weight: 700;">총량</td>
-																							<td colspan="2"><span class="red updowntotal">0</span> g</td>
-																						</tr>
-																					</tbody>
-																				</table>
-																			</div>
-
-																		</div>
-																	</div>
-																</div>
-															</div>
-																														
-															<style>
-																/*헬프박스*/
-																.help_point {cursor:help;}
-																.fa-solid {font-size: 16px;}
-																.help_rel_flex {margin-top: 15px; display: flex; position: relative;}
-																.help_point span {margin: 0 !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); color: #fff;}
-																.help_wrap {position: relative; width: 20px; height: 20px;}
-																.help_wrap .helpbox {bottom: 0; left: 40px;}
-																.helpbox {display: none; position: absolute; padding:10px; width: 200px; background-color: #fff; border-radius: 10px; border: 1px solid #8d8d8d; z-index: 99;}
-																.helpbox p {font-size: 14px; line-height: 23px; color: #000;}
-																.helpbox p .tit {font-weight: 700;}
-																.excla_mark {width: 20px; height: 20px; position: relative; border-radius: 50%; background-color: #7e7e7e; margin-left: 10px;}
-															</style>
-															
-															<script>
-																$(function(){
-															
-																	//cursor:help; 내용 열기
-																	$(".help_point").on("mouseenter",function(event){
-															
-																		event.preventDefault();
-															
-																		$(".helpbox").hide();
-																		$(this).siblings(".helpbox").show();
-															
-															
-																	});
-																	//cursor:help; 내용 닫기
-																	$(".help_point").on("mouseleave",function(){
-															
-																		$(".helpbox").hide();
-															
-															
-																	});
-															
-																});
-															</script>
 												
 														</div>
 													</div>
 												</div>
 												<div class="s_tabCont">
+													<div class="s_tab_tit dp_f dp_c">
+														<span class="s_tab_tit_txt">불면증</span>
+														<a class="verifi_btn" href="" title="검증">검증</a>
+													</div>
 													<div class="prescriptWrap">
 														<div class="p_Cont">
 															<div class="topShowWrap02">
@@ -1735,125 +1540,189 @@
 																	<div class="p_meWrap m-20">
 																		<div class="dp_sb dp_c">
 																			<p>총 <span class="red">6</span>건의 검색결과</p>
-																			<div class="search_box">
-																				<input type="text" placeholder="처방명, 약재명 검색" autocomplete="off">
-																				<button>
-																					<img src="../img/search_icon.png">
-																				</button>
-																			</div>
+																			<ul class="kind_filter_btn dp_f dp_c">
+																				<li class="on"><a href="" title="불면증">불면증</a></li>
+																				<li><a href="" title="비만">비만</a></li>
+																				<li><a href="" title="만성기침">만성기침</a></li>
+																				<li><a href="" title="비염">비염</a></li>
+																			</ul>
 																		</div>
+																		<script>
+																			$(".kind_filter_btn li a").on("click",function(event){
+																				event.preventDefault();
+
+																				$(".kind_filter_btn li a").parent().removeClass("on");
+																				$(this).parent().addClass("on");
+																			});
+																		</script>
 																		<div class="interactBox m-20">
 																			<div class="tableWrap">
 																				<table class="plusTr02">
 																					<tbody>
 																						<tr class="gry04">
 																							<th>적합도</th>
+																							<th>카테고리</th>
 																							<th>처방명</th>
 																							<th>처방내용</th>
 																							<th></th>
 																						</tr>
 																						<tr data-pro="1">
 																							<td class="proNm">1</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">반하사심탕</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">반하사심탕</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="1">
 																							<td class="proNm">1a</td>
+																							<td></td>
 																							<td colspan="2">해당하는 처방이 없습니다.</td>
 																							<td></td>
 																						</tr>
 																						<tr data-pro="1">
 																							<td class="proNm">1a</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">소청룡탕</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">소청룡탕</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="2">
 																							<td class="proNm">2a</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3a</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3b</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																						<tr data-pro="3">
 																							<td class="proNm">3c</td>
+																							<td></td>
 																							<td class="txt-l pad20">
-																								<span class="useTi"><span>7</span>+</span>
-																								<a href="" title="">처방명</a>
+																								<div class="dp_f dp_c">
+																									<span class="useTi"><span>7</span>+</span>
+																									<a href="" title="">처방명</a>
+																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
 																							<td>
-																								<a class="choseBtn blue01 " href="" title="">선택</a>
+																								<div class="dp_f dp_c dp_cc">
+																									<a class="choseBtn blue01 " href="" title="">선택</a>
+																									<a class="choseBtn gry05 " href="" title="">검증</a>
+																								</div>
 																							</td>
 																						</tr>
 																					</tbody>
@@ -1964,187 +1833,6 @@
 																});
 															</script>
 
-															<script>
-																//정인적방 복약지시 처방 총량 일분 
-																function tt_date(){
-
-																	var tt_date = $("#tt_date").val();
-																	var tt_date_count = Number($("#tt_date_count").val());
-																	var tt_date_rst = Number($("#tt_date_rst").val());
-
-																	console.log(tt_date_count);
-
-																	var totalpack = tt_date_rst * tt_date_count
-
-
-																		$("#tt_date_rst").val(tt_date);
-																		$("#tt_pack_rst").val(totalpack);
-
-																		return true;
-
-
-																}
-																//프로토콜 복약지시 처방 총량 일분 
-																function tt_date02(){
-
-																	var tt_date02 = $("#tt_date02").val();
-																	var tt_date_count02 = Number($("#tt_date_count02").val());
-																	var tt_date_rst02 = Number($("#tt_date_rst02").val());
-
-																	var totalpack02 = tt_date_rst02 * tt_date_count02
-
-																	$("#tt_date_rst02").val(tt_date02);
-																	$("#tt_pack_rst02").val(totalpack02);
-
-																	return true;
-
-																}
-																//정인적방 복약지시 처방 총량 첩 
-																function tt_amt01(){
-
-																	var tt_amt01 = $("#tt_amt01").val();
-
-
-																	$("#tt_amt_rst01_1").val(tt_amt01);
-																	$("#tt_amt_rst01_2").val(tt_amt01);
-
-																	return true;
-
-																}
-																//프로토콜 복약지시 처방 총량 첩 
-																function tt_amt02(){
-
-																	var tt_amt02 = $("#tt_amt02").val();
-
-																	$("#tt_amt_rst02_1").val(tt_amt02);
-																	$("#tt_amt_rst02_2").val(tt_amt02);
-
-																	return true;
-																}
-
-
-
-																//처방 탭 약재 첩당사용량 화살표 +1 -1
-																$('.minus1').click(function(e){
-																	e.preventDefault();
-
-																	var num = $(this).siblings('.numberUpdown').text();
-																	num --;
-																	if (num < 0) {
-																		alert('더이상 줄일수 없습니다.');
-																		num = 0;
-																	}
-																	$(this).siblings('.numberUpdown').text(num);
-
-																	totalFn();
-																});
-																
-																$('.plus1').click(function(e){
-																	e.preventDefault();
-
-																	var num = $(this).siblings('.numberUpdown').text();
-																	num ++;
-
-																	$(this).siblings('.numberUpdown').text(num);
-																	
-																	totalFn();
-																});
-
-																//정인적방 개별 배량 계산
-																$('#totalAmtBtn01 .muti05').click(function(e){
-																	e.preventDefault();
-
-																	dp1 = $(this).attr('title');
-																	dp2 = $(this).data('dp');
-
-																	$("#totalAmtBtn01 .muti05").removeClass("on");
-																	$(this).addClass("on");
-
-																	$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = tmp * dp1;
-
-																		$(this).text(tmp2);
-
-																	});
-																	totalFn();
-
-																});
-																//프로토콜  개별 배량 계산
-																$('#totalAmtBtn02 .muti05').click(function(e){
-																	e.preventDefault();
-
-																	dp1 = $(this).attr('title');
-																	dp2 = $(this).data('dp');
-
-																	$("#totalAmtBtn02 .muti05").removeClass("on");
-																	$(this).addClass("on");
-
-																	$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
-																		tmp = Number($(this).text());
-																		tmp2 = tmp * dp2;
-
-																		$(this).text(tmp2);
-
-																	});
-																	totalFn();
-
-																});
-
-																
-																//처방 탭 약재 총량 , 배수 버튼
-																function totalFn(){
-																	var totalWrap01 = $("#totalAmtTbl01 tr td") //정인적방
-																	var totalWrap02 = $("#totalAmtTbl02 tr td") //프로토콜
-																	
-																	let total01 = 0; //정인적방
-																	let total02 = 0; //프로토콜
-
-																	//정인적방
-																	totalWrap01.find(".numberUpdown").each(function(){
-																		total01 += Number($(this).text());
-																	});
-
-																	//프로토콜
-																	totalWrap02.find(".numberUpdown").each(function(){
-																		total02 += Number($(this).text());
-																	});
-																	$("#totalAmtTbl01 .updowntotal").text(total01); //정인적방
-																	$("#totalAmtTbl02 .updowntotal").text(total02); //프로토콜
-																	
-																	$("#totalgram01_1").val(total01); //정인적방
-																	$("#totalgram01_2").val(total01); //정인적방
-
-																	$("#totalgram02_1").val(total02); //프로토콜
-																	$("#totalgram02_2").val(total02); //프로토
-																};
-
-																//약재 table tr 삭제
-																//정인적방
-																$('#totalAmtTbl01 table tr td .delBtn').click(function(e){
-																	e.preventDefault();
-																	$(this).parent().parent().remove();
-																	let totalgram01 = Number($("#totalAmtTbl01 .updowntotal").text());
-																	let minusAmt01 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
-																	let totalgcal01 = totalgram01 - minusAmt01;
-
-																	$("#totalAmtTbl01 .updowntotal").text(totalgcal01);
-
-
-																});
-
-																//프로토콜
-																$('#totalAmtTbl02 table tr td .delBtn').click(function(e){
-																	e.preventDefault();
-																	$(this).parent().parent().remove();
-																	let totalgram02 = Number($("#totalAmtTbl02 .updowntotal").text());
-																	let minusAmt02 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
-																	let totalgcal02 = totalgram02 - minusAmt02;
-
-																	$("#totalAmtTbl02 .updowntotal").text(totalgcal02);
-																});
-																
-															</script>
 
 															<!-- <script>
 																														$(".amountStar > a").on("click",function(event){
@@ -2175,90 +1863,359 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="tab_right">
-											<div class="fixed_sidemenu">
-												<div class="pin_box_scroll">
-													<p class="anjinTit dp_sb">
-														주증상
-														<span id="addBtnWrap" class="dp_f">
-															<a class="addBtn" href="" title="">CC추가</a>
-														</span>
-													</p>
-													<div class="rowCont">
-														<!---추가되는 table--->
-														<table id="tblAdd" class="tbl">
+											
+											<div class="prescriptWrap">
+												<p class="anjinTit dp_f dp_c">약재</p>
+												<div class="interactBox p-12">
+													<div class="metiAmt_tit dp_sb m_10">
+														<div class="dp_f dp_c">
+															첩당약재량 
+															<div class="help_wrap">
+																<div class="excla_mark help_point">
+																	<span>!</span>
+																</div>
+																<div class="helpbox" style="display: none;">
+																	<p>첩당약재량 설명입니다.</p>
+																</div>
+															</div>
+														</div>
+														<div id="totalAmtBtn01" class="multiBtn dp_f dp_c dp_cc">
+															<a class="multiBtn_s muti05 blue05 c_w" href="" title="0.5" data-dp='0.5'>x 0.5</a>
+															<a class="multiBtn_s muti05 blue05 c_w on" href="" title="1" data-dp='1'>x 1.0</a>
+															<a class="multiBtn_s muti05 blue05 c_w" href="" title="1.5" data-dp='1.5'>x 1.5</a>
+															<a class="multiBtn_s muti05 blue05 c_w" href="" title="2" data-dp='2'>x 2</a>
+															<a class="multiBtn_s muti05 blue05 c_w" href="" title="3" data-dp='3'>x 3</a>
+															<span>배</span>
+														</div>
+													</div>
+													<div id="totalAmtTbl01" class="tableWrap totalAmtTbl">
+														<table>
 															<colgroup>
-																<col width="30%">
-																<col width="70%">
+																<col style="width: 5%;">
+																<col style="width: 30%;">
+																<col style="width: 60%;">
+																<col style="width: 5%;">
 															</colgroup>
 															<tbody>
-																<tr>
-																	<th class="gry04">CC</th>
-																	<th class="nobr gry04">
-																		내용
-																		<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
-																	</th>
+																<tr class="gry04">
+																	<th></th>
+																	<th>약재명</th>
+																	<th>첩당사용량</th>
+																	<th></th>
 																</tr>
 																<tr>
-																	<th class="gry04">Check</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
+																	<td>1</td>
+																	<td>인삼(人蔘)</td>
+																	<td>
+																		<div class="upDown_box dp_f dp_c dp_cc">
+																			<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																			<span class="numberUpdown" style="width: 16px;">0</span>
+																			<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																		</div>
+																	</td>
+																	<td>
+																		<a class="delBtn" href="" title="삭제">X</a>
+																	</td>
 																</tr>
 																<tr>
-																	<th class="gry04">From</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
+																	<td>2</td>
+																	<td>인삼(人蔘)</td>
+																	<td>
+																		<div class="upDown_box dp_f dp_c dp_cc">
+																			<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																			<span class="numberUpdown" style="width: 16px;">0</span>
+																			<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																		</div>
+																	</td>
+																	<td>
+																		<a class="delBtn" href="" title="삭제">X</a>
+																	</td>
 																</tr>
 																<tr>
-																	<th class="gry04">Progress</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
+																	<td>3</td>
+																	<td>인삼(人蔘)</td>
+																	<td>
+																		<div class="upDown_box dp_f dp_c dp_cc">
+																			<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																			<span class="numberUpdown" style="width: 16px;">0</span>
+																			<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																		</div>
+																	</td>
+																	<td>
+																		<a class="delBtn" href="" title="삭제">X</a>
+																	</td>
 																</tr>
 																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
+																	<td>4</td>
+																	<td>인삼(人蔘)</td>
+																	<td>
+																		<div class="upDown_box dp_f dp_c dp_cc">
+																			<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																			<span class="numberUpdown" style="width: 16px;">0</span>
+																			<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																		</div>
+																	</td>
+																	<td>
+																		<a class="delBtn" href="" title="삭제">X</a>
+																	</td>
 																</tr>
 																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
+																	<td>5</td>
+																	<td>인삼(人蔘)</td>
+																	<td>
+																		<div class="upDown_box dp_f dp_c dp_cc">
+																			<a class="minus1 c_blue01" href="" title="▼">▼</a>
+																			<span class="numberUpdown" style="width: 16px;">0</span>
+																			<a class="plus1 c_blue01" href="" title="▲">▲</a>
+																		</div>
+																	</td>
+																	<td>
+																		<a class="delBtn" href="" title="삭제">X</a>
+																	</td>
+																</tr>
+																<tr class="nomore_medi">
+																	<td colspan="4"></td>
+																</tr>
+																<tr class="blue04">
+																	<td></td>
+																	<td style="font-weight: 700;">총량</td>
+																	<td colspan="2"><span class="red updowntotal">0</span> g</td>
 																</tr>
 															</tbody>
 														</table>
 													</div>
-													<p class="anjinTit dp_sb">
-														진료메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
-													<p class="anjinTit dp_sb">
-														처방메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
 
-													<script>
-														$('#textBox').keyup(function (e) {
-															let content = $(this).val();
-															
-															// 글자수 제한
-															if (content.length > 2000) {
-																// 2000자 부터는 타이핑 되지 않도록
-																$(this).val($(this).val().substring(0, 2000));
-																// 2000자 넘으면 알림창 뜨도록
-																alert('글자수는 2000자까지 입력 가능합니다.');
-															};
-														});
-													</script>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-								<!----조제/복약 탭 내용----->
-								<div class="perTab">
-									<div class="dp_sb">
-										<div class="tab_left_cont">
+
+											<script>
+												//정인적방 복약지시 처방 총량 일분 
+												function tt_date(){
+
+													var tt_date = $("#tt_date").val();
+													var tt_date_count = Number($("#tt_date_count").val());
+													var tt_date_rst = Number($("#tt_date_rst").val());
+
+													console.log(tt_date_count);
+
+													var totalpack = tt_date_rst * tt_date_count
+
+
+														$("#tt_date_rst").val(tt_date);
+														$("#tt_pack_rst").val(totalpack);
+
+														return true;
+
+
+												}
+												//프로토콜 복약지시 처방 총량 일분 
+												function tt_date02(){
+
+													var tt_date02 = $("#tt_date02").val();
+													var tt_date_count02 = Number($("#tt_date_count02").val());
+													var tt_date_rst02 = Number($("#tt_date_rst02").val());
+
+													var totalpack02 = tt_date_rst02 * tt_date_count02
+
+													$("#tt_date_rst02").val(tt_date02);
+													$("#tt_pack_rst02").val(totalpack02);
+
+													return true;
+
+												}
+												//정인적방 복약지시 처방 총량 첩 
+												function tt_amt01(){
+
+													var tt_amt01 = $("#tt_amt01").val();
+
+
+													$("#tt_amt_rst01_1").val(tt_amt01);
+													$("#tt_amt_rst01_2").val(tt_amt01);
+
+													return true;
+
+												}
+												//프로토콜 복약지시 처방 총량 첩 
+												function tt_amt02(){
+
+													var tt_amt02 = $("#tt_amt02").val();
+
+													$("#tt_amt_rst02_1").val(tt_amt02);
+													$("#tt_amt_rst02_2").val(tt_amt02);
+
+													return true;
+												}
+
+
+
+												//처방 탭 약재 첩당사용량 화살표 +1 -1
+												$('.minus1').click(function(e){
+													e.preventDefault();
+
+													var num = $(this).siblings('.numberUpdown').text();
+													num --;
+													if (num < 0) {
+														alert('더이상 줄일수 없습니다.');
+														num = 0;
+													}
+													$(this).siblings('.numberUpdown').text(num);
+
+													totalFn();
+												});
+												
+												$('.plus1').click(function(e){
+													e.preventDefault();
+
+													var num = $(this).siblings('.numberUpdown').text();
+													num ++;
+
+													$(this).siblings('.numberUpdown').text(num);
+													
+													totalFn();
+												});
+
+												//정인적방 개별 배량 계산
+												$('#totalAmtBtn01 .muti05').click(function(e){
+													e.preventDefault();
+
+													dp1 = $(this).attr('title');
+													dp2 = $(this).data('dp');
+
+													$("#totalAmtBtn01 .muti05").removeClass("on");
+													$(this).addClass("on");
+
+													$("#totalAmtTbl01 tr td .numberUpdown").each(function(){
+														tmp = Number($(this).text());
+														tmp2 = tmp * dp1;
+
+														$(this).text(tmp2);
+
+													});
+													totalFn();
+
+												});
+												//프로토콜  개별 배량 계산
+												$('#totalAmtBtn02 .muti05').click(function(e){
+													e.preventDefault();
+
+													dp1 = $(this).attr('title');
+													dp2 = $(this).data('dp');
+
+													$("#totalAmtBtn02 .muti05").removeClass("on");
+													$(this).addClass("on");
+
+													$("#totalAmtTbl02 tr td .numberUpdown").each(function(){
+														tmp = Number($(this).text());
+														tmp2 = tmp * dp2;
+
+														$(this).text(tmp2);
+
+													});
+													totalFn();
+
+												});
+
+												
+												//처방 탭 약재 총량 , 배수 버튼
+												function totalFn(){
+													var totalWrap01 = $("#totalAmtTbl01 tr td") //정인적방
+													var totalWrap02 = $("#totalAmtTbl02 tr td") //프로토콜
+													
+													let total01 = 0; //정인적방
+													let total02 = 0; //프로토콜
+
+													//정인적방
+													totalWrap01.find(".numberUpdown").each(function(){
+														total01 += Number($(this).text());
+													});
+
+													//프로토콜
+													totalWrap02.find(".numberUpdown").each(function(){
+														total02 += Number($(this).text());
+													});
+													$("#totalAmtTbl01 .updowntotal").text(total01); //정인적방
+													$("#totalAmtTbl02 .updowntotal").text(total02); //프로토콜
+													
+													$("#totalgram01_1").val(total01); //정인적방
+													$("#totalgram01_2").val(total01); //정인적방
+
+													$("#totalgram02_1").val(total02); //프로토콜
+													$("#totalgram02_2").val(total02); //프로토
+												};
+
+												//약재 table tr 삭제
+												//정인적방
+												$('#totalAmtTbl01 table tr td .delBtn').click(function(e){
+													e.preventDefault();
+													$(this).parent().parent().remove();
+													let totalgram01 = Number($("#totalAmtTbl01 .updowntotal").text());
+													let minusAmt01 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
+													let totalgcal01 = totalgram01 - minusAmt01;
+
+													let table_tr_length = $("#totalAmtTbl01 table tr").length;
+
+													$("#totalAmtTbl01 .updowntotal").text(totalgcal01);
+													if(table_tr_length == 3){
+														$("#totalAmtTbl01 table tr.nomore_medi td").text("처방전을 선택해주세요.");
+														$("#totalAmtTbl01 table tr.nomore_medi").css({'height':'200px'});
+														$("#totalAmtTbl01 table tr.nomore_medi td").css({'font-size':'16px'});
+													}
+
+												});
+
+												//프로토콜
+												$('#totalAmtTbl02 table tr td .delBtn').click(function(e){
+													e.preventDefault();
+													$(this).parent().parent().remove();
+													let totalgram02 = Number($("#totalAmtTbl02 .updowntotal").text());
+													let minusAmt02 = Number($(this).parent().siblings().children().children(".numberUpdown").text());
+													let totalgcal02 = totalgram02 - minusAmt02;
+
+													$("#totalAmtTbl02 .updowntotal").text(totalgcal02);
+												});
+												
+											</script>
+																										
+											<style>
+												/*헬프박스*/
+												.help_point {cursor:help;}
+												.fa-solid {font-size: 16px;}
+												.help_rel_flex {margin-top: 15px; display: flex; position: relative;}
+												.help_point span {margin: 0 !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); color: #fff;}
+												.help_wrap {position: relative; width: 20px; height: 20px;}
+												.help_wrap .helpbox {bottom: 0; left: 40px;}
+												.helpbox {display: none; position: absolute; padding:10px; width: 200px; background-color: #fff; border-radius: 10px; border: 1px solid #8d8d8d; z-index: 99;}
+												.helpbox p {font-size: 14px; line-height: 23px; color: #000;}
+												.helpbox p .tit {font-weight: 700;}
+												.excla_mark {width: 20px; height: 20px; position: relative; border-radius: 50%; background-color: #7e7e7e; margin-left: 10px;}
+											</style>
 											
+											<script>
+												$(function(){
+											
+													//cursor:help; 내용 열기
+													$(".help_point").on("mouseenter",function(event){
+											
+														event.preventDefault();
+											
+														$(".helpbox").hide();
+														$(this).siblings(".helpbox").show();
+											
+											
+													});
+													//cursor:help; 내용 닫기
+													$(".help_point").on("mouseleave",function(){
+											
+														$(".helpbox").hide();
+											
+											
+													});
+											
+												});
+											</script>
+										</div>
+										<!----조제/복약 탭 내용----->
+										<div class="perTab">
 											<div class="p_contentwrap">
 												<p class="anjinTit dp_f dp_c">조제지시</p>
 												<div class="wid100 dp_sb">
@@ -2533,7 +2490,7 @@
 																</script>
 															</div>
 														</div>
-														<div class="wid49 p-12">
+														<div class="wid49 p-12 interactBox">
 															<div class="textHgt03  p_r">
 																<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
 																<div class="letterChk dp_f dp_c">
@@ -2598,81 +2555,81 @@
 												});
 											</script>
 										</div>
-										<div class="tab_right">
-											<div class="fixed_sidemenu">
-												<div class="pin_box_scroll">
-													<p class="anjinTit dp_sb">
-														주증상
-														<span id="addBtnWrap" class="dp_f">
-															<a class="addBtn" href="" title="">CC추가</a>
-														</span>
-													</p>
-													<div class="rowCont">
-														<!---추가되는 table--->
-														<table id="tblAdd" class="tbl">
-															<colgroup>
-																<col width="30%">
-																<col width="70%">
-															</colgroup>
-															<tbody>
-																<tr>
-																	<th class="gry04">CC</th>
-																	<th class="nobr gry04">
-																		내용
-																		<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
-																	</th>
-																</tr>
-																<tr>
-																	<th class="gry04">Check</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">From</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">Progress</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-																<tr>
-																	<th class="gry04">악화요인</th>
-																	<td class="dp_f dp_c"><textarea></textarea></td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-													<p class="anjinTit dp_sb">
-														진료메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
-													<p class="anjinTit dp_sb">
-														처방메모
-													</p>
-													<div class="rowCont">
-														<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
-													</div>
-
-													<script>
-														$('#textBox').keyup(function (e) {
-															let content = $(this).val();
-															
-															// 글자수 제한
-															if (content.length > 2000) {
-																// 2000자 부터는 타이핑 되지 않도록
-																$(this).val($(this).val().substring(0, 2000));
-																// 2000자 넘으면 알림창 뜨도록
-																alert('글자수는 2000자까지 입력 가능합니다.');
-															};
-														});
-													</script>
-												</div>
+									</div>
+								</div>
+								<div class="tab_right">
+									<div class="fixed_sidemenu">
+										<div class="pin_box_scroll">
+											<p class="anjinTit dp_sb">
+												주증상
+												<span id="addBtnWrap" class="dp_f">
+													<a class="addBtn" href="" title="">CC추가</a>
+												</span>
+											</p>
+											<div class="rowCont">
+												<!---추가되는 table--->
+												<table id="tblAdd" class="tbl">
+													<colgroup>
+														<col width="30%">
+														<col width="70%">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="gry04">CC</th>
+															<th class="nobr gry04">
+																내용
+																<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
+															</th>
+														</tr>
+														<tr>
+															<th class="gry04">Check</th>
+															<td class="dp_f dp_c"><textarea></textarea></td>
+														</tr>
+														<tr>
+															<th class="gry04">From</th>
+															<td class="dp_f dp_c"><textarea></textarea></td>
+														</tr>
+														<tr>
+															<th class="gry04">Progress</th>
+															<td class="dp_f dp_c"><textarea></textarea></td>
+														</tr>
+														<tr>
+															<th class="gry04">악화요인</th>
+															<td class="dp_f dp_c"><textarea></textarea></td>
+														</tr>
+														<tr>
+															<th class="gry04">악화요인</th>
+															<td class="dp_f dp_c"><textarea></textarea></td>
+														</tr>
+													</tbody>
+												</table>
 											</div>
+											<p class="anjinTit dp_sb">
+												진료메모
+											</p>
+											<div class="rowCont">
+												<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
+											</div>
+											<p class="anjinTit dp_sb">
+												처방메모
+											</p>
+											<div class="rowCont">
+												<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
+											</div>
+
+											<script>
+												$('#textBox').keyup(function (e) {
+													let content = $(this).val();
+													
+													// 글자수 제한
+													if (content.length > 2000) {
+														// 2000자 부터는 타이핑 되지 않도록
+														$(this).val($(this).val().substring(0, 2000));
+														// 2000자 넘으면 알림창 뜨도록
+														alert('글자수는 2000자까지 입력 가능합니다.');
+													};
+												});
+											</script>
 										</div>
 									</div>
 								</div>
@@ -2694,17 +2651,24 @@
 						
 							});
 
-							$(".perTabBtn02 > li").on("click",function(event){
-								
+							$(".perTabBtn > li:nth-child(1)").on("click",function(event){
+						
 								event.preventDefault();
+								$("#perTab_status").text("진료내용저장");
 						
-								let tabNumber = $(this).index();
+							});
+
+							$(".perTabBtn > li:nth-child(2)").on("click",function(event){
 						
-								$(".perTabBtn02 > li").removeClass("on");
-								$(this).addClass("on");
+								event.preventDefault();
+								$("#perTab_status").text("처방내용저장");
 						
-								$(".s_tabContWrap .s_tabCont").hide();;
-								$(".s_tabContWrap .s_tabCont").eq(tabNumber).show();
+							});
+
+							$(".perTabBtn > li:nth-child(3)").on("click",function(event){
+						
+								event.preventDefault();
+								$("#perTab_status").text("지시내용저장");
 						
 							});
 
@@ -2712,23 +2676,344 @@
 								var sT = $(window).scrollTop();
 
 								if (sT >= 350) {
-									$('.perTab .fixed_sidemenu').addClass('on')
+									$('.tab_right').addClass('on')
 								} else {
-									$('.perTab .fixed_sidemenu').removeClass('on')
+									$('.tab_right').removeClass('on')
 								}
 							});
 
+						</script>
+
+						<!---처방 검증 팝업-->
+						<div class="popUpwrap verifiPop editPop">
+							<div class="popUpBox">
+								<div class="popUpTop blue02 dp_sb dp_c">
+									<span>정인적방 검증</span>
+									<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
+								</div>
+								<div class="popUpBot"  style="padding: 20px;">
+									<div class="dp_sb">
+										<div class="wid49 verifiPop_left">
+											<p>총 <span class="red">6</span>건의 검색결과</p>
+											<div class="interactBox m-20">
+												<div class="tableWrap">
+													<table class="plusTr">
+														<tbody>
+															<tr class="gry04">
+																<th>적합도</th>
+																<th>처방명</th>
+																<th>1</th>
+																<th>2</th>
+																<th>3</th>
+																<th>4</th>
+																<th>5</th>
+																<th>6</th>
+																<th>a</th>
+																<th>b</th>
+																<th>c</th>
+																<th></th>
+															</tr>
+															<tr data-pro="1" class="brbold">
+																<td class="proNm">1</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">반하사심탕</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="1" class="brbold">
+																<td class="proNm">1a</td>
+																<td colspan="2">해당하는 처방이 없습니다.</td>
+																<td></td>
+															</tr>
+															<tr data-pro="1">
+																<td class="proNm">1a</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">소청룡탕</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="2" class="brbold">
+																<td class="proNm">2</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="2">
+																<td class="proNm">2</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="2" class="brbold">
+																<td class="proNm">2a</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="3" class="brbold" style="display: none;">
+																<td class="proNm">3</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="3" class="brbold" style="display: none;">
+																<td class="proNm">3a</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="3" class="brbold" style="display: none;">
+																<td class="proNm">3b</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+															<tr data-pro="3" class="brbold" style="display: none;">
+																<td class="proNm">3c</td>
+																<td class="txt-l pad20">
+																	<div class="dp_f dp_c">
+																		<span class="useTi"><span>7</span>+</span>
+																		<a href="" title="">처방명</a>
+																	</div>
+																</td>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>a</td>
+																<td>b</td>
+																<td>c</td>
+																<td>
+																	<div class="dp_f dp_c dp_cc">
+																		<a class="choseBtn gry05 " href="" title="">문진</a>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="moreBtn">
+													<a class="firstClick dp_f dp_c dp_cc blue01 c_w" href="" title="더보기">더보기</a>
+												</div>
+											</div>
+										</div>
+										<div class="wid49 verifiPop_right">
+											<p class="verifi_no_status">검증하실 처방전을 선택해주세요.</p>
+											<div class="tableWrap">
+												<table>
+													<colgroup>
+														<col style="width: 5%;">
+														<col style="width: 40%;">
+														<col style="width: 15%;">
+														<col style="width: 40%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th>등급</th>
+															<th>질문</th>
+															<th>기준답변</th>
+															<th>환자선택답변/답변의 텍스트</th>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---처방 검증 팝업-->
+						
+						<script>	
+							$("#wholeWrap .perTab .s_tabContWrap .s_tabCont .verifi_btn").on("click",function(event){
+								event.preventDefault();
+								$(".popUpwrap.verifiPop").stop().fadeIn();
+							});
+					
+							$(".popUpTop .popClose").on("click",function(event){
+								event.preventDefault();
+								$(".popUpwrap").stop().fadeOut();
+							});
+
+							// 외부영역 클릭 시 팝업 닫기
+							$(document).mouseup(function (e){
+								var LayerPopup = $(".popUpwrap");
+								if(LayerPopup.has(e.target).length === 0){
+									LayerPopup.stop().fadeOut();
+								}
+							});
+						
 						</script>
 					</div>
 					<div class="chartBotBtn">
 						<div class="chartbotC">
 							<div class="chartbotIne dp_sb">
 								<div class=" dp_f dp_c">
-									<a class="dp_f dp_c dp_cc gry04" href="" title="목록으로">목록으로</a>
+									<a class="dp_f dp_c dp_cc gry04" href="./list.html" title="목록으로">목록으로</a>
 									<a class="dp_f dp_c dp_cc gry04" href="" title="임시저장">임시저장</a>
 								</div>
 								<div class=" dp_f dp_c">
-									<a class="dp_f dp_c dp_cc blue01" href="" title="진료내용저장" style="color: #fff;">진료내용저장</a>
+									<a id="perTab_status" class="dp_f dp_c dp_cc blue01" href="" title="진료내용저장" style="color: #fff;">진료내용저장</a>
 								</div>
 							</div>
 						</div>

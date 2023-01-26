@@ -437,10 +437,11 @@
 								}
 							</style>
 							
-							<div class="popUpwrap regiPopup editPop">
+							<!---신환등록--->
+							<div class="popUpwrap regiPopup regiPop">
 								<div class="popUpBox">
 									<div class="popUpTop blue02 dp_sb dp_c">
-										<span>환자정보</span>
+										<span>신환등록</span>
 										<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
 									</div>
 									<div class="popUpBot">
@@ -450,14 +451,14 @@
 													<span class="red">*</span>
 													<span>이름</span>
 												</p>
-												<input type="text" name="" id="" class="" value="이하나" onkeypress="" autocomplete="off">
+												<input type="text" name="" id="" class="" placeholder='' onkeypress="" autocomplete="off">
 											</div>
 											<div class="halfInputWrap">
 												<p class="popupTit m_10">
 													<span class="red">*</span>
 													<span>생년월일</span>
 												</p>
-												<input type="text" name="" id="" class="" value="20220101" onkeypress="" autocomplete="off">
+												<input type="text" name="" id="" class="" placeholder='ex)20220101' onkeypress="" autocomplete="off">
 											</div>
 										</div>
 										<div class="dp_sb m_20">
@@ -466,14 +467,14 @@
 													<span class="red">*</span>
 													<span>키</span>
 												</p>
-												<input type="text" name="" id="" class="" value="168" onkeypress="" autocomplete="off">
+												<input type="text" name="" id="" class="" placeholder='숫자만 입력해주세요.' onkeypress="" autocomplete="off">
 											</div>
 											<div class="halfInputWrap">
 												<p class="popupTit m_10">
 													<span class="red">*</span>
 													<span>몸무게</span>
 												</p>
-												<input type="text" name="" id="" class="" value="48" onkeypress="" autocomplete="off">
+												<input type="text" name="" id="" class="" placeholder='숫자만 입력해주세요.' onkeypress="" autocomplete="off">
 											</div>
 										</div>
 										<div class="inputWrap m_20">
@@ -497,7 +498,7 @@
 												<span class="red">*</span>
 												<span>연락처</span>
 											</p>
-											<input type="text" name="" id="" class="" value="01012341234" onkeypress="" autocomplete="off">
+											<input type="text" name="" id="" class="" placeholder='(-)없이 숫자만 입력해주세요.' onkeypress="" autocomplete="off">
 										</div>
 										<div class="inputWrap m_20">
 											<p class="popupTit m_10">
@@ -505,19 +506,19 @@
 												<span>주소</span>
 											</p>
 											<div class="adrWrap dp_f m_20">
-												<input type="text" name="" id="" class="" value="서울시 강남구 청담동 123" onkeypress="" autocomplete="off">
+												<input type="text" name="" id="" class="" placeholder='' onkeypress="" autocomplete="off">
 												<a class="adrBtn gry02 dp_f dp_c dp_cc" href="" title="주소찾기">주소찾기</a>
 											</div>
-											<input type="text" name="" id="" class="" value="하나아파트 1208동 403호" onkeypress="" autocomplete="off">
+											<input type="text" name="" id="" class="" placeholder='상세주소 입력' onkeypress="" autocomplete="off">
 											<span class="inputDet">※ 한약배송을 위한 필수 정보입니다.</span>
 										</div>
 										<div class="dp_f dp_cc">
-											<a class="cancelBtn blue01 dp_f dp_c dp_cc" href="" title="취소">취소</a>
 											<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="등록">등록</a>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!---신환등록--->
 							
 							<script>
 								$(function(){
@@ -531,7 +532,19 @@
 										event.preventDefault();
 										$(".popUpwrap").stop().fadeOut();
 									});
-							
+
+									$(".infoRegi").on("click",function(event){
+										event.preventDefault();
+										$(".popUpwrap.regiPop").stop().fadeIn();
+									});
+																							// 외부영역 클릭 시 팝업 닫기
+									// 외부영역 클릭 시 팝업 닫기
+									$(document).mouseup(function (e){
+										var LayerPopup = $(".popUpwrap");
+										if(LayerPopup.has(e.target).length === 0){
+											LayerPopup.stop().fadeOut();
+										}
+									});
 								});
 							</script>
 						</div>

@@ -700,37 +700,44 @@
 
 #wholeWrap .perTabWrap .perTab {
 	display: none;
-	margin-top: 30px;
 	width: 100%;
 }
 
-#wholeWrap .perTabWrap .perTab .tab_left_cont {
+#wholeWrap .tab_left_cont {
+	margin-top: 30px;
 	background-color: #f7f7f7;
 	border-radius: 4px;
-	padding: 40px; 
+	padding: 20px; 
 	box-sizing: border-box;
 	width: 78%;
 }
-.perTab .fixed_sidemenu {
-	width: 312px;
+.tab_right {
+	width: 21%;
+}
+.tab_right .fixed_sidemenu {
+	margin-top: 30px;
+	width: 100%;
 	border: 1px solid #efefef;
 	box-sizing: border-box;
 	border-radius: 4px;
 	background-color: #fff;
-	transition: all 0.4s ease;
 }
-.perTab .fixed_sidemenu.on {
+.tab_right.on {
 	position: fixed;
 	top: 50px;
-	right: 46px;
+	right: 45px;
+	width: 20.7em;
 }
-#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll {
+.wholeWrap.active .tab_right.on {
+	width: 23em;
+}
+#wholeWrap .fixed_sidemenu .pin_box_scroll {
     overflow-y: auto;
     max-height: 600px;
 	padding: 0 15px 50px; 
 }
-#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
-#wholeWrap .perTabWrap .perTab .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar-thumb {background-color: #888; border-radius: 3px;}
+#wholeWrap .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
+#wholeWrap .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar-thumb {background-color: #888; border-radius: 3px;}
 
 #wholeWrap .perTabBtn02 li {
 	border: 1px solid #DDDDDD;
@@ -749,21 +756,27 @@
 }
 
 #wholeWrap .interactBox .tableWrap tr td.pad20 {
-	padding: 0 20px;
+	padding: 0 10px;
 }
 
 #wholeWrap .interactBox .tableWrap .useTi {
-	margin-right: 5px;
+	margin-right: 2px;
 	border: 1px solid #064eaa;
-	border-radius: 30px;
-	padding: 3px 10px;
+	border-radius: 6px;
+    padding: 3px 4px;
+    font-size: 12px;
 }
 
 #wholeWrap .interactBox .tableWrap .choseBtn {
 	display: inline-block; 
+	margin: 0 3px;
 	padding: 3px 10px;
 	border-radius: 5px;
 	color: #fff;
+}
+
+#wholeWrap .interactBox .tableWrap .choseBtn.gry05 {
+	color: #000;
 }
 
 #wholeWrap .perTabBtn02 li.on {
@@ -777,11 +790,36 @@
 }
 
 #wholeWrap .perTab .s_tabContWrap .s_tabCont {
-	display: none;
+	width: 49%;
 }
 
-#wholeWrap .perTab .s_tabContWrap .s_tabCont:nth-child(1) {
-	display: block;
+#wholeWrap .perTab .s_tabContWrap .s_tabCont .s_tab_tit {
+	margin-top: 30px;
+	width: 100%;
+	box-sizing: border-box;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5;
+    color: #054391;
+}
+
+#wholeWrap .perTab .s_tabContWrap .s_tabCont .s_tab_tit_txt {
+	margin-right: 15px;
+}
+
+#wholeWrap .perTab .s_tabContWrap .s_tabCont .verifi_btn {
+	padding: 3px 10px;
+	border:1px solid #c5c5c5;
+	background-color: #fff;
+	color: #000;
+	border-radius: 4px;
+	transition: all 0.3s;
+	font-size: 15px;
+}
+
+#wholeWrap .perTab .s_tabContWrap .s_tabCont .verifi_btn:hover {
+	background-color: #043677;
+	color: #fff;
+	border:1px solid #043677;
 }
 
 #wholeWrap .perTabWrap .perTab:nth-child(1) {
@@ -1004,6 +1042,10 @@
 	z-index: 999;
 }
 
+#wholeWrap .verifiPop .popUpBox {
+	width: 90%;
+}
+
 #wholeWrap .purposeCheck input[type=checkbox] {
     display:none;
 }
@@ -1083,7 +1125,7 @@ html .ui-button.ui-state-disabled:active {
 
 .usefulbtnWrap label {
 	margin-right: 15px;
-	width: 200px;
+	width: 49%;
 	padding: 10px 0;
 	border-radius: 4px;;
     justify-content: center;
@@ -1252,24 +1294,55 @@ html .ui-button.ui-state-disabled:active {
 	margin: 0 10px;
 	border-radius: 4px;
 	padding: 5px;
-	height: 30px;
+	height: 35px;
 	box-sizing: border-box;
 }
 
 #wholeWrap .degreeCirWrap .cirsWrap li {
-	border-radius: 50%;
-	width: 14px;
-	height: 14px;
-	background-color: #ccc;
 	cursor: pointer;
+	width: 30px;
+	height: 30px;
 }
 
-#wholeWrap .degreeCirWrap .cirsWrap li.on {
+#wholeWrap .degreeCirWrap .cirsWrap li a {
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #ccc;
+}
+
+#wholeWrap .degreeCirWrap .cirsWrap li.on a {
 	background-color:#043677;
 }
 
-#wholeWrap .degreeTxt {
+#wholeWrap .degreeCirWrap .cirsWrap li:nth-child(1).on a {
+	width:30px; height:30px;
+}
+
+#wholeWrap .degreeCirWrap .cirsWrap li:nth-child(2).on a {
+	width:27px; height:27px;
+}
+
+#wholeWrap .degreeCirWrap .cirsWrap li:nth-child(3).on a {
+	width:24px; height:24px;
+}
+
+#wholeWrap .degreeCirWrap .cirsWrap li:nth-child(5).on a {
+	width:18px; height:18px;
+}
+
+#wholeWrap .degreeCirWrap .cirsWrap li:nth-child(6).on a {
+	width:16px; height:16px;
+}
+
+.wholeWrap .degreeTxt {
 	font-size: 14px;
+	max-width: 48px;
+	font-weight: 500;
+}
+.wholeWrap.active .degreeTxt {
+	max-width: 100%;
 }
 
 #wholeWrap .degreeCirWrap {
@@ -1277,7 +1350,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .degreeSel {
-	margin-bottom: 20px;
+	margin-bottom: 35px;
 }
 
 #wholeWrap .degreeSel.m_100 {
@@ -1300,12 +1373,14 @@ html .ui-button.ui-state-disabled:active {
 	transform:rotate(45deg)
 }
 
-.radioWrap {width: 420px; height: 30px; margin:0 0 0 12px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
-.radioWrap label {width:33.333%; height:100%; justify-content: center; border-right:1px solid #ccc; background-color:#fff; box-sizing:border-box; transition:all .2s; cursor:pointer; text-align: center;}
+.radioWrap {max-width: 283px; min-width: 283px; height: 30px; margin:0 0 0 12px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+.wholeWrap.active .radioWrap {max-width: 100%; min-width: 360px;}
+.radioWrap label {width:33.333%; height:100%; justify-content: center; border-right:1px solid #ccc; background-color:#fff; box-sizing:border-box; transition:all .2s; cursor:pointer; text-align: center; font-size: 15px;}
 .radioWrap label input {display: none;}
 .radioWrap label.active {background-color:#054391;color: #fff;}
 .radioWrap label:last-child {border-right: none;}
 .checkWrap .checkBox {margin: 0 7px;}
+.checkWrap .checkBox label {font-size: 15px;}
 .checkWrap {margin-left: 10px;}
 
 #addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff; font-size: 14px;}
@@ -1410,14 +1485,15 @@ html .ui-button.ui-state-disabled:active {
     position: absolute;
 }
 
-#wholeWrap .treat_detail_anjin_list_box {
+.wholeWrap .treat_detail_anjin_list_box {
     width: 100%;
     vertical-align: top;
 }
 
-#wholeWrap .treat_detail_anjin_list_box li {
+.wholeWrap .treat_detail_anjin_list_box li {
 	padding: 2px;
-    width: 49%;
+    width: 48%;
+	cursor: pointer;
 }
 
 #wholeWrap .check_star_unit {
@@ -1427,7 +1503,6 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .check_star_name {
-	width: calc(100% - 80px);
 	font-size: 14px;
 }
 
@@ -1482,7 +1557,6 @@ html .ui-button.ui-state-disabled:active {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
-    margin: 0 3px;
 }
 
 .check_star.showon {
@@ -1493,7 +1567,7 @@ html .ui-button.ui-state-disabled:active {
 	background-image: url("../img/icon_star_on.png");
 }
 
-#wholeWrap .emotionWrap .e_box > li {
+.wholeWrap .emotionWrap .e_box > li {
 	width: 31.333%; 
 	box-sizing: border-box;
 	padding: 15px 0 15px 20px ;
@@ -1509,6 +1583,7 @@ html .ui-button.ui-state-disabled:active {
 
 #wholeWrap .emotionWrap .emo_contWrap li {
 	padding: 15px 0 15px 0 ;
+	font-size: 15px;
 }
 
 #wholeWrap .emotionWrap .emo_contWrap li:last-child {
@@ -1567,9 +1642,10 @@ html .ui-button.ui-state-disabled:active {
 .interactBox .letterChk {position: absolute; right: 10px; bottom: 10px; font-size: 14px;}
 .interactBox .letterChk span {font-size: 14px;}
 .prescriptWrap .metiAmt_tit {background-color: #e7e7e7; border-radius: 4px; padding: 10px;}
+#totalAmtTbl01 {min-height: 321px;}
 .prescriptWrap .interactBox .tableWrap tr {height: 40px;}
 .prescriptWrap .interactBox .tableWrap tr th, 
-.prescriptWrap .interactBox .tableWrap tr td {border-right: 1px solid #eee; text-align: center; padding-left: 0; font-size: 16px;}
+.prescriptWrap .interactBox .tableWrap tr td {border-right: 1px solid #eee; text-align: center; padding-left: 0; font-size: 15px;}
 .prescriptWrap .interactBox .tableWrap tr th:last-child, 
 .prescriptWrap .interactBox .tableWrap tr td:last-child {border-right: none;}
 .prescriptWrap .interactBox .tableWrap tr td {font-weight: 400;}
@@ -1580,15 +1656,15 @@ html .ui-button.ui-state-disabled:active {
 .interactBox .dayAmount input {border: 1px solid #ddd; width: 80px; height: 30px; text-align: center;}
 .interactBox .dayAmount input.readon {border-top: none; border-left: 0; border-right: 0; background-color: transparent; color: #053f87; font-weight: 700;}
 
-.prescriptWrap .interactBox .dayDetail .btnWrap02 {border: 1px solid #ddd; overflow: hidden; height: 35px; border-radius: 4px;}
-.prescriptWrap .interactBox .dayDetail .btnWrap02 a {width: 80px; background-color: #fff; border-right: 1px solid #ddd;}
-.prescriptWrap .interactBox .dayDetail .btnWrap02 a:last-child {border-right: none;}
-.prescriptWrap .interactBox .dayDetail .btnWrap02 a.on {background-color: #043677; color: #fff;}
-.prescriptWrap .interactBox .hotor {margin: 0 10px; width: 80px; height: 35px; border-radius: 4px; border: 1px solid #ddd;}
+.interactBox .dayDetail .btnWrap02 {border: 1px solid #ddd; overflow: hidden; height: 35px; border-radius: 4px;}
+.interactBox .dayDetail .btnWrap02 a {width: 80px; background-color: #fff; border-right: 1px solid #ddd;}
+.interactBox .dayDetail .btnWrap02 a:last-child {border-right: none;}
+.interactBox .dayDetail .btnWrap02 a.on {background-color: #043677; color: #fff;}
+.interactBox .hotor {margin: 0 10px; width: 80px; height: 35px; border-radius: 4px; border: 1px solid #ddd;}
 .prescriptWrap .interactBox .hotor.on {background-color: #043677; color: #fff;}
 .prescriptWrap .interactBox .textHgt01 {height: 150px;}
 .prescriptWrap .interactBox .textHgt02 {height: 268px;}
-.prescriptWrap .interactBox .textHgt03 {height: 205px;}
+.interactBox .textHgt03 {height: 148px;}
 .prescriptWrap .interactBox .textHgt04 {height: 325px;}
 .prescriptWrap .multiBtn a {margin: 0 5px; padding: 2px 4px; border-radius: 4px;}
 .prescriptWrap .multiBtn a:nth-child(1) input,
@@ -1596,6 +1672,10 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .multiBtn input {width: auto; background: transparent; width: 40px; color: #000; font-family: 'Pretendard'; font-weight: 400; text-align: center;}
 .prescriptWrap .multiBtn .multiBtn_s.on {background-color: #043677;}
 .upDown_box a {display: block; width: 60px;}
+.prescriptWrap .p_Cont .kind_filter_btn {margin-top: 7px; height: 40px;}
+.prescriptWrap .p_Cont .kind_filter_btn li {margin-left: 5px; padding: 5px 10px; border-radius: 20px; background-color: #5c7eab;}
+.prescriptWrap .p_Cont .kind_filter_btn li.on {background-color: #043677;}
+.prescriptWrap .p_Cont .kind_filter_btn li a {color: #fff;}
 
 .p_contentwrap .totalAmt {border-radius: 4px; margin-bottom: 10px; padding: 11px 20px; background-color: #e7e7e7;}
 .p_contentwrap .totalAmt .tt_inputWrap label {margin: 0 10px;}
