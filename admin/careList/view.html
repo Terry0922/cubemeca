@@ -480,20 +480,20 @@
 																</div>
 															</div>
 															<div class="degreeSel dp_f dp_c m_100">
-																<div class="degreeTxt txt-l">기타(다중선택)</div>
+																<div class="degreeTxt txt-l">기타(선택)</div>
 																<div class="checkWrap dp_f dp_c">
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_1" style="margin-right: 5px;">
-																		<label for="a_box2_1">미간주름</label>
-																	</div>
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_2" style="margin-right: 5px;">
-																		<label for="a_box2_2">입술건조</label>
-																	</div>
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_3" style="margin-right: 5px;">
-																		<label for="a_box2_3">안구황색침착</label>
-																	</div>
+																	<label for="a_box2_1">
+																		<input type="checkbox" name="a_box2" id="a_box2_1" onclick="a_box2(this.name,0);">
+																		미간주름
+																	</label>
+																	<label for="a_box2_2">
+																		<input type="checkbox" name="a_box2" id="a_box2_2" onclick="a_box2(this.name,1);">
+																		입술건조
+																	</label>
+																	<label for="a_box2_3">
+																		<input type="checkbox" name="a_box2" id="a_box2_3" onclick="a_box2(this.name,2);">
+																		안구황색침착
+																	</label>
 																</div>
 															</div>
 														</div>
@@ -541,21 +541,16 @@
 															}
 
 														}
-														// function a_box2(obj,chk){
-														// 	eChk = document.getElementsByName(obj);
-
-														// 	for(var i=0;i<eChk.length;i++){
-														// 		var jj=i+1
-														// 		if(i == chk){
-														// 			eChk[i].checked = true;
-														// 			$('#a_box2_'+jj).parent().addClass('active');
-														// 		}else{
-														// 			eChk[i].checked = false;
-														// 			$('#a_box2_'+jj).parent().removeClass('active');
-														// 		}
-														// 	}
-
-														// }
+														$('input[name="a_box2"]').change(function() {
+															var value = $(this).val();              // value
+															var checked = $(this).prop('checked');  // checked 상태 (true, false)
+															var $label = $(this).parent();            // find a label element
+														
+															if(checked)
+																$label.addClass('active');   
+															else
+																$label.removeClass('active');    
+														});
 														function a_box3(obj,chk){
 															eChk = document.getElementsByName(obj);
 
@@ -1421,633 +1416,848 @@
 											<div class="munjin_set_wrap dp_sb">
 												<div class="munjin_set_box">
 													<!--depth1--->
-													<ul class="mun_depth1">
+													<ul class="mun_depth mun_depth1">
 														<li>
 															<div class="munjin_set_quest">
 																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
 																<div class="munjin_set_quest_det depth1_color_det">
 																	<ul class="dp_f dp_wrap">
 																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
+																			<label for="set_quest1_1_1">
+																				<input type="radio" id="set_quest1_1_1" name="set_quest1_1" autocomplete="off" data_seq="mun_depth2">
 																				답변1
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
+																			<label for="set_quest1_1_2">
+																				<input type="radio" id="set_quest1_1_2" name="set_quest1_1" autocomplete="off">
 																				답변2의 지문입니다.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
+																			<label for="set_quest1_1_3">
+																				<input type="radio" id="set_quest1_1_3" name="set_quest1_1" autocomplete="off">
 																				지문이 이렇게 길어질 수 있습니다.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
+																			<label for="set_quest1_1_4">
+																				<input type="radio" id="set_quest1_1_4" name="set_quest1_1" autocomplete="off">
 																				그러면 이렇게 다음줄로 넘어가게 해주세요.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
+																			<label for="set_quest1_1_5">
+																				<input type="radio" id="set_quest1_1_5" name="set_quest1_1" autocomplete="off">
 																				모든 답변 공통입니다.
 																			</label>
 																		</li>
 																	</ul>
 																</div>
 															</div>
-														</li>
-													</ul>
-
-													<!--depth2--->
-													<ul class="mun_depth2">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth2_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="checkbox" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="checkbox" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="checkbox" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="checkbox" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="checkbox" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2" data_seq="mun_depth2">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<!-- <div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest1_2_1">
+																							<input type="radio" id="set_quest1_2_1" name="set_quest1_2" autocomplete="off" data_seq="mun_depth3">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_2">
+																							<input type="radio" id="set_quest1_2_2" name="set_quest1_2" autocomplete="off">
+																							답변2의 지문입니다.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_3">
+																							<input type="radio" id="set_quest1_2_3" name="set_quest1_2" autocomplete="off">
+																							지문이 이렇게 길어질 수 있습니다.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_4">
+																							<input type="radio" id="set_quest1_2_4" name="set_quest1_2" autocomplete="off">
+																							그러면 이렇게 다음줄로 넘어가게 해주세요.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_5">
+																							<input type="radio" id="set_quest1_2_5" name="set_quest1_2" autocomplete="off">
+																							모든 답변 공통입니다.
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3" data_seq="mun_depth3">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest1_3_1">
+																										<input type="checkbox" id="set_quest1_3_1" name="set_quest1_3" autocomplete="off">
+																										답변1
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_2">
+																										<input type="checkbox" id="set_quest1_3_2" name="set_quest1_3" autocomplete="off">
+																										답변2의 지문입니다.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_3">
+																										<input type="checkbox" id="set_quest1_3_3" name="set_quest1_3" autocomplete="off">
+																										지문이 이렇게 길어질 수 있습니다.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_4">
+																										<input type="checkbox" id="set_quest1_3_4" name="set_quest1_3" autocomplete="off">
+																										그러면 이렇게 다음줄로 넘어가게 해주세요.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_5">
+																										<input type="checkbox" id="set_quest1_3_5" name="set_quest1_3" autocomplete="off">
+																										모든 답변 공통입니다.
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<!-- <div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest1_4_1">
+																													<input type="checkbox" id="set_quest1_4_1" name="set_quest1_4" autocomplete="off">
+																													답변1
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_2">
+																													<input type="checkbox" id="set_quest1_4_2" name="set_quest1_4" autocomplete="off">
+																													답변2의 지문입니다.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_3">
+																													<input type="checkbox" id="set_quest1_4_3" name="set_quest1_4" autocomplete="off">
+																													지문이 이렇게 길어질 수 있습니다.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_4">
+																													<input type="checkbox" id="set_ques1_4_4" name="set_quest1_4" autocomplete="off">
+																													그러면 이렇게 다음줄로 넘어가게 해주세요.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_5">
+																													<input type="checkbox" id="set_quest1_4_5" name="set_quest1_4" autocomplete="off">
+																													모든 답변 공통입니다.
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
 															</div>
 														</li>
 													</ul>
 
-													<!--depth3--->
-													<ul class="mun_depth3">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth3_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="checkbox" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="checkbox" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<!--depth4--->
-													<ul class="mun_depth4">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth4_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<!--depth5--->
-													<ul class="mun_depth5">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth5_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
 												</div>
 
 												<div class="munjin_set_box">
-													<ul class="mun_depth1">
+													<!--depth1--->
+													<ul class="mun_depth mun_depth1">
 														<li>
 															<div class="munjin_set_quest">
 																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
 																<div class="munjin_set_quest_det depth1_color_det">
 																	<ul class="dp_f dp_wrap">
 																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
+																			<label for="set_quest2_1_1">
+																				<input type="radio" id="set_quest2_1_1" name="set_quest2_1" autocomplete="off" data_seq="mun_depth2_1">
 																				답변1
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
+																			<label for="set_quest2_1_2">
+																				<input type="radio" id="set_quest2_1_2" name="set_quest2_1" autocomplete="off" data_seq="mun_depth2_2">
 																				답변2의 지문입니다.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
+																			<label for="set_quest2_1_3">
+																				<input type="radio" id="set_quest2_1_3" name="set_quest2_1" autocomplete="off">
 																				지문이 이렇게 길어질 수 있습니다.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
+																			<label for="set_quest2_1_4">
+																				<input type="radio" id="set_quest2_1_4" name="set_quest2_1" autocomplete="off">
 																				그러면 이렇게 다음줄로 넘어가게 해주세요.
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
+																			<label for="set_quest2_1_5">
+																				<input type="radio" id="set_quest2_1_5" name="set_quest2_1" autocomplete="off">
 																				모든 답변 공통입니다.
 																			</label>
 																		</li>
 																	</ul>
 																</div>
 															</div>
-														</li>
-													</ul>
-													
-													<ul class="mun_depth2">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth2_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2 mun_depth2_1" data_seq="mun_depth2_1">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">답변 1의 2 depth 질문 01</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest2_2_1">
+																							<input type="radio" id="set_quest2_2_1" name="set_quest2_2" autocomplete="off">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest2_2_2">
+																							<input type="radio" id="set_quest2_2_2" name="set_quest2_2" autocomplete="off">
+																							답변2
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2 mun_depth2_2" data_seq="mun_depth2_2">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">답변 2의 2 depth 질문 02</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest2_2_1">
+																							<input type="radio" id="set_quest2_2_1" name="set_quest2_2" autocomplete="off" data_seq="mun_depth3_1">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest2_2_2">
+																							<input type="radio" id="set_quest2_2_2" name="set_quest2_2" autocomplete="off">
+																							답변2
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3 mun_depth3_1" data_seq="mun_depth3_1">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">답변 2의 2 depth 질문 02의 종속질문 01</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest2_3_1">
+																										<input type="radio" id="set_quest2_3_1" name="set_quest2_3" autocomplete="off" data_seq="mun_depth4_1">
+																										답변1
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest2_3_2">
+																										<input type="radio" id="set_quest2_3_2" name="set_quest2_3" autocomplete="off">
+																										답변2
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4 mun_depth4_1" data_seq="mun_depth4_1">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">답변 2의 2 depth 질문 02의 종속질문 01의 종속질문 01</div>
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest2_4_1">
+																													<input type="radio" id="set_quest2_4_1" name="set_quest2_4" autocomplete="off" data_seq="mun_depth5_1">
+																													답변1
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest2_4_2">
+																													<input type="radio" id="set_quest2_4_2" name="set_quest2_4" autocomplete="off">
+																													답변2
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																								<div class="depth_wrap">
+																									<!--depth5--->
+																									<ul class="mun_depth mun_depth5 mun_depth5_1" data_seq="mun_depth5_1">
+																										<li>
+																											<div class="munjin_set_quest">
+																												<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">답변 2의 2 depth 질문 02의 종속질문 01의 종속질문 01의 종속질문</div>
+																												<div class="munjin_set_quest_det depth4_color_det">
+																													<ul class="dp_f dp_wrap">
+																														<li>
+																															<label for="set_quest2_5_1">
+																																<input type="radio" id="set_quest2_5_1" name="set_quest2_5" autocomplete="off">
+																																답변1
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest2_5_2">
+																																<input type="radio" id="set_quest2_5_2" name="set_quest2_5" autocomplete="off">
+																																답변2
+																															</label>
+																														</li>
+																													</ul>
+																												</div>
+																											</div>
+																										</li>
+																									</ul>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
 															</div>
 														</li>
 													</ul>
 
-													<ul class="mun_depth3">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth3_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<ul class="mun_depth4">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth4_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<ul class="mun_depth5">
-														<li>
-															<div class="munjin_set_quest">
-																<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
-																<div class="munjin_set_quest_det depth5_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
 												</div>
 
 												<div class="munjin_set_box">
-													<ul class="mun_depth1">
+													<!--depth1--->
+													<ul class="mun_depth mun_depth1">
 														<li>
 															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
+																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">평소 매일 정상변을 보는 편</div>
 																<div class="munjin_set_quest_det depth1_color_det">
 																	<ul class="dp_f dp_wrap">
 																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
+																			<label for="set_quest3_1_1">
+																				<input type="radio" id="set_quest3_1_1" name="set_quest3_1" autocomplete="off" data_seq="mun_depth2_1_02">
+																				예
 																			</label>
 																		</li>
 																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
+																			<label for="set_quest3_1_2">
+																				<input type="radio" id="set_quest3_1_2" name="set_quest3_1" autocomplete="off">
+																				아니오
 																			</label>
 																		</li>
 																	</ul>
 																</div>
 															</div>
-														</li>
-													</ul>
-													
-													<ul class="mun_depth2">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth2_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2_1_02" data_seq="mun_depth2_1_02">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">변비경향</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest3_2_1">
+																							<input type="radio" id="set_quest3_2_1" name="set_quest3_2" autocomplete="off" data_seq="mun_depth3_1_02">
+																							예
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest3_2_2">
+																							<input type="radio" id="set_quest3_2_2" name="set_quest3_2" autocomplete="off">
+																							아니오
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3_1_02" data_seq="mun_depth3_1_02">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">어느 정도</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest3_3_1">
+																										<input type="radio" id="set_quest3_3_1" name="set_quest3_3" autocomplete="off" data_seq="mun_depth4_1_02">
+																										심한편
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest3_3_2">
+																										<input type="radio" id="set_quest3_3_2" name="set_quest3_3" autocomplete="off" data_seq="mun_depth4_1_02">
+																										어느정도
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest3_3_3">
+																										<input type="radio" id="set_quest3_3_3" name="set_quest3_3" autocomplete="off">
+																										약간
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4_1_02" data_seq="mun_depth4_1_02">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">대변 제때 못보면 가스가 많이 차서 더부룩 답답하다.</div>
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest3_4_1">
+																													<input type="radio" id="set_quest3_4_1" name="set_quest3_4" autocomplete="off" data_seq="mun_depth5_1_02">
+																													예
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest3_4_2">
+																													<input type="radio" id="set_quest3_4_2" name="set_quest3_4" autocomplete="off">
+																													아니오
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																								<div class="depth_wrap">
+																									<!--depth5--->
+																									<ul class="mun_depth mun_depth5_1_02" data_seq="mun_depth5_1_02">
+																										<li>
+																											<div class="munjin_set_quest">
+																												
+																												<div class="munjin_set_quest_det depth5_color_det">
+																													<ul class="dp_f dp_wrap">
+																														<li>
+																															<label for="set_quest3_5_1">
+																																<input type="radio" id="set_quest3_5_1" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																그러면 매우 괴롭다
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest3_5_2">
+																																<input type="radio" id="set_quest3_5_2" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																괴롭다
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest3_5_2">
+																																<input type="radio" id="set_quest3_5_2" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																약간 불편다
+																															</label>
+																														</li>
+																													</ul>
+																												</div>
+																											</div>
+																											<div class="depth_wrap">
+																												<!--depth6--->
+																												<ul class="mun_depth mun_depth6_1_02" data_seq="mun_depth6_1_02">
+																													<li>
+																														<div class="munjin_set_quest">
+																															
+																															<div class="munjin_set_quest_det depth1_color_det">
+																																<ul class="dp_f dp_wrap">
+																																	<li>
+																																		<label for="set_quest3_6_1">
+																																			<input type="radio" id="set_quest3_6_1" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			하루라도 못 보면 그렇다.
+																																		</label>
+																																	</li>
+																																	<li>
+																																		<label for="set_quest3_6_2">
+																																			<input type="radio" id="set_quest3_6_2" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			2~3일 못보면 
+																																		</label>
+																																	</li>
+																																	<li>
+																																		<label for="set_quest3_6_2">
+																																			<input type="radio" id="set_quest3_6_2" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			4~5일 넘어가면
+																																		</label>
+																																	</li>
+																																</ul>
+																															</div>
+																														</div>
+																														<div class="depth_wrap">
+																															<!--depth7--->
+																															<ul class="mun_depth mun_depth7_1_02" data_seq="mun_depth7_1_02">
+																																<li>
+																																	<div class="munjin_set_quest">
+																																		<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">설사를 해서라도 다 쏟아내면 너무 시원하고 좋겠다.</div>
+																																		<div class="munjin_set_quest_det depth2_color_det">
+																																			<ul class="dp_f dp_wrap">
+																																				<li>
+																																					<label for="set_quest3_7_1">
+																																						<input type="radio" id="set_quest3_7_1" name="set_quest3_7" autocomplete="off" data_seq="mun_depth8_1_02">
+																																						그렇다.
+																																					</label>
+																																				</li>
+																																				<li>
+																																					<label for="set_quest3_7_2">
+																																						<input type="radio" id="set_quest3_7_2" name="set_quest3_7" autocomplete="off" >
+																																						그 정도는 아니다.
+																																					</label>
+																																				</li>
+																																			</ul>
+																																		</div>
+																																	</div>
+																																	<div class="depth_wrap">
+																																		<!--depth8--->
+																																		<ul class="mun_depth mun_depth8_1_02" data_seq="mun_depth8_1_02">
+																																			<li>
+																																				<div class="munjin_set_quest">
+																																					<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">설사-무른변 경향</div>
+																																					<div class="munjin_set_quest_det depth3_color_det">
+																																						<ul class="dp_f dp_wrap">
+																																							<li>
+																																								<label for="set_quest3_8_1">
+																																									<input type="radio" id="set_quest3_8_1" name="set_quest3_8" autocomplete="off" data_seq="mun_depth9_1_02">
+																																									예
+																																								</label>
+																																							</li>
+																																							<li>
+																																								<label for="set_quest3_8_2">
+																																									<input type="radio" id="set_quest3_8_2" name="set_quest3_8" autocomplete="off" >
+																																									아니요
+																																								</label>
+																																							</li>
+																																						</ul>
+																																					</div>
+																																				</div>
+																																				<div class="depth_wrap">
+																																					<!--depth9--->
+																																					<ul class="mun_depth mun_depth9_1_02" data_seq="mun_depth9_1_02">
+																																						<li>
+																																							<div class="munjin_set_quest">
+																																								<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">어느 정도</div>
+																																								<div class="munjin_set_quest_det depth4_color_det">
+																																									<ul class="dp_f dp_wrap">
+																																										<li>
+																																											<label for="set_quest3_9_1">
+																																												<input type="radio" id="set_quest3_9_1" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_2_02">
+																																												거의 매일
+																																											</label>
+																																										</li>
+																																										<li>
+																																											<label for="set_quest3_9_2">
+																																												<input type="radio" id="set_quest3_9_2" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_2_02">
+																																												일주일 3~4번 정도
+																																											</label>
+																																										</li>
+																																										<li>
+																																											<label for="set_quest3_9_3">
+																																												<input type="radio" id="set_quest3_9_3" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_1_02">
+																																												한달 3~ 4번 이하
+																																											</label>
+																																										</li>
+																																									</ul>
+																																								</div>
+																																							</div>
+																																							<div class="depth_wrap">
+																																								<!--depth10--->
+																																								<ul class="mun_depth mun_depth10_1_02" data_seq="mun_depth10_1_02">
+																																									<li>
+																																										<div class="munjin_set_quest">
+																																											<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">그럴 때는 어떻게 하시나요?</div>
+																																											<div class="munjin_set_quest_det depth5_color_det">
+																																												<ul class="dp_f dp_wrap">
+																																													<li>
+																																														<label for="set_quest3_10_1">
+																																															<input type="radio" id="set_quest3_10_1" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_1_02">
+																																															설사약을 먹어야 할 정도이다
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_2">
+																																															<input type="radio" id="set_quest3_10_2" name="set_quest3_10" autocomplete="off">
+																																															약을 먹을 정도는 아니다
+																																														</label>
+																																													</li>
+																																												</ul>
+																																											</div>
+																																										</div>
+																																										<div class="depth_wrap">
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_1_02" data_seq="mun_depth11_1_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">10번이면</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		10~7번 정도
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		5번 전후
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_3">
+																																																		<input type="radio" id="set_quest3_11_3" name="set_quest3_11" autocomplete="off">
+																																																		3번 이하
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																										</div>
+																																									</li>
+																																								</ul>
+																																								<!--depth10--->
+																																								<ul class="mun_depth mun_depth10_2_02" data_seq="mun_depth10_2_02">
+																																									<li>
+																																										<div class="munjin_set_quest">
+																																											<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">어떨 때 설사-무른변을 보나요?</div>
+																																											<div class="munjin_set_quest_det depth5_color_det">
+																																												<ul class="dp_f dp_wrap">
+																																													<li>
+																																														<label for="set_quest3_10_1">
+																																															<input type="radio" id="set_quest3_10_1" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_1_02">
+																																															찬 음식 먹으면 예)찬음료, 찬우유, 찬맥주 등
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_2">
+																																															<input type="radio" id="set_quest3_10_2" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_2_02">
+																																															두번째 답변
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_3">
+																																															<input type="radio" id="set_quest3_10_3" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_3_02">
+																																															세번째 답변
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_4">
+																																															<input type="radio" id="set_quest3_10_4" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_4_02">
+																																															네번째 답변
+																																														</label>
+																																													</li>
+																																												</ul>
+																																											</div>
+																																										</div>
+																																										<div class="depth_wrap">
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_1_02" data_seq="mun_depth11_1_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">01.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_2_02" data_seq="mun_depth11_2_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">02.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_3_02" data_seq="mun_depth11_3_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">03.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_4_02" data_seq="mun_depth11_4_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">04.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																										</div>
+																																									</li>
+																																								</ul>
+																																							</div>
+																																						</li>
+																																					</ul>
+																																				</div>
+																																			</li>
+																																		</ul>
+																																	</div>
+																																</li>
+																															</ul>
+																														</div>
+																													</li>
+																												</ul>
+																											</div>
+																										</li>
+																									</ul>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
 															</div>
 														</li>
 													</ul>
 
-													<ul class="mun_depth3">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth3_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<ul class="mun_depth4">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth4_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
-
-													<ul class="mun_depth5">
-														<li>
-															<div class="munjin_set_quest">
-																<!-- <div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
-																<div class="munjin_set_quest_det depth5_color_det">
-																	<ul class="dp_f dp_wrap">
-																		<li>
-																			<label for="set_quest1_1">
-																				<input type="radio" id="set_quest1_1" name="set_quest1" autocomplete="off">
-																				답변1
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_2">
-																				<input type="radio" id="set_quest1_2" name="set_quest1" autocomplete="off">
-																				답변2의 지문입니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_3">
-																				<input type="radio" id="set_quest1_3" name="set_quest1" autocomplete="off">
-																				지문이 이렇게 길어질 수 있습니다.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_4">
-																				<input type="radio" id="set_quest1_4" name="set_quest1" autocomplete="off">
-																				그러면 이렇게 다음줄로 넘어가게 해주세요.
-																			</label>
-																		</li>
-																		<li>
-																			<label for="set_quest1_5">
-																				<input type="radio" id="set_quest1_5" name="set_quest1" autocomplete="off">
-																				모든 답변 공통입니다.
-																			</label>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</li>
-													</ul>
 												</div>
 											</div>
 											<script>
-												$(".h_bot").click(function(event) {
+												//라디오 해당 data_seq 눌렀을 시 depth 나옴
+												$('.munjin_set_quest_det > ul > li label input[type="radio"]').change(function() {        
+													const thisSeq = $(this).attr('data_seq');
+													const nextSeq = $(this).parents(".munjin_set_quest").next().children('.'+ thisSeq).attr('data_seq');
+													const checked = $(this).prop('checked');  // checked 상태 (true, false)
+													const $nextdepth = $(this).parents(".munjin_set_quest").next().children('.'+ thisSeq);            // find a label element
+													const $nextdepth_off = $(this).parents(".munjin_set_quest").next().children('.mun_depth');
+													const other = $(".munjin_set_quest .mun_depth input");
 
-													event.preventDefault();
+													if(thisSeq == nextSeq && $(this).is(':checked')) {
+														$nextdepth_off.hide(); 
+														$nextdepth.stop().fadeIn(); 
 
+													} else {
+														$(".munjin_set_quest_det > ul > li label input[type='radio']").prop('checked',false); 
+														$nextdepth_off.hide(); 
+														$nextdepth.hide();
+														other.hide();
 
+													}    
+												});
+												//체크박스 어느 것을 눌러도 depth 나옴
+												$('.munjin_set_quest_det > ul > li label input[type="checkbox"]').change(function() {        
+													
+													const checked = $(this).prop('checked');  // checked 상태 (true, false)
+													const $nextdepth = $(this).parents(".munjin_set_quest").next().children(".mun_depth");            // find a label element
+												
+													if($(this).is(':checked')) {
+														$nextdepth.stop().fadeIn(); 
+
+													} else {
+														$nextdepth.hide(); 
+
+													}    
+												});
+
+												$('.munjin_set_quest_det input').on("click",function() {        
+													$("html, body").animate({ scrollTop: $(document).height() }, 2000);
+												
 												});
 											</script>
 										</div>
@@ -2946,6 +3156,9 @@
 													let table_tr_length = $("#totalAmtTbl01 table tr").length;
 
 													$("#totalAmtTbl01 .updowntotal").text(totalgcal01);
+													$("#totalgram01_1").val(totalgcal01);
+													$("#totalgram01_2").val(totalgcal01);
+
 													if(table_tr_length == 3){
 														$("#totalAmtTbl01 table tr.nomore_medi td").text("처방전을 선택해주세요.");
 														$("#totalAmtTbl01 table tr.nomore_medi").css({'height':'200px'});
@@ -3476,7 +3689,7 @@
 						</script>
 
 						<!---처방 검증 팝업-->
-						<div class="popUpwrap verifiPop editPop">
+						<div class="popUpwrap verifiPop">
 							<div class="popUpBox">
 								<div class="popUpTop blue02 dp_sb dp_c">
 									<span>정인적방 검증</span>
