@@ -2059,11 +2059,18 @@ html .ui-button.ui-state-disabled:active {
 .munjin_set_wrap .munjin_set_box {
 	width: 32.333%;
 }
-.munjin_set_quest .munjin_set_quest_tit {
+.munjin_set_wrap .munjin_set_box .munjin_set_tit {
 	padding: 10px;
 	box-sizing: border-box;
 	min-height: 58px;
 	background-color: #054391;
+	color: #fff;
+}
+.munjin_set_quest .munjin_set_quest_tit {
+	padding: 10px;
+	box-sizing: border-box;
+	min-height: 58px;
+	background-color: #4f77a9;
 	color: #fff;
 }
 .munjin_set_quest .munjin_set_quest_det {
