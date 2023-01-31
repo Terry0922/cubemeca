@@ -147,9 +147,9 @@
 					<div class="chartWrap">
 					<div class="dp_sb">
 						<div class="personView">
-							<div class="wid100 dp_sb dp_end m-20 m_40">
+							<div class="wid100 dp_sb m-20 m_20">
 								<div class="nameInfo">
-									<div class="dp_f dp_end">
+									<div class="dp_f dp_end m-20">
 										<p class="person">이하나<span>(37세)</span></p>
 										<span class="person_num cogrn">Ch. 123456789</span>
 									</div>
@@ -222,7 +222,7 @@
 								</div>
 							</div>
 
-							<ul class="perTabBtn dp_f m-28">
+							<ul class="perTabBtn dp_f m-20">
 								<li class="on"><a href="" title="진료">진료</a></li>
 								<li><a href="" title="처방">처방</a></li>
 								<li><a href="" title="조제/복약">조제/복약</a></li>
@@ -434,7 +434,7 @@
 										<div class="perTab">
 											<p class="anjinTit">체형</p>
 										
-											<ul class="bmiList dp_sb m-20">
+											<ul class="bmiList dp_sb m-20 m_20">
 												<li class="dp_f dp_cc dp_end dp_fc">
 													<div class="cirWrap"></div>
 													<div class="txtBox">
@@ -500,7 +500,7 @@
 												<div class="wid62">
 													<p class="anjinTit dp_f dp_c">형색성정<a class="infoPopup dp_f dp_c dp_cc" href="" title="">!</a></p>
 										
-													<div class="degreeWrap p-45 dp_sb">
+													<div class="degreeWrap p-20 dp_sb">
 														<div class="wid49">
 															<p class="dgSelT dp_f dp_c">면색</p>
 															<div class="degreeSel dp_f dp_c">
@@ -731,7 +731,7 @@
 														<a class="bodyCheckBtn" href="" title="">인체도 크게보기</a>
 													</div>
 										
-													<div class="anatomyWrap p-45">
+													<div class="anatomyWrap p-20">
 														<div class="treat_detail_anjin_body_pic_box">
 															<div class="treat_detail_anjin_body_pic">
 																<div class="anjin_body_top dp_sb dp_c blue02">
@@ -1111,23 +1111,8 @@
 												<div class="wid31"></div>
 												<div class="wid31"></div>
 											</div>
-											<script>
-												$(function(){
-													//주증상 table 삭제
-													$(".delBtn").click(function(){
-														$(this).closest("table").hide();								
-													});
 
-													//주증상 table 추가
-													$("#addBtnWrap .addBtn").on("click",function(event){
-														event.preventDefault();	
-			
-														$("#tblAdd").clone(true, true).insertAfter("#tblAdd");							
-													});
-
-												});
-											</script>
-											<p class="anjinTit">감정</p>
+											<p class="anjinTit m-20">감정</p>
 										
 											<div class="emotionWrap dp_sb">
 												<ul class="e_box e_box1 dp_f dp_wrap">
@@ -2920,9 +2905,9 @@
 											</div>
 											
 											<div class="prescriptWrap">
-												<p class="anjinTit dp_f dp_c">약재</p>
-												<div class="interactBox p-12">
-													<div class="metiAmt_tit dp_sb m_10">
+												<p class="anjinTit dp_f dp_c m-20">약재</p>
+												<div class="interactBox p-20">
+													<div class="metiAmt_tit dp_sb m_20">
 														<div class="dp_f dp_c">
 															첩당약재량 
 															<div class="help_wrap">
@@ -3278,7 +3263,7 @@
 												<p class="anjinTit dp_f dp_c">조제지시</p>
 												<div class="wid100 dp_sb">
 													<div class="wid49">
-														<div class="interactBox p-12">
+														<div class="interactBox p-20">
 															<ul class="mediBtnWrap">
 																<li class="on"><a href="" title="탕전">탕전</a></li>
 																<li><a href="" title="환제">환제</a></li>
@@ -3379,7 +3364,7 @@
 																		<a class="wid23 dp_f dp_c dp_cc" href="" title="밀환(국산꿀)">밀환(국산꿀)</a>
 																	</div>
 																	<!--환제의 크기-->
-																	<div class="anjinTit dp_f dp_c">
+																	<div class="anjinTit dp_f dp_c m-20">
 																		환제의 크기
 																		<div class="help_wrap">
 																			<div class="excla_mark help_point">
@@ -3465,8 +3450,8 @@
 														</div>
 													</div>
 													<div class="wid49">
-														<div class="p_r interactBox m-12">
-															<textarea style="height: 372px;"></textarea>
+														<div class="p_r interactBox m-20">
+															<textarea style="height: 350px;"></textarea>
 															<div class="letterChk dp_f dp_c">
 																(<span>0</span>/<span>300</span>)
 															</div>
@@ -3474,7 +3459,7 @@
 													</div>
 												</div>
 												<div class="wid100">
-													<div class="anjinTit dp_f dp_c">
+													<div class="anjinTit dp_f dp_c m-20">
 														복약지시
 														<div class="help_wrap">
 															<div class="excla_mark help_point">
@@ -3488,7 +3473,7 @@
 													</div>
 													<div class="dp_sb">
 														<div class="wid49">
-															<div class="interactBox p-12">
+															<div class="interactBox p-20">
 																<div class="totalAmt dp_sb">
 																	<div class="totalAmt_tit">처방총량</div>
 																	<div class="t_tit_input">
@@ -3517,7 +3502,7 @@
 																	</label>
 																	일간 복용하시는 양입니다.
 																</div>
-																<div class="dayDetail dp_f dp_c m_28">
+																<div class="dayDetail dp_f dp_c m_20">
 																	<div class="btnWrap02 dp_f">
 																		<a class="on dp_f dp_c dp_cc" href="" title="관계없음">관계없음</a>
 																		<a class="dp_f dp_c dp_cc" href="" title="식전">식전</a>
@@ -3548,7 +3533,7 @@
 																</script>
 															</div>
 														</div>
-														<div class="wid49 p-12 interactBox">
+														<div class="wid49 p-20 interactBox">
 															<div class="textHgt03  p_r">
 																<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
 																<div class="letterChk dp_f dp_c">
@@ -3562,13 +3547,13 @@
 												<div class="wid100">
 													<p class="anjinTit dp_f dp_c">배송정보확인</p>
 													<div class="dp_sb">
-														<div class="p_tabTitBox m-40 wid49">
-															<p class="p_addrTit bold2 m_28 f20">주소</p>
-															<p class="p_addrDet m_12">서울시 동작구 매봉로 99 갑을아파트 103동 101호</p>
+														<div class="p_tabTitBox m-20 wid49">
+															<p class="p_addrTit bold2 m_20 f20">주소</p>
+															<p class="p_addrDet">서울시 동작구 매봉로 99 갑을아파트 103동 101호</p>
 														</div>
-														<div class="p_tabTitBox m-40 wid49">
-															<p class="p_addrTit bold2 m_28 f20">연락처</p>
-															<p class="p_addrDet m_12">010-123-1234</p>
+														<div class="p_tabTitBox m-20 wid49">
+															<p class="p_addrTit bold2 m_20 f20">연락처</p>
+															<p class="p_addrDet">010-123-1234</p>
 														</div>
 													</div>
 												</div>
@@ -3618,7 +3603,7 @@
 								<div class="tab_right">
 									<div class="fixed_sidemenu">
 										<div class="pin_box_scroll">
-											<p class="anjinTit dp_sb">
+											<p class="anjinTit dp_sb m-20 dp_end">
 												주증상
 												<span id="addBtnWrap" class="dp_f">
 													<a class="addBtn" href="" title="">CC추가</a>
@@ -3633,42 +3618,54 @@
 													</colgroup>
 													<tbody>
 														<tr>
-															<th class="gry04">CC</th>
-															<th class="nobr gry04">
-																내용
+															<th class="skyblue02 c_wht">CC</th>
+															<td class="dp_f dp_c">
 																<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
-															</th>
+																<textarea></textarea>
+															</td>
 														</tr>
 														<tr>
-															<th class="gry04">Check</th>
+															<th class="skyblue02 c_wht">O/S</th>
+															<td class="dp_f dp_c"><textarea style="background-color: #bcd6f7;"></textarea></td>
+														</tr>
+														<tr>
+															<th class="skyblue02 c_wht">경과</th>
 															<td class="dp_f dp_c"><textarea></textarea></td>
 														</tr>
 														<tr>
-															<th class="gry04">From</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
+															<th class="skyblue02 c_wht">악화요인</th>
+															<td class="dp_f dp_c"><textarea style="background-color: #bcd6f7;"></textarea></td>
 														</tr>
 														<tr>
-															<th class="gry04">Progress</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
-														</tr>
-														<tr>
-															<th class="gry04">악화요인</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
-														</tr>
-														<tr>
-															<th class="gry04">악화요인</th>
+															<th class="skyblue02 c_wht">악화요인</th>
 															<td class="dp_f dp_c"><textarea></textarea></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
-											<p class="anjinTit dp_sb">
+											<script>
+												$(function(){
+													//주증상 table 삭제
+													$(".delBtn").click(function(){
+														$(this).closest("table").hide();								
+													});
+
+													//주증상 table 추가
+													$("#addBtnWrap .addBtn").on("click",function(event){
+														event.preventDefault();	
+			
+														$("#tblAdd").clone(true, true).insertAfter("#tblAdd");							
+													});
+
+												});
+											</script>
+											<p class="anjinTit dp_sb m-20">
 												진료메모
 											</p>
 											<div class="rowCont">
 												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 20px; height: 100px;"></textarea>
 											</div>
-											<p class="anjinTit dp_sb">
+											<p class="anjinTit dp_sb m-20">
 												처방메모
 											</p>
 											<div class="rowCont">

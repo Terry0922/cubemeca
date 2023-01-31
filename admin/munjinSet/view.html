@@ -39,7 +39,7 @@
 				background-color: transparent;
 			}
 			.wholeWrap .sidemenu .sideList li:nth-child(4) .sideIcon {
-				background-image: url("../img/icon04_on.png");
+				background-image: url("../img/icon02_on.png");
 				background-color: #054391;
 				color: #fff;
 			}
@@ -147,9 +147,9 @@
 					<div class="chartWrap">
 					<div class="dp_sb">
 						<div class="personView">
-							<div class="wid100 dp_sb dp_end m-20 m_40">
+							<div class="wid100 dp_sb m-20 m_20">
 								<div class="nameInfo">
-									<div class="dp_f dp_end">
+									<div class="dp_f dp_end m-20">
 										<p class="person">이하나<span>(37세)</span></p>
 										<span class="person_num cogrn">Ch. 123456789</span>
 									</div>
@@ -222,7 +222,7 @@
 								</div>
 							</div>
 
-							<ul class="perTabBtn dp_f m-28">
+							<ul class="perTabBtn dp_f m-20">
 								<li class="on"><a href="" title="진료">진료</a></li>
 								<li><a href="" title="처방">처방</a></li>
 								<li><a href="" title="조제/복약">조제/복약</a></li>
@@ -297,51 +297,107 @@
 										<span>내원목적</span>
 										<a class="popClose" href="" title="닫기"><img src="../img/lnr-cross.png" alt=""></a>
 									</div>
-									<div class="popUpBot" style="width: 560px; padding: 20px;">
-										<p class="symptom_tit m_10 bold2">증상</p>
-										<textarea class="m_28" name="" id="" placeholder="" style="height: 100px;">무릎통증</textarea>
-
-										<p class="symptom_tit m_10 bold2">대략 언제부터 그랬나요?</p>
-										<textarea class="m_28" name="" id="" placeholder="" style="height: 100px;">3년전 찬바람 맞고 나서부터</textarea>
-
-										<p class="symptom_tit m_10 bold2">어떻게 아픈가요?</p>
-										<textarea class="m_28" name="" id="" placeholder="" style="height: 100px;">갑자기 통증이 발생했었는데, 약을 먹어도 병원에 가도 낫지를 않습니다. 어떻게 해야 할까요</textarea>
-
-										<p class="symptom_tit m_10 bold2">사용여부</p>
-										<div class="usefulbtnWrap dp_f dp_c m_40">
-											<label for="pur_box1_1">
-												<input type="radio" name="pur_box1" id="pur_box1_1" onclick="pur_box1(this.name,0);">
-												사용
-											</label>
-											<label for="pur_box1_2">
-												<input type="radio" name="pur_box1" id="pur_box1_2" onclick="pur_box1(this.name,1);">
-												미사용
-											</label>
+									<div class="popUpBot" style="width: 560px;">
+										<p class="txt-l f15" style="margin-bottom:20px; padding: 0 20px;">※드래그해서 순서를 바꿀수 있습니다.</p>
+										<div class="purposeCheck">
+											<ul id="sortable" class="c_box3 purposeChk agree ui-sortable" style="margin-top: 0;">
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk1">
+														<label for="chk1" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">정신병</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk2">
+														<label for="chk2" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">비염</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk3">
+														<label for="chk3" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">소화장애</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk4">
+														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">불면증</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk4">
+														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">불면증</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk4">
+														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_cc categoryTit">불면증</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk4">
+														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
+												</li>
+												<li class="c_box3_c1 m_10 dp_sb ui-state-default ui-sortable-handle">
+													<div class="chkBoxWrap dp_f dp_c">
+														<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+														<input type="checkbox" name="purposeChk" id="chk4">
+														<label for="chk4" class="f18">증상명 증상명 증상명입니다.</label>
+													</div>
+													<span class="dp_f dp_c dp_end02 categoryTit">불면증</span>
+												</li>
+											</ul>
 										</div>
 
+
+										<script>
+											$(function() {
+												$("#sortable").sortable();
+												$("#sortable").disableSelection();
+											});
+
+											$("#sortable li input[type='checkbox']").on("click",function(event){
+												$("#sortable li input[type='checkbox']").prop('checked', false);
+												$(this).prop('checked', true);
+											});
+
+											function c_box7(obj,chk){
+
+												if(chk+1==4){	//4번째 항목일때 .purp_text 펼쳐짐
+													$(".purp_text").css("height","200px");
+												}else{
+													$(".purp_text").css("height","0");
+												}
+											}
+
+										</script>
 										<div class="dp_f dp_cc purposeTwoBtn">
-											<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="저장">저장</a>
+											<a class="cancelBtn blue01 dp_f dp_c dp_cc" href="" title="취소">취소</a>
+											<a class="submitBtn blue01 dp_f dp_c dp_cc" href="" title="수정">수정</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<script>
-								function pur_box1(obj,chk){
-									eChk = document.getElementsByName(obj);
-
-									for(var i=0;i<eChk.length;i++){
-										var k=i+1
-										if(i == chk){
-											eChk[i].checked = true;
-											$('#pur_box1_'+k).parent().addClass('active');
-										}else{
-											eChk[i].checked = false;
-											$('#pur_box1_'+k).parent().removeClass('active');
-										}
-									}
-
-								}
-							</script>
+							
 
 							<script>
 								$(function(){
@@ -378,7 +434,7 @@
 										<div class="perTab">
 											<p class="anjinTit">체형</p>
 										
-											<ul class="bmiList dp_sb m-20">
+											<ul class="bmiList dp_sb m-20 m_20">
 												<li class="dp_f dp_cc dp_end dp_fc">
 													<div class="cirWrap"></div>
 													<div class="txtBox">
@@ -444,7 +500,7 @@
 												<div class="wid62">
 													<p class="anjinTit dp_f dp_c">형색성정<a class="infoPopup dp_f dp_c dp_cc" href="" title="">!</a></p>
 										
-													<div class="degreeWrap p-45 dp_sb">
+													<div class="degreeWrap p-20 dp_sb">
 														<div class="wid49">
 															<p class="dgSelT dp_f dp_c">면색</p>
 															<div class="degreeSel dp_f dp_c">
@@ -480,20 +536,20 @@
 																</div>
 															</div>
 															<div class="degreeSel dp_f dp_c m_100">
-																<div class="degreeTxt txt-l">기타(다중선택)</div>
+																<div class="degreeTxt txt-l">기타(선택)</div>
 																<div class="checkWrap dp_f dp_c">
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_1" style="margin-right: 5px;">
-																		<label for="a_box2_1">미간주름</label>
-																	</div>
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_2" style="margin-right: 5px;">
-																		<label for="a_box2_2">입술건조</label>
-																	</div>
-																	<div class="dp_f dp_c checkBox">
-																		<input type="checkbox" name="a_box2" id="a_box2_3" style="margin-right: 5px;">
-																		<label for="a_box2_3">안구황색침착</label>
-																	</div>
+																	<label for="a_box2_1">
+																		<input type="checkbox" name="a_box2" id="a_box2_1" onclick="a_box2(this.name,0);">
+																		미간주름
+																	</label>
+																	<label for="a_box2_2">
+																		<input type="checkbox" name="a_box2" id="a_box2_2" onclick="a_box2(this.name,1);">
+																		입술건조
+																	</label>
+																	<label for="a_box2_3">
+																		<input type="checkbox" name="a_box2" id="a_box2_3" onclick="a_box2(this.name,2);">
+																		안구황색침착
+																	</label>
 																</div>
 															</div>
 														</div>
@@ -541,21 +597,16 @@
 															}
 
 														}
-														// function a_box2(obj,chk){
-														// 	eChk = document.getElementsByName(obj);
-
-														// 	for(var i=0;i<eChk.length;i++){
-														// 		var jj=i+1
-														// 		if(i == chk){
-														// 			eChk[i].checked = true;
-														// 			$('#a_box2_'+jj).parent().addClass('active');
-														// 		}else{
-														// 			eChk[i].checked = false;
-														// 			$('#a_box2_'+jj).parent().removeClass('active');
-														// 		}
-														// 	}
-
-														// }
+														$('input[name="a_box2"]').change(function() {
+															var value = $(this).val();              // value
+															var checked = $(this).prop('checked');  // checked 상태 (true, false)
+															var $label = $(this).parent();            // find a label element
+														
+															if(checked)
+																$label.addClass('active');   
+															else
+																$label.removeClass('active');    
+														});
 														function a_box3(obj,chk){
 															eChk = document.getElementsByName(obj);
 
@@ -680,7 +731,7 @@
 														<a class="bodyCheckBtn" href="" title="">인체도 크게보기</a>
 													</div>
 										
-													<div class="anatomyWrap p-45">
+													<div class="anatomyWrap p-20">
 														<div class="treat_detail_anjin_body_pic_box">
 															<div class="treat_detail_anjin_body_pic">
 																<div class="anjin_body_top dp_sb dp_c blue02">
@@ -1060,23 +1111,8 @@
 												<div class="wid31"></div>
 												<div class="wid31"></div>
 											</div>
-											<script>
-												$(function(){
-													//주증상 table 삭제
-													$(".delBtn").click(function(){
-														$(this).closest("table").hide();								
-													});
 
-													//주증상 table 추가
-													$("#addBtnWrap .addBtn").on("click",function(event){
-														event.preventDefault();	
-			
-														$("#tblAdd").clone(true, true).insertAfter("#tblAdd");							
-													});
-
-												});
-											</script>
-											<p class="anjinTit">감정</p>
+											<p class="anjinTit m-20">감정</p>
 										
 											<div class="emotionWrap dp_sb">
 												<ul class="e_box e_box1 dp_f dp_wrap">
@@ -1212,7 +1248,7 @@
 															</li>
 														</ul>
 													</li>
-													<li>
+													<li class="nobor">
 														<ul class="emo_contWrap">
 															<li class="emo_tit">· 긴장</li>
 															<li>
@@ -1229,8 +1265,6 @@
 															</li>
 														</ul>
 													</li>
-													<li></li>
-													<li></li>
 												</ul>
 											</div>
 											<script>
@@ -1258,6 +1292,1012 @@
 													}
 												});
 												
+											</script>
+											<div>
+												<p class="anjinTit dp_f dp_c">
+													프로토콜 비염 불문진
+													<a class="infoPopup02 dp_f dp_c dp_cc" href="" title="">!</a>
+												</p>
+												<div class="popUpWrap proto_pop">
+													<div class="popDetailBox">
+														<a class="closeBtn" href="" title="닫기"><span class="lnr lnr-cross"></span></a>
+														<div class="contBox">
+															<p class="f18 bold2 m_36">콧물 샘플</p>
+															<div class="dp_sb">
+																<div class="proto_samp_box">
+																	<div class="proto_samp_img" style="background-image:url('../img/samp_img.jpg');"><!---배경으로--></div>
+																	<p class="proto_samp_txt">맑은 콧물</p>
+																</div>
+																<div class="proto_samp_box">
+																	<div class="proto_samp_img" style="background-image:url('../img/samp_img.jpg');"><!---배경으로--></div>
+																	<p class="proto_samp_txt">맑은 콧물</p>
+																</div>
+																<div class="proto_samp_box">
+																	<div class="proto_samp_img" style="background-image:url('../img/samp_img.jpg');"><!---배경으로--></div>
+																	<p class="proto_samp_txt">맑은 콧물</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="bulmunjin_wrap dp_sb">
+												<div class="bulmunjin_box">
+													<div class="bulmunjin_tit dp_f dp_c">콧물을 풀어보게 하니, 주로…</div>
+													<div class="bulmunjin_det">
+														<ul class="dp_f dp_wrap">
+															<li>
+																<label for="bul_box1_1">
+																	<input type="radio" id="bul_box1_1" name="bul_box1" autocomplete="off">
+																	맑거나 흰 콧물
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_2">
+																	<input type="radio" id="bul_box1_2" name="bul_box1" autocomplete="off">
+																	맑거나 흰+누런 콧물이 섞여있다.
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_3">
+																	<input type="radio" id="bul_box1_3" name="bul_box1" autocomplete="off">
+																	누렇고 진득한 콧물
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="bulmunjin_box">
+													<div class="bulmunjin_tit dp_f dp_c">(비경소견) 콧물이…</div>
+													<div class="bulmunjin_det">
+														<ul class="dp_f dp_wrap">
+															<li>
+																<label for="bul_box1_4">
+																	<input type="radio" id="bul_box1_4" name="bul_box1" autocomplete="off">
+																	많다.
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_5">
+																	<input type="radio" id="bul_box1_5" name="bul_box1" autocomplete="off">
+																	어느 정도
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_6">
+																	<input type="radio" id="bul_box1_6" name="bul_box1" autocomplete="off">
+																	답변1
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_7">
+																	<input type="radio" id="bul_box1_7" name="bul_box1" autocomplete="off">
+																	소량 맺혀있다.
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_8">
+																	<input type="radio" id="bul_box1_8" name="bul_box1" autocomplete="off">
+																	거의 없다.
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_9">
+																	<input type="radio" id="bul_box1_9" name="bul_box1" autocomplete="off">
+																	바짝 말라있다.
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="bulmunjin_box">
+													<div class="bulmunjin_tit dp_f dp_c">(비경소견) 콧물이 주로…</div>
+													<div class="bulmunjin_det">
+														<ul class="dp_f dp_wrap">
+															<li>
+																<label for="bul_box1_10">
+																	<input type="radio" id="bul_box1_10" name="bul_box1" autocomplete="off">
+																	맑거나 흰 콧물
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_11">
+																	<input type="radio" id="bul_box1_11" name="bul_box1" autocomplete="off">
+																	맑거나 흰+누런 콧물이 섞여있다.
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_12">
+																	<input type="radio" id="bul_box1_12" name="bul_box1" autocomplete="off">
+																	누렇고 진득한 콧물
+																</label>
+															</li>
+															<li>
+																<label for="bul_box1_13">
+																	<input type="radio" id="bul_box1_13" name="bul_box1" autocomplete="off">
+																	건조한 코딱지가 있다.
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<script>
+												//프로토콜 불문진 info 팝업창 띄우기
+												$(".anjinTit .infoPopup02").click(function(event){
+													
+													event.preventDefault();
+													$(this).parent(".anjinTit").siblings(".popUpWrap").stop().fadeIn();
+													
+												});
+											
+												//프로토콜 불문진 info 팝업창 닫기
+												$(".popUpWrap .closeBtn").click(function(event){
+											
+													event.preventDefault();
+													$(".popUpWrap").stop().fadeOut();
+											
+												});
+
+												// 외부영역 클릭 시 팝업 닫기
+												$(document).mouseup(function (e){
+													var LayerPopup02 = $("#wholeWrap .popUpWrap");
+													if(LayerPopup02.has(e.target).length === 0){
+														LayerPopup02.stop().fadeOut();
+													}
+												});
+											</script>
+
+											<p class="anjinTit">
+												문진
+											</p>
+
+											<div class="munjin_set_wrap dp_sb">
+												
+												<div class="munjin_set_box">
+													<!-- <p class="munjin_set_tit dp_f dp_c">대제목(예:대변)</p> -->
+													<!--depth1--->
+													<ul class="mun_depth mun_depth1">
+														<li>
+															<div class="munjin_set_quest">
+																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
+																<div class="munjin_set_quest_det depth1_color_det">
+																	<ul class="dp_f dp_wrap">
+																		<li>
+																			<label for="set_quest1_1_1">
+																				<input type="radio" id="set_quest1_1_1" name="set_quest1_1" autocomplete="off" data_seq="mun_depth2">
+																				답변1
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest1_1_2">
+																				<input type="radio" id="set_quest1_1_2" name="set_quest1_1" autocomplete="off">
+																				답변2의 지문입니다.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest1_1_3">
+																				<input type="radio" id="set_quest1_1_3" name="set_quest1_1" autocomplete="off">
+																				지문이 이렇게 길어질 수 있습니다.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest1_1_4">
+																				<input type="radio" id="set_quest1_1_4" name="set_quest1_1" autocomplete="off">
+																				그러면 이렇게 다음줄로 넘어가게 해주세요.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest1_1_5">
+																				<input type="radio" id="set_quest1_1_5" name="set_quest1_1" autocomplete="off">
+																				모든 답변 공통입니다.
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2" data_seq="mun_depth2">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<!-- <div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest1_2_1">
+																							<input type="radio" id="set_quest1_2_1" name="set_quest1_2" autocomplete="off" data_seq="mun_depth3">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_2">
+																							<input type="radio" id="set_quest1_2_2" name="set_quest1_2" autocomplete="off">
+																							답변2의 지문입니다.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_3">
+																							<input type="radio" id="set_quest1_2_3" name="set_quest1_2" autocomplete="off">
+																							지문이 이렇게 길어질 수 있습니다.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_4">
+																							<input type="radio" id="set_quest1_2_4" name="set_quest1_2" autocomplete="off">
+																							그러면 이렇게 다음줄로 넘어가게 해주세요.
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest1_2_5">
+																							<input type="radio" id="set_quest1_2_5" name="set_quest1_2" autocomplete="off">
+																							모든 답변 공통입니다.
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3" data_seq="mun_depth3">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest1_3_1">
+																										<input type="checkbox" id="set_quest1_3_1" name="set_quest1_3" autocomplete="off">
+																										답변1
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_2">
+																										<input type="checkbox" id="set_quest1_3_2" name="set_quest1_3" autocomplete="off">
+																										답변2의 지문입니다.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_3">
+																										<input type="checkbox" id="set_quest1_3_3" name="set_quest1_3" autocomplete="off">
+																										지문이 이렇게 길어질 수 있습니다.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_4">
+																										<input type="checkbox" id="set_quest1_3_4" name="set_quest1_3" autocomplete="off">
+																										그러면 이렇게 다음줄로 넘어가게 해주세요.
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest1_3_5">
+																										<input type="checkbox" id="set_quest1_3_5" name="set_quest1_3" autocomplete="off">
+																										모든 답변 공통입니다.
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<!-- <div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div> -->
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest1_4_1">
+																													<input type="checkbox" id="set_quest1_4_1" name="set_quest1_4" autocomplete="off">
+																													답변1
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_2">
+																													<input type="checkbox" id="set_quest1_4_2" name="set_quest1_4" autocomplete="off">
+																													답변2의 지문입니다.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_3">
+																													<input type="checkbox" id="set_quest1_4_3" name="set_quest1_4" autocomplete="off">
+																													지문이 이렇게 길어질 수 있습니다.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_4">
+																													<input type="checkbox" id="set_ques1_4_4" name="set_quest1_4" autocomplete="off">
+																													그러면 이렇게 다음줄로 넘어가게 해주세요.
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest1_4_5">
+																													<input type="checkbox" id="set_quest1_4_5" name="set_quest1_4" autocomplete="off">
+																													모든 답변 공통입니다.
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+
+												</div>
+
+												<div class="munjin_set_box">
+													<!-- <p class="munjin_set_tit dp_f dp_c">대제목(예:대변)</p> -->
+													<!--depth1--->
+													<ul class="mun_depth mun_depth1">
+														<li>
+															<div class="munjin_set_quest">
+																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">질문내용이 나오는 곳. 질문은 길어질 수 있으며 2줄로 나타날 수도 있습니다.</div>
+																<div class="munjin_set_quest_det depth1_color_det">
+																	<ul class="dp_f dp_wrap">
+																		<li>
+																			<label for="set_quest2_1_1">
+																				<input type="radio" id="set_quest2_1_1" name="set_quest2_1" autocomplete="off" data_seq="mun_depth2_1">
+																				답변1
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest2_1_2">
+																				<input type="radio" id="set_quest2_1_2" name="set_quest2_1" autocomplete="off" data_seq="mun_depth2_2">
+																				답변2의 지문입니다.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest2_1_3">
+																				<input type="radio" id="set_quest2_1_3" name="set_quest2_1" autocomplete="off">
+																				지문이 이렇게 길어질 수 있습니다.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest2_1_4">
+																				<input type="radio" id="set_quest2_1_4" name="set_quest2_1" autocomplete="off">
+																				그러면 이렇게 다음줄로 넘어가게 해주세요.
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest2_1_5">
+																				<input type="radio" id="set_quest2_1_5" name="set_quest2_1" autocomplete="off">
+																				모든 답변 공통입니다.
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2 mun_depth2_1" data_seq="mun_depth2_1">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">답변 1의 2 depth 질문 01</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest2_2_1">
+																							<input type="radio" id="set_quest2_2_1" name="set_quest2_2" autocomplete="off">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest2_2_2">
+																							<input type="radio" id="set_quest2_2_2" name="set_quest2_2" autocomplete="off">
+																							답변2
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2 mun_depth2_2" data_seq="mun_depth2_2">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">답변 2의 2 depth 질문 02</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest2_2_1">
+																							<input type="radio" id="set_quest2_2_1" name="set_quest2_2" autocomplete="off" data_seq="mun_depth3_1">
+																							답변1
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest2_2_2">
+																							<input type="radio" id="set_quest2_2_2" name="set_quest2_2" autocomplete="off">
+																							답변2
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3 mun_depth3_1" data_seq="mun_depth3_1">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">답변 2의 2 depth 질문 02의 종속질문 01</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest2_3_1">
+																										<input type="radio" id="set_quest2_3_1" name="set_quest2_3" autocomplete="off" data_seq="mun_depth4_1">
+																										답변1
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest2_3_2">
+																										<input type="radio" id="set_quest2_3_2" name="set_quest2_3" autocomplete="off">
+																										답변2
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4 mun_depth4_1" data_seq="mun_depth4_1">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">답변 2의 2 depth 질문 02의 종속질문 01의 종속질문 01</div>
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest2_4_1">
+																													<input type="radio" id="set_quest2_4_1" name="set_quest2_4" autocomplete="off" data_seq="mun_depth5_1">
+																													답변1
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest2_4_2">
+																													<input type="radio" id="set_quest2_4_2" name="set_quest2_4" autocomplete="off">
+																													답변2
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																								<div class="depth_wrap">
+																									<!--depth5--->
+																									<ul class="mun_depth mun_depth5 mun_depth5_1" data_seq="mun_depth5_1">
+																										<li>
+																											<div class="munjin_set_quest">
+																												<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">답변 2의 2 depth 질문 02의 종속질문 01의 종속질문 01의 종속질문</div>
+																												<div class="munjin_set_quest_det depth4_color_det">
+																													<ul class="dp_f dp_wrap">
+																														<li>
+																															<label for="set_quest2_5_1">
+																																<input type="radio" id="set_quest2_5_1" name="set_quest2_5" autocomplete="off">
+																																답변1
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest2_5_2">
+																																<input type="radio" id="set_quest2_5_2" name="set_quest2_5" autocomplete="off">
+																																답변2
+																															</label>
+																														</li>
+																													</ul>
+																												</div>
+																											</div>
+																										</li>
+																									</ul>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+
+												</div>
+
+												<div class="munjin_set_box">
+													<p class="munjin_set_tit dp_f dp_c">대변</p>
+													<!--depth1--->
+													<ul class="mun_depth mun_depth1">
+														<li>
+															<div class="munjin_set_quest">
+																<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">평소 매일 정상변을 보는 편</div>
+																<div class="munjin_set_quest_det depth1_color_det">
+																	<ul class="dp_f dp_wrap">
+																		<li>
+																			<label for="set_quest3_1_1">
+																				<input type="radio" id="set_quest3_1_1" name="set_quest3_1" autocomplete="off" data_seq="mun_depth2_1_02">
+																				예
+																			</label>
+																		</li>
+																		<li>
+																			<label for="set_quest3_1_2">
+																				<input type="radio" id="set_quest3_1_2" name="set_quest3_1" autocomplete="off">
+																				아니오
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="depth_wrap">
+																<!--depth2--->
+																<ul class="mun_depth mun_depth2_1_02" data_seq="mun_depth2_1_02">
+																	<li>
+																		<div class="munjin_set_quest">
+																			<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">변비경향</div>
+																			<div class="munjin_set_quest_det depth2_color_det">
+																				<ul class="dp_f dp_wrap">
+																					<li>
+																						<label for="set_quest3_2_1">
+																							<input type="radio" id="set_quest3_2_1" name="set_quest3_2" autocomplete="off" data_seq="mun_depth3_1_02">
+																							예
+																						</label>
+																					</li>
+																					<li>
+																						<label for="set_quest3_2_2">
+																							<input type="radio" id="set_quest3_2_2" name="set_quest3_2" autocomplete="off">
+																							아니오
+																						</label>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="depth_wrap">
+																			<!--depth3--->
+																			<ul class="mun_depth mun_depth3_1_02" data_seq="mun_depth3_1_02">
+																				<li>
+																					<div class="munjin_set_quest">
+																						<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">어느 정도</div>
+																						<div class="munjin_set_quest_det depth3_color_det">
+																							<ul class="dp_f dp_wrap">
+																								<li>
+																									<label for="set_quest3_3_1">
+																										<input type="radio" id="set_quest3_3_1" name="set_quest3_3" autocomplete="off" data_seq="mun_depth4_1_02">
+																										심한편
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest3_3_2">
+																										<input type="radio" id="set_quest3_3_2" name="set_quest3_3" autocomplete="off" data_seq="mun_depth4_1_02">
+																										어느정도
+																									</label>
+																								</li>
+																								<li>
+																									<label for="set_quest3_3_3">
+																										<input type="radio" id="set_quest3_3_3" name="set_quest3_3" autocomplete="off">
+																										약간
+																									</label>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																					<div class="depth_wrap">
+																						<!--depth4--->
+																						<ul class="mun_depth mun_depth4_1_02" data_seq="mun_depth4_1_02">
+																							<li>
+																								<div class="munjin_set_quest">
+																									<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">대변 제때 못보면 가스가 많이 차서 더부룩 답답하다.</div>
+																									<div class="munjin_set_quest_det depth4_color_det">
+																										<ul class="dp_f dp_wrap">
+																											<li>
+																												<label for="set_quest3_4_1">
+																													<input type="radio" id="set_quest3_4_1" name="set_quest3_4" autocomplete="off" data_seq="mun_depth5_1_02">
+																													예
+																												</label>
+																											</li>
+																											<li>
+																												<label for="set_quest3_4_2">
+																													<input type="radio" id="set_quest3_4_2" name="set_quest3_4" autocomplete="off">
+																													아니오
+																												</label>
+																											</li>
+																										</ul>
+																									</div>
+																								</div>
+																								<div class="depth_wrap">
+																									<!--depth5--->
+																									<ul class="mun_depth mun_depth5_1_02" data_seq="mun_depth5_1_02">
+																										<li>
+																											<div class="munjin_set_quest">
+																												
+																												<div class="munjin_set_quest_det depth5_color_det">
+																													<ul class="dp_f dp_wrap">
+																														<li>
+																															<label for="set_quest3_5_1">
+																																<input type="radio" id="set_quest3_5_1" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																그러면 매우 괴롭다
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest3_5_2">
+																																<input type="radio" id="set_quest3_5_2" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																괴롭다
+																															</label>
+																														</li>
+																														<li>
+																															<label for="set_quest3_5_2">
+																																<input type="radio" id="set_quest3_5_2" name="set_quest3_5" autocomplete="off" data_seq="mun_depth6_1_02">
+																																약간 불편다
+																															</label>
+																														</li>
+																													</ul>
+																												</div>
+																											</div>
+																											<div class="depth_wrap">
+																												<!--depth6--->
+																												<ul class="mun_depth mun_depth6_1_02" data_seq="mun_depth6_1_02">
+																													<li>
+																														<div class="munjin_set_quest">
+																															
+																															<div class="munjin_set_quest_det depth1_color_det">
+																																<ul class="dp_f dp_wrap">
+																																	<li>
+																																		<label for="set_quest3_6_1">
+																																			<input type="radio" id="set_quest3_6_1" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			하루라도 못 보면 그렇다.
+																																		</label>
+																																	</li>
+																																	<li>
+																																		<label for="set_quest3_6_2">
+																																			<input type="radio" id="set_quest3_6_2" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			2~3일 못보면 
+																																		</label>
+																																	</li>
+																																	<li>
+																																		<label for="set_quest3_6_2">
+																																			<input type="radio" id="set_quest3_6_2" name="set_quest3_6" autocomplete="off" data_seq="mun_depth7_1_02">
+																																			4~5일 넘어가면
+																																		</label>
+																																	</li>
+																																</ul>
+																															</div>
+																														</div>
+																														<div class="depth_wrap">
+																															<!--depth7--->
+																															<ul class="mun_depth mun_depth7_1_02" data_seq="mun_depth7_1_02">
+																																<li>
+																																	<div class="munjin_set_quest">
+																																		<div class="munjin_set_quest_tit dp_f dp_c depth2_color_tit">설사를 해서라도 다 쏟아내면 너무 시원하고 좋겠다.</div>
+																																		<div class="munjin_set_quest_det depth2_color_det">
+																																			<ul class="dp_f dp_wrap">
+																																				<li>
+																																					<label for="set_quest3_7_1">
+																																						<input type="radio" id="set_quest3_7_1" name="set_quest3_7" autocomplete="off" data_seq="mun_depth8_1_02">
+																																						그렇다.
+																																					</label>
+																																				</li>
+																																				<li>
+																																					<label for="set_quest3_7_2">
+																																						<input type="radio" id="set_quest3_7_2" name="set_quest3_7" autocomplete="off" >
+																																						그 정도는 아니다.
+																																					</label>
+																																				</li>
+																																			</ul>
+																																		</div>
+																																	</div>
+																																	<div class="depth_wrap">
+																																		<!--depth8--->
+																																		<ul class="mun_depth mun_depth8_1_02" data_seq="mun_depth8_1_02">
+																																			<li>
+																																				<div class="munjin_set_quest">
+																																					<div class="munjin_set_quest_tit dp_f dp_c depth3_color_tit">설사-무른변 경향</div>
+																																					<div class="munjin_set_quest_det depth3_color_det">
+																																						<ul class="dp_f dp_wrap">
+																																							<li>
+																																								<label for="set_quest3_8_1">
+																																									<input type="radio" id="set_quest3_8_1" name="set_quest3_8" autocomplete="off" data_seq="mun_depth9_1_02">
+																																									예
+																																								</label>
+																																							</li>
+																																							<li>
+																																								<label for="set_quest3_8_2">
+																																									<input type="radio" id="set_quest3_8_2" name="set_quest3_8" autocomplete="off" >
+																																									아니요
+																																								</label>
+																																							</li>
+																																						</ul>
+																																					</div>
+																																				</div>
+																																				<div class="depth_wrap">
+																																					<!--depth9--->
+																																					<ul class="mun_depth mun_depth9_1_02" data_seq="mun_depth9_1_02">
+																																						<li>
+																																							<div class="munjin_set_quest">
+																																								<div class="munjin_set_quest_tit dp_f dp_c depth4_color_tit">어느 정도</div>
+																																								<div class="munjin_set_quest_det depth4_color_det">
+																																									<ul class="dp_f dp_wrap">
+																																										<li>
+																																											<label for="set_quest3_9_1">
+																																												<input type="radio" id="set_quest3_9_1" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_2_02">
+																																												거의 매일
+																																											</label>
+																																										</li>
+																																										<li>
+																																											<label for="set_quest3_9_2">
+																																												<input type="radio" id="set_quest3_9_2" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_2_02">
+																																												일주일 3~4번 정도
+																																											</label>
+																																										</li>
+																																										<li>
+																																											<label for="set_quest3_9_3">
+																																												<input type="radio" id="set_quest3_9_3" name="set_quest3_9" autocomplete="off" data_seq="mun_depth10_1_02">
+																																												한달 3~ 4번 이하
+																																											</label>
+																																										</li>
+																																									</ul>
+																																								</div>
+																																							</div>
+																																							<div class="depth_wrap">
+																																								<!--depth10--->
+																																								<ul class="mun_depth mun_depth10_1_02" data_seq="mun_depth10_1_02">
+																																									<li>
+																																										<div class="munjin_set_quest">
+																																											<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">그럴 때는 어떻게 하시나요?</div>
+																																											<div class="munjin_set_quest_det depth5_color_det">
+																																												<ul class="dp_f dp_wrap">
+																																													<li>
+																																														<label for="set_quest3_10_1">
+																																															<input type="checkbox" id="set_quest3_10_1" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_1_02">
+																																															설사약을 먹어야 할 정도이다
+																																														</label>
+																																													</li>
+																																												</ul>
+																																											</div>
+																																										</div>
+																																										<div class="depth_wrap">
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_1_02" data_seq="mun_depth11_1_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">10번이면</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		10~7번 정도
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		5번 전후
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_3">
+																																																		<input type="radio" id="set_quest3_11_3" name="set_quest3_11" autocomplete="off">
+																																																		3번 이하
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																										</div>
+																																									</li>
+																																								</ul>
+																																								<!--depth10--->
+																																								<ul class="mun_depth mun_depth10_2_02" data_seq="mun_depth10_2_02">
+																																									<li>
+																																										<div class="munjin_set_quest">
+																																											<div class="munjin_set_quest_tit dp_f dp_c depth5_color_tit">어떨 때 설사-무른변을 보나요?</div>
+																																											<div class="munjin_set_quest_det depth5_color_det">
+																																												<ul class="dp_f dp_wrap">
+																																													<li>
+																																														<label for="set_quest3_10_1">
+																																															<input type="radio" id="set_quest3_10_1" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_1_02">
+																																															찬 음식 먹으면 예)찬음료, 찬우유, 찬맥주 등
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_2">
+																																															<input type="radio" id="set_quest3_10_2" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_2_02">
+																																															두번째 답변
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_3">
+																																															<input type="radio" id="set_quest3_10_3" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_3_02">
+																																															세번째 답변
+																																														</label>
+																																													</li>
+																																													<li>
+																																														<label for="set_quest3_10_4">
+																																															<input type="radio" id="set_quest3_10_4" name="set_quest3_10" autocomplete="off" data_seq="mun_depth11_4_02">
+																																															네번째 답변
+																																														</label>
+																																													</li>
+																																												</ul>
+																																											</div>
+																																										</div>
+																																										<div class="depth_wrap">
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_1_02" data_seq="mun_depth11_1_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">01.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_2_02" data_seq="mun_depth11_2_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">02.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_3_02" data_seq="mun_depth11_3_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">03.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																											<!--depth11--->
+																																											<ul class="mun_depth mun_depth11_4_02" data_seq="mun_depth11_4_02">
+																																												<li>
+																																													<div class="munjin_set_quest">
+																																														<div class="munjin_set_quest_tit dp_f dp_c depth1_color_tit">04.평소 배에 가스가 많이 차서 헛배가 자주 부른다.</div>
+																																														<div class="munjin_set_quest_det depth1_color_det">
+																																															<ul class="dp_f dp_wrap">
+																																																<li>
+																																																	<label for="set_quest3_11_1">
+																																																		<input type="radio" id="set_quest3_11_1" name="set_quest3_11" autocomplete="off">
+																																																		예
+																																																	</label>
+																																																</li>
+																																																<li>
+																																																	<label for="set_quest3_11_2">
+																																																		<input type="radio" id="set_quest3_11_2" name="set_quest3_11" autocomplete="off">
+																																																		아니요
+																																																	</label>
+																																																</li>
+																																															</ul>
+																																														</div>
+																																													</div>
+																																												</li>
+																																											</ul>
+																																										</div>
+																																									</li>
+																																								</ul>
+																																							</div>
+																																						</li>
+																																					</ul>
+																																				</div>
+																																			</li>
+																																		</ul>
+																																	</div>
+																																</li>
+																															</ul>
+																														</div>
+																													</li>
+																												</ul>
+																											</div>
+																										</li>
+																									</ul>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+
+												</div>
+											</div>
+											<script>
+												//라디오 해당 data_seq 눌렀을 시 depth 나옴
+												$('.munjin_set_quest_det > ul > li label input[type="radio"]').change(function() {        
+													const thisSeq = $(this).attr('data_seq');
+													const nextSeq = $(this).parents(".munjin_set_quest").next().children('.'+ thisSeq).attr('data_seq');
+													const checked = $(this).prop('checked');  // checked 상태 (true, false)
+													const $nextdepth = $(this).parents(".munjin_set_quest").next().children('.'+ thisSeq);            // find a label element
+													const $nextdepth_off = $(this).parents(".munjin_set_quest").next().children('.mun_depth');
+													const other = $(".munjin_set_quest .mun_depth input");
+
+													if(thisSeq == nextSeq && $(this).is(':checked')) {
+														$nextdepth_off.hide(); 
+														$nextdepth.stop().fadeIn(); 
+
+													} else {
+														$(".munjin_set_quest_det > ul > li label input[type='radio']").prop('checked',false); 
+														$nextdepth_off.hide(); 
+														$nextdepth.hide();
+														other.hide();
+
+													}    
+												});
+												//체크박스 어느 것을 눌러도 depth 나옴
+												$('.munjin_set_quest_det > ul > li label input[type="checkbox"]').change(function() {        
+													
+													const checked = $(this).prop('checked');  // checked 상태 (true, false)
+													const $nextdepth = $(this).parents(".munjin_set_quest").next().children(".mun_depth");            // find a label element
+												
+													if($(this).is(':checked')) {
+														$nextdepth.stop().fadeIn(); 
+
+													} else {
+														$nextdepth.hide(); 
+
+													}    
+												});
+
+												// $('.munjin_set_quest_det input').on("click",function() {        
+												// 	$("html, body").animate({ scrollTop: $(document).height() }, 2000);
+												
+												// });
 											</script>
 										</div>
 										<!---처방 탭 내용--->
@@ -1297,7 +2337,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">반하사심탕</a>
+																									<span>반하사심탕</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1318,7 +2358,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">소청룡탕</a>
+																									<span>소청룡탕</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1334,7 +2374,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1350,7 +2390,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1366,7 +2406,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1382,7 +2422,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1398,7 +2438,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1414,7 +2454,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1430,7 +2470,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1572,7 +2612,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">반하사심탕</a>
+																									<span>반하사심탕</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1595,7 +2635,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">소청룡탕</a>
+																									<span>소청룡탕</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1612,7 +2652,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1629,7 +2669,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1646,7 +2686,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1663,7 +2703,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1680,7 +2720,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1697,7 +2737,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1714,7 +2754,7 @@
 																							<td class="txt-l pad20">
 																								<div class="dp_f dp_c">
 																									<span class="useTi"><span>7</span>+</span>
-																									<a href="" title="">처방명</a>
+																									<span>처방명</span>
 																								</div>
 																							</td>
 																							<td class="txt-l pad20">인삼 6,황기 1, 반하 10, 약재명 용량(g)</td>
@@ -1865,9 +2905,9 @@
 											</div>
 											
 											<div class="prescriptWrap">
-												<p class="anjinTit dp_f dp_c">약재</p>
-												<div class="interactBox p-12">
-													<div class="metiAmt_tit dp_sb m_10">
+												<p class="anjinTit dp_f dp_c m-20">약재</p>
+												<div class="interactBox p-20">
+													<div class="metiAmt_tit dp_sb m_20">
 														<div class="dp_f dp_c">
 															첩당약재량 
 															<div class="help_wrap">
@@ -2155,6 +3195,9 @@
 													let table_tr_length = $("#totalAmtTbl01 table tr").length;
 
 													$("#totalAmtTbl01 .updowntotal").text(totalgcal01);
+													$("#totalgram01_1").val(totalgcal01);
+													$("#totalgram01_2").val(totalgcal01);
+
 													if(table_tr_length == 3){
 														$("#totalAmtTbl01 table tr.nomore_medi td").text("처방전을 선택해주세요.");
 														$("#totalAmtTbl01 table tr.nomore_medi").css({'height':'200px'});
@@ -2220,7 +3263,7 @@
 												<p class="anjinTit dp_f dp_c">조제지시</p>
 												<div class="wid100 dp_sb">
 													<div class="wid49">
-														<div class="interactBox p-12">
+														<div class="interactBox p-20">
 															<ul class="mediBtnWrap">
 																<li class="on"><a href="" title="탕전">탕전</a></li>
 																<li><a href="" title="환제">환제</a></li>
@@ -2321,7 +3364,7 @@
 																		<a class="wid23 dp_f dp_c dp_cc" href="" title="밀환(국산꿀)">밀환(국산꿀)</a>
 																	</div>
 																	<!--환제의 크기-->
-																	<div class="anjinTit dp_f dp_c">
+																	<div class="anjinTit dp_f dp_c m-20">
 																		환제의 크기
 																		<div class="help_wrap">
 																			<div class="excla_mark help_point">
@@ -2407,8 +3450,8 @@
 														</div>
 													</div>
 													<div class="wid49">
-														<div class="p_r interactBox m-12">
-															<textarea style="height: 372px;"></textarea>
+														<div class="p_r interactBox m-20">
+															<textarea style="height: 350px;"></textarea>
 															<div class="letterChk dp_f dp_c">
 																(<span>0</span>/<span>300</span>)
 															</div>
@@ -2416,7 +3459,7 @@
 													</div>
 												</div>
 												<div class="wid100">
-													<div class="anjinTit dp_f dp_c">
+													<div class="anjinTit dp_f dp_c m-20">
 														복약지시
 														<div class="help_wrap">
 															<div class="excla_mark help_point">
@@ -2430,7 +3473,7 @@
 													</div>
 													<div class="dp_sb">
 														<div class="wid49">
-															<div class="interactBox p-12">
+															<div class="interactBox p-20">
 																<div class="totalAmt dp_sb">
 																	<div class="totalAmt_tit">처방총량</div>
 																	<div class="t_tit_input">
@@ -2459,7 +3502,7 @@
 																	</label>
 																	일간 복용하시는 양입니다.
 																</div>
-																<div class="dayDetail dp_f dp_c m_28">
+																<div class="dayDetail dp_f dp_c m_20">
 																	<div class="btnWrap02 dp_f">
 																		<a class="on dp_f dp_c dp_cc" href="" title="관계없음">관계없음</a>
 																		<a class="dp_f dp_c dp_cc" href="" title="식전">식전</a>
@@ -2490,7 +3533,7 @@
 																</script>
 															</div>
 														</div>
-														<div class="wid49 p-12 interactBox">
+														<div class="wid49 p-20 interactBox">
 															<div class="textHgt03  p_r">
 																<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
 																<div class="letterChk dp_f dp_c">
@@ -2504,13 +3547,13 @@
 												<div class="wid100">
 													<p class="anjinTit dp_f dp_c">배송정보확인</p>
 													<div class="dp_sb">
-														<div class="p_tabTitBox m-40 wid49">
-															<p class="p_addrTit bold2 m_28 f20">주소</p>
-															<p class="p_addrDet m_12">서울시 동작구 매봉로 99 갑을아파트 103동 101호</p>
+														<div class="p_tabTitBox m-20 wid49">
+															<p class="p_addrTit bold2 m_20 f20">주소</p>
+															<p class="p_addrDet">서울시 동작구 매봉로 99 갑을아파트 103동 101호</p>
 														</div>
-														<div class="p_tabTitBox m-40 wid49">
-															<p class="p_addrTit bold2 m_28 f20">연락처</p>
-															<p class="p_addrDet m_12">010-123-1234</p>
+														<div class="p_tabTitBox m-20 wid49">
+															<p class="p_addrTit bold2 m_20 f20">연락처</p>
+															<p class="p_addrDet">010-123-1234</p>
 														</div>
 													</div>
 												</div>
@@ -2560,7 +3603,7 @@
 								<div class="tab_right">
 									<div class="fixed_sidemenu">
 										<div class="pin_box_scroll">
-											<p class="anjinTit dp_sb">
+											<p class="anjinTit dp_sb m-20 dp_end">
 												주증상
 												<span id="addBtnWrap" class="dp_f">
 													<a class="addBtn" href="" title="">CC추가</a>
@@ -2575,46 +3618,58 @@
 													</colgroup>
 													<tbody>
 														<tr>
-															<th class="gry04">CC</th>
-															<th class="nobr gry04">
-																내용
+															<th class="skyblue02 c_wht">CC</th>
+															<td class="dp_f dp_c">
 																<a class="gry02 delBtn dp_f dp_c dp_cc" href="javascript:void(0);" title=""><span>X</span></a>
-															</th>
+																<textarea></textarea>
+															</td>
 														</tr>
 														<tr>
-															<th class="gry04">Check</th>
+															<th class="skyblue02 c_wht">O/S</th>
+															<td class="dp_f dp_c"><textarea style="background-color: #bcd6f7;"></textarea></td>
+														</tr>
+														<tr>
+															<th class="skyblue02 c_wht">경과</th>
 															<td class="dp_f dp_c"><textarea></textarea></td>
 														</tr>
 														<tr>
-															<th class="gry04">From</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
+															<th class="skyblue02 c_wht">악화요인</th>
+															<td class="dp_f dp_c"><textarea style="background-color: #bcd6f7;"></textarea></td>
 														</tr>
 														<tr>
-															<th class="gry04">Progress</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
-														</tr>
-														<tr>
-															<th class="gry04">악화요인</th>
-															<td class="dp_f dp_c"><textarea></textarea></td>
-														</tr>
-														<tr>
-															<th class="gry04">악화요인</th>
+															<th class="skyblue02 c_wht">악화요인</th>
 															<td class="dp_f dp_c"><textarea></textarea></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
-											<p class="anjinTit dp_sb">
+											<script>
+												$(function(){
+													//주증상 table 삭제
+													$(".delBtn").click(function(){
+														$(this).closest("table").hide();								
+													});
+
+													//주증상 table 추가
+													$("#addBtnWrap .addBtn").on("click",function(event){
+														event.preventDefault();	
+			
+														$("#tblAdd").clone(true, true).insertAfter("#tblAdd");							
+													});
+
+												});
+											</script>
+											<p class="anjinTit dp_sb m-20">
 												진료메모
 											</p>
 											<div class="rowCont">
-												<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
+												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 20px; height: 100px;"></textarea>
 											</div>
-											<p class="anjinTit dp_sb">
+											<p class="anjinTit dp_sb m-20">
 												처방메모
 											</p>
 											<div class="rowCont">
-												<textarea name="" id="textBox" maxlength="2000" style="margin-top: 20px; height: 100px;"></textarea>
+												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 20px; height: 100px;"></textarea>
 											</div>
 
 											<script>
@@ -2685,7 +3740,7 @@
 						</script>
 
 						<!---처방 검증 팝업-->
-						<div class="popUpwrap verifiPop editPop">
+						<div class="popUpwrap verifiPop">
 							<div class="popUpBox">
 								<div class="popUpTop blue02 dp_sb dp_c">
 									<span>정인적방 검증</span>
@@ -2719,7 +3774,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">반하사심탕</a>
+																			<span>반하사심탕</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2742,7 +3797,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">소청룡탕</a>
+																			<span>소청룡탕</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2765,7 +3820,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2788,7 +3843,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2811,7 +3866,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2834,7 +3889,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2857,7 +3912,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2880,7 +3935,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>
@@ -2903,7 +3958,7 @@
 																	<td class="txt-l pad20">
 																		<div class="dp_f dp_c">
 																			<span class="useTi"><span>7</span>+</span>
-																			<a href="" title="">처방명</a>
+																			<span>처방명</span>
 																		</div>
 																	</td>
 																	<td>1</td>

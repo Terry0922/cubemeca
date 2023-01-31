@@ -609,7 +609,7 @@
 }
 
 #wholeWrap .basicInfo_tbl {
-	padding: 10px 20px;
+	padding: 4px 20px;
 	border-radius: 4px; 
 	border: 1px solid #DDDDDD;
 	/* box-shadow: 0px 3px 16px #00000029; */
@@ -633,7 +633,7 @@
 }
 
 #wholeWrap .basicInfo_tbl table tr {
-	height: 35px;
+	height: 30px;
 }
 
 #wholeWrap .basicInfo_tbl03 select {
@@ -721,13 +721,13 @@
 	border-radius: 4px;
 	padding: 20px; 
 	box-sizing: border-box;
-	width: 78%;
+	width: 70%;
 }
 .tab_right {
-	width: 21%;
+	width: 29%;
 }
 .tab_right .fixed_sidemenu {
-	margin-top: 30px;
+	margin-top: 20px;
 	width: 100%;
 	border: 1px solid #efefef;
 	box-sizing: border-box;
@@ -738,14 +738,14 @@
 	position: fixed;
 	top: 0;
 	right: 45px;
-	width: 20.7em;
+	width: 28.5em;
 }
 .wholeWrap.active .tab_right.on {
-	width: 23em;
+	width: 31.7em;
 }
 #wholeWrap .fixed_sidemenu .pin_box_scroll {
     overflow-y: auto;
-    max-height: 700px;
+    height: calc(100vh - 170px);
 	padding: 0 15px 50px; 
 }
 #wholeWrap .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
@@ -806,7 +806,6 @@
 }
 
 #wholeWrap .perTab .s_tabContWrap .s_tabCont .s_tab_tit {
-	margin-top: 30px;
 	width: 100%;
 	box-sizing: border-box;
     padding-bottom: 10px;
@@ -967,7 +966,6 @@
 }
 
 #wholeWrap .anjinTit {
-	margin-top: 30px;
 	width: 100%;
 	padding-bottom: 10px; 
 	border-bottom: 1px solid #c5c5c5;
@@ -1463,7 +1461,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .degreeSel {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 
 #wholeWrap .degreeSel.m_100 {
@@ -1508,11 +1506,12 @@ html .ui-button.ui-state-disabled:active {
     text-align: center;
     font-size: 15px;
 }
+.degreeSel .checkWrap label:last-child {border-right: 0;}
 .degreeSel .checkWrap label input {display: none;}
 .degreeSel .checkWrap label.active {background-color:#054391;color: #fff;}
 
 #addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff; font-size: 14px;}
-#tblAdd {margin-top: 20px; width: 100%;}
+#tblAdd {margin-top: 30px; width: 100%;}
 #tblAdd tr {border: 1px solid #eee;}
 #tblAdd tr th, 
 #tblAdd tr td {
@@ -1532,13 +1531,11 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #tblAdd tr {background-color: #fff;}
-#tblAdd:first-child th .delBtn {display: none;}
-#tblAdd tr th .delBtn {
+#tblAdd:first-child td .delBtn {display: none;}
+#tblAdd tr td .delBtn {
 	position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 7px;
-    border-radius: 50%;
+    top: -20px;
+    right: 0;
     width: 20px;
     height: 20px;
     color: #fff;
@@ -1699,7 +1696,7 @@ html .ui-button.ui-state-disabled:active {
 .wholeWrap .emotionWrap .e_box > li {
 	width: 31.333%; 
 	box-sizing: border-box;
-	padding: 15px 0 15px 20px ;
+	padding: 0 0 10px 20px ;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -1708,7 +1705,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .emotionWrap .emo_contWrap .emo_tit {
-	padding: 15px 0 15px 0 !important;
+	padding: 20px 0 10px 0 !important;
 	border-bottom: none !important;
 	font-weight: 700;
 	color: #054391;
@@ -1797,7 +1794,7 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .interactBox .hotor.on {background-color: #043677; color: #fff;}
 .prescriptWrap .interactBox .textHgt01 {height: 150px;}
 .prescriptWrap .interactBox .textHgt02 {height: 268px;}
-.interactBox .textHgt03 {height: 148px;}
+.interactBox .textHgt03 {height: 140px;}
 .prescriptWrap .interactBox .textHgt04 {height: 325px;}
 .prescriptWrap .multiBtn a {margin: 0 5px; padding: 2px 4px; border-radius: 4px;}
 .prescriptWrap .multiBtn a:nth-child(1) input,
@@ -1810,7 +1807,7 @@ html .ui-button.ui-state-disabled:active {
 .prescriptWrap .p_Cont .kind_filter_btn li.on {background-color: #043677;}
 .prescriptWrap .p_Cont .kind_filter_btn li a {color: #fff;}
 
-.p_contentwrap .totalAmt {border-radius: 4px; margin-bottom: 10px; padding: 11px 20px; background-color: #e7e7e7;}
+.p_contentwrap .totalAmt {border-radius: 4px; margin-bottom: 20px; padding: 11px 20px; background-color: #e7e7e7;}
 .p_contentwrap .totalAmt .tt_inputWrap label {margin: 0 10px;}
 .p_contentwrap .totalAmt .tt_inputWrap label input {width: 80px; text-align: center;}
 
@@ -2030,7 +2027,7 @@ html .ui-button.ui-state-disabled:active {
 .tableWrap.verifi_tbl tr td {font-weight: 400;}
 
 .bulmunjin_wrap {
-	margin: 30px 0 100px 0;
+	margin: 20px 0;
 }
 
 .bulmunjin_wrap .bulmunjin_box {
@@ -2047,6 +2044,9 @@ html .ui-button.ui-state-disabled:active {
 	background-color: #efefef;
 	padding: 10px;
 	box-sizing: border-box;
+	min-height: 176px;
+}
+.wholeWrap.active .bulmunjin_wrap .bulmunjin_box .bulmunjin_det {
 	min-height: 137px;
 }
 .bulmunjin_wrap .bulmunjin_box .bulmunjin_det ul li {
@@ -2060,11 +2060,19 @@ html .ui-button.ui-state-disabled:active {
 	width: 32.333%;
 }
 .munjin_set_wrap .munjin_set_box .munjin_set_tit {
-	padding: 10px;
 	box-sizing: border-box;
-	min-height: 58px;
+	font-size:1.375rem;
+	padding-bottom: 10px;
+	color: #054391;
+	font-weight: 700;
+}
+.munjin_set_wrap .munjin_set_box .munjin_set_tit:before {
+	content: "";
+	margin-right: 10px;
+	display: block;
+	width: 4px;
+	height: 30px;
 	background-color: #054391;
-	color: #fff;
 }
 .munjin_set_quest .munjin_set_quest_tit {
 	padding: 10px;

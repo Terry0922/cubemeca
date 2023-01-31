@@ -191,6 +191,7 @@ textarea {font-size: 16px; font-family:'Pretendard'; padding: 10px; box-sizing: 
 .blue05 {background-color: #5c7eab;}
 .skyblue {background-color: #f2f4f6;}
 .skyblue01 {background-color: #eaf3ff;}
+.skyblue02 {background-color: #4f77a9;}
 
 .grn01 {background-color: #75C553;}
 .orange01 {background-color: #ffa207;}
@@ -201,8 +202,9 @@ textarea {font-size: 16px; font-family:'Pretendard'; padding: 10px; box-sizing: 
 .c_blue {color: #064EAA;}
 .c_blue02 {color: #054391;}
 .cogrn {color: #75C553;}
+.c_wht {color: #fff;}
 
-.tabInner {margin:0 auto; padding: 40px 0; width:90%;}
+.tabInner {margin:0 auto; padding: 20px 0; width:100%;}
 .tableWrap table {margin: 0 auto; width: 100%; background-color: #fff;}
 .tableWrap table tr {border: 1px solid #eee; height: 50px;}
 .tableWrap table td {padding-left: 20px; color: #000;}
