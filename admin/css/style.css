@@ -698,11 +698,11 @@
 }
 
 #wholeWrap .perTabBtn li:nth-child(1) a {
-	border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 0;
 }
 
 #wholeWrap .perTabBtn li:last-child a {
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 0 0;
 }
 
 #wholeWrap .perTabBtn li.on a {
@@ -718,7 +718,7 @@
 
 #wholeWrap .tab_left_cont {
 	background-color: #f7f7f7;
-	border-radius: 4px;
+	border-radius: 0 0 4px 4px;
 	padding: 20px; 
 	box-sizing: border-box;
 	width: 70%;
@@ -730,7 +730,7 @@
 	width: 100%;
 	border: 1px solid #efefef;
 	box-sizing: border-box;
-	border-radius: 4px;
+	border-radius: 0 0 4px 4px;
 	background-color: #fff;
 }
 .tab_right.on .fixed_sidemenu {
@@ -747,8 +747,8 @@
 }
 #wholeWrap .fixed_sidemenu .pin_box_scroll {
     overflow-y: auto;
-    height: calc(100vh - 170px);
-	padding: 0 15px 50px; 
+    height: calc(100vh - 132px);
+	padding: 0 15px 20px; 
 }
 #wholeWrap .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
 #wholeWrap .fixed_sidemenu .pin_box_scroll::-webkit-scrollbar-thumb {background-color: #888; border-radius: 3px;}
@@ -1035,11 +1035,11 @@
 }
 
 #wholeWrap .halfTitWrap .infoPopup {
-	margin-left: 10px;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	border-radius: 50%;
-	background-color: #96b6df;
+	margin: 1px 0 0 4px;
+	background-color: #a1a1a1;
 	color: #fff;
 }
 
@@ -1081,11 +1081,11 @@
 }
 
 #wholeWrap .infoPopup02 {
-	margin-left: 10px;
-	width: 20px;
-	height: 20px;
+	margin: 1px 0 0 4px;
+	width: 18px;
+	height: 18px;
 	border-radius: 50%;
-	background-color: #96b6df;
+	background-color: #a1a1a1;
 	color: #fff;
 }
 
@@ -1404,9 +1404,7 @@ html .ui-button.ui-state-disabled:active {
 
 #wholeWrap .degreeCirWrap .cirsWrap {
 	background-color: #efefef;
-	margin: 0 10px;
 	border-radius: 4px;
-	padding: 5px;
 	height: 32px;
 	box-sizing: border-box;
 }
@@ -1451,16 +1449,22 @@ html .ui-button.ui-state-disabled:active {
 
 .wholeWrap .degreeTxt {
 	font-size: 14px;
-	margin-right: 5px;
-	min-width: 48px;
+	margin: 0 4px;
+	width: 62px;
+	height: 32px;
 	font-weight: 500;
+	background-color: #efefef;
 }
 .wholeWrap.active .degreeTxt {
 	max-width: 100%;
 }
 
-#wholeWrap .degreeCirWrap {
-	width: 100%;
+.wholeWrap .degreeCirWrap {
+	width: 280px;
+}
+
+.wholeWrap.active .degreeCirWrap {
+	width: 325px;
 }
 
 #wholeWrap .degreeSel {
@@ -1476,14 +1480,14 @@ html .ui-button.ui-state-disabled:active {
 	color: #054391;
 }
 
-.radioWrap {min-width: 295px; height: 30px; margin:0 0 0 12px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+.radioWrap {width: calc(100% - 80px); height: 30px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
 .wholeWrap.active .radioWrap {max-width: 100%; min-width: 360px;}
 .radioWrap label {width:33.333%; height:100%; justify-content: center; border-right:1px solid #ccc; background-color:#fff; box-sizing:border-box; transition:all .2s; cursor:pointer; text-align: center; font-size: 15px;}
 .radioWrap label input {display: none;}
 .radioWrap label.active {background-color:#054391;color: #fff;}
 .radioWrap label:last-child {border-right: none;}
 .wholeWrap.active .degreeSel .checkWrap {max-width: 100%; min-width: 360px;}
-.degreeSel .checkWrap {min-width: 295px; height: 30px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+.degreeSel .checkWrap {width: calc(100% - 80px); height: 30px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
 .degreeSel .checkWrap label {    
 	display: flex;
 	align-items: center;
@@ -1503,7 +1507,7 @@ html .ui-button.ui-state-disabled:active {
 .degreeSel .checkWrap label.active {background-color:#054391;color: #fff;}
 
 #addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff; font-size: 14px;}
-#tblAdd {margin-top: 10px; width: 100%;}
+#tblAdd {margin-bottom: 20px; width: 100%;}
 #tblAdd tr {border: 1px solid #eee;}
 #tblAdd tr th, 
 #tblAdd tr td {
@@ -1703,7 +1707,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .emotionWrap .emo_contWrap li {
-	padding: 5px 0 ;
+	padding: 2px 0 ;
 	font-size: 15px;
 }
 
@@ -2030,6 +2034,7 @@ html .ui-button.ui-state-disabled:active {
 	padding: 10px;
 	box-sizing: border-box;
 	min-height: 40px;
+	font-size: 15px;
 }
 .bulmunjin_wrap .bulmunjin_box .bulmunjin_det {
 	background-color: #efefef;
@@ -2043,12 +2048,23 @@ html .ui-button.ui-state-disabled:active {
 .bulmunjin_wrap .bulmunjin_box .bulmunjin_det ul li {
 	margin: 0 5px;
 	padding: 2px 0;
+	font-size: 15px;
 }
 .munjin_set_wrap {
 	margin: 10px 0 0 0;
+	font-weight: 300 !important;
+	font-size: 13px;
+}
+.munjin_set_wrap .munjin_set_big_tit {
+	background-color: #4f77a9;
+	color: #fff;
+	width: 15%;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
 }
 .munjin_set_wrap .munjin_set_box {
-	width: 32.333%;
+	width: 85%;
+	border-top: 1px solid #efefef;
 }
 .munjin_set_wrap .munjin_set_box .munjin_set_tit {
 	box-sizing: border-box;
@@ -2065,15 +2081,24 @@ html .ui-button.ui-state-disabled:active {
 	height: 30px;
 	background-color: #054391;
 }
+.munjin_set_quest_tit.prefix:before  {
+	content:"└";
+	display:block;
+	margin-right: 3px;
+}
+.munjin_set_quest {border-bottom: 1px solid #efefef;}
 .munjin_set_quest .munjin_set_quest_tit {
-	padding: 10px;
+	width: 45%;
+	padding: 2px 5px;
 	box-sizing: border-box;
-	min-height: 58px;
-	background-color: #4f77a9;
-	color: #fff;
+	min-height: 30px;
+	/* background-color: #4f77a9;
+	color: #fff; */
 }
 .munjin_set_quest .munjin_set_quest_det {
+	width: 55%;
 	padding: 5px;
+	min-height: 30px;
 	box-sizing: border-box;
 }
 .munjin_set_quest .munjin_set_quest_det ul li {
@@ -2084,11 +2109,11 @@ html .ui-button.ui-state-disabled:active {
 .mun_depth {display: none;}
 .mun_depth1 {display: block;}
 
-.depth1_color_det {background-color: #d5d5d5;}
-.depth2_color_det {background-color: #dfdddd;}
-.depth3_color_det {background-color: #e7e7e7;}
-.depth4_color_det {background-color: #efeded;}
-.depth5_color_det {background-color: #f5f5f5;}
+.depth1_color {background-color: #d1d1d1;}
+.depth2_color {background-color: #dfdddd;}
+.depth3_color {background-color: #e7e7e7;}
+.depth4_color {background-color: #efeded;}
+.depth5_color {background-color: #f5f5f5;}
 
 @media screen and (max-width:1855px) {
 	.tab_right.on {
