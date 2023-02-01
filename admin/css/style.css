@@ -1768,7 +1768,7 @@ html .ui-button.ui-state-disabled:active {
 .interactBox .letterChk span {font-size: 14px;}
 .prescriptWrap .metiAmt_tit {background-color: #e7e7e7; border-radius: 4px; padding: 10px;}
 #totalAmtTbl01 {min-height: 321px;}
-.prescriptWrap .interactBox .tableWrap tr {height: 40px;}
+.prescriptWrap .interactBox .tableWrap tr {height: 35px;}
 .prescriptWrap .interactBox .tableWrap tr th, 
 .prescriptWrap .interactBox .tableWrap tr td {border-right: 1px solid #eee; text-align: center; padding-left: 0; font-size: 15px;}
 .prescriptWrap .interactBox .tableWrap tr th:last-child, 
