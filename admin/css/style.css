@@ -229,17 +229,17 @@
 }
 
 #wholeWrap .innerCont {
-	padding: 50px 0 0 0;
+	padding: 20px 0 0 0;
 	box-sizing: border-box;
 }
 
 #wholeWrap .innerCont.fixPadd {
-	padding: 50px 0 80px 0;
+	padding: 20px 0 80px 0;
 }
 
 #wholeWrap .inTit {
 	width: 97%;
-	margin: 0 auto 30px;
+	margin: 0 auto 20px;
 }
 
 #wholeWrap .inTit h4 {
@@ -609,7 +609,8 @@
 }
 
 #wholeWrap .basicInfo_tbl {
-	padding: 4px 20px;
+	padding: 10px;
+	height: 60px;
 	border-radius: 4px; 
 	border: 1px solid #DDDDDD;
 	/* box-shadow: 0px 3px 16px #00000029; */
@@ -716,7 +717,6 @@
 }
 
 #wholeWrap .tab_left_cont {
-	margin-top: 30px;
 	background-color: #f7f7f7;
 	border-radius: 4px;
 	padding: 20px; 
@@ -727,12 +727,14 @@
 	width: 29%;
 }
 .tab_right .fixed_sidemenu {
-	margin-top: 20px;
 	width: 100%;
 	border: 1px solid #efefef;
 	box-sizing: border-box;
 	border-radius: 4px;
 	background-color: #fff;
+}
+.tab_right.on .fixed_sidemenu {
+	margin-top: 10px;
 }
 .tab_right.on {
 	position: fixed;
@@ -973,7 +975,7 @@
 }
 
 #wholeWrap .bmiList li {
-	padding: 20px 15px;
+	padding: 10px;
 	transition: all 0.3s;
 	border-radius: 4px;
 	cursor: pointer;
@@ -1037,7 +1039,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background-color: #000;
+	background-color: #96b6df;
 	color: #fff;
 }
 
@@ -1083,7 +1085,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background-color: #000;
+	background-color: #96b6df;
 	color: #fff;
 }
 
@@ -1405,7 +1407,7 @@ html .ui-button.ui-state-disabled:active {
 	margin: 0 10px;
 	border-radius: 4px;
 	padding: 5px;
-	height: 35px;
+	height: 32px;
 	box-sizing: border-box;
 }
 
@@ -1449,7 +1451,8 @@ html .ui-button.ui-state-disabled:active {
 
 .wholeWrap .degreeTxt {
 	font-size: 14px;
-	max-width: 48px;
+	margin-right: 5px;
+	min-width: 48px;
 	font-weight: 500;
 }
 .wholeWrap.active .degreeTxt {
@@ -1469,29 +1472,18 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .dgSelT {
-	margin-bottom: 20px;
-	font-weight: 500;
+	margin-bottom: 10px;
 	color: #054391;
 }
 
-#wholeWrap .dgSelT:before {
-	content:"";
-	margin-right: 8px;
-	display: block;
-	width: 6px;
-	height: 6px;
-	background-color: #054391;
-	transform:rotate(45deg)
-}
-
-.radioWrap {max-width: 283px; min-width: 283px; height: 30px; margin:0 0 0 12px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+.radioWrap {min-width: 295px; height: 30px; margin:0 0 0 12px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
 .wholeWrap.active .radioWrap {max-width: 100%; min-width: 360px;}
 .radioWrap label {width:33.333%; height:100%; justify-content: center; border-right:1px solid #ccc; background-color:#fff; box-sizing:border-box; transition:all .2s; cursor:pointer; text-align: center; font-size: 15px;}
 .radioWrap label input {display: none;}
 .radioWrap label.active {background-color:#054391;color: #fff;}
 .radioWrap label:last-child {border-right: none;}
-.wholeWrap.active .degreeSel .checkWrap {margin-left: 12px; max-width: 100%; min-width: 360px;}
-.degreeSel .checkWrap {max-width: 283px; min-width: 283px; height: 30px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+.wholeWrap.active .degreeSel .checkWrap {max-width: 100%; min-width: 360px;}
+.degreeSel .checkWrap {min-width: 295px; height: 30px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
 .degreeSel .checkWrap label {    
 	display: flex;
 	align-items: center;
@@ -1511,7 +1503,7 @@ html .ui-button.ui-state-disabled:active {
 .degreeSel .checkWrap label.active {background-color:#054391;color: #fff;}
 
 #addBtnWrap .addBtn {border-radius: 4px; padding: 5px 25px; background-color:#054391;color: #fff; font-size: 14px;}
-#tblAdd {margin-top: 30px; width: 100%;}
+#tblAdd {margin-top: 10px; width: 100%;}
 #tblAdd tr {border: 1px solid #eee;}
 #tblAdd tr th, 
 #tblAdd tr td {
@@ -1694,9 +1686,9 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .wholeWrap .emotionWrap .e_box > li {
-	width: 31.333%; 
+	width: 33.333%; 
 	box-sizing: border-box;
-	padding: 0 0 10px 20px ;
+	padding: 0 0 10px 0 ;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -1705,14 +1697,13 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #wholeWrap .emotionWrap .emo_contWrap .emo_tit {
-	padding: 20px 0 10px 0 !important;
+	padding: 10px 0 5px 0 !important;
 	border-bottom: none !important;
-	font-weight: 700;
 	color: #054391;
 }
 
 #wholeWrap .emotionWrap .emo_contWrap li {
-	padding: 10px 0 ;
+	padding: 5px 0 ;
 	font-size: 15px;
 }
 
@@ -2042,19 +2033,19 @@ html .ui-button.ui-state-disabled:active {
 }
 .bulmunjin_wrap .bulmunjin_box .bulmunjin_det {
 	background-color: #efefef;
-	padding: 10px;
+	padding: 5px;
 	box-sizing: border-box;
-	min-height: 176px;
+	min-height: 78px;
 }
 .wholeWrap.active .bulmunjin_wrap .bulmunjin_box .bulmunjin_det {
-	min-height: 137px;
+	min-height: 56px;
 }
 .bulmunjin_wrap .bulmunjin_box .bulmunjin_det ul li {
 	margin: 0 5px;
-	padding: 10px 0;
+	padding: 2px 0;
 }
 .munjin_set_wrap {
-	margin: 30px 0 100px 0;
+	margin: 10px 0 0 0;
 }
 .munjin_set_wrap .munjin_set_box {
 	width: 32.333%;
@@ -2082,12 +2073,12 @@ html .ui-button.ui-state-disabled:active {
 	color: #fff;
 }
 .munjin_set_quest .munjin_set_quest_det {
-	padding: 10px;
+	padding: 5px;
 	box-sizing: border-box;
 }
 .munjin_set_quest .munjin_set_quest_det ul li {
 	margin: 0 5px;
-	padding: 10px 0;
+	padding: 2px 0;
 }
 
 .mun_depth {display: none;}

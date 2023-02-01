@@ -31,14 +31,14 @@
 	<body>
 		<style>
 			/*sidemenu css*/
-			.wholeWrap .sidemenu .sideList li:nth-child(4) a {
+			.wholeWrap .sidemenu .sideList li:nth-child(2) a {
 				background-color: #054391;
 				color: #fff;
 			}
-			.wholeWrap.active .sidemenu .sideList li:nth-child(4) a {
+			.wholeWrap.active .sidemenu .sideList li:nth-child(2) a {
 				background-color: transparent;
 			}
-			.wholeWrap .sidemenu .sideList li:nth-child(4) .sideIcon {
+			.wholeWrap .sidemenu .sideList li:nth-child(2) .sideIcon {
 				background-image: url("../img/icon02_on.png");
 				background-color: #054391;
 				color: #fff;
@@ -141,19 +141,25 @@
 				</div>
 				<!---- 내용-->
 				<div class="innerCont fixPadd">
-					<div class="inTit dp_f dp_c">
-						<span>환자의 진료화면입니다.</span>
-					</div>
 					<div class="chartWrap">
 					<div class="dp_sb">
 						<div class="personView">
-							<div class="wid100 dp_sb m-20 m_20">
-								<div class="nameInfo">
-									<div class="dp_f dp_end m-20">
-										<p class="person">이하나<span>(37세)</span></p>
-										<span class="person_num cogrn">Ch. 123456789</span>
+							<div class="wid100 dp_sb">
+								<div>
+									<div class="nameInfo">
+										<div class="dp_f dp_end">
+											<p class="person">이하나<span>(37세)</span></p>
+											<span class="person_num cogrn">Ch. 123456789</span>
+										</div>
 									</div>
+									<ul class="perTabBtn dp_f m-20">
+										<li class="on"><a href="" title="진료">진료</a></li>
+										<li><a href="" title="처방">처방</a></li>
+										<li><a href="" title="조제/복약">조제/복약</a></li>
+									</ul>
 								</div>
+
+
 								<div class="dp_f">
 									<div class="basicInfo_tbl basicInfo_tbl01">
 										<table>
@@ -222,11 +228,6 @@
 								</div>
 							</div>
 
-							<ul class="perTabBtn dp_f m-20">
-								<li class="on"><a href="" title="진료">진료</a></li>
-								<li><a href="" title="처방">처방</a></li>
-								<li><a href="" title="조제/복약">조제/복약</a></li>
-							</ul>
 
 							<div class="popUpwrap regiPopup editPop">
 								<div class="popUpBox">

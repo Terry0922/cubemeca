@@ -141,19 +141,25 @@
 				</div>
 				<!---- 내용-->
 				<div class="innerCont fixPadd">
-					<div class="inTit dp_f dp_c">
-						<span>환자의 진료화면입니다.</span>
-					</div>
 					<div class="chartWrap">
 					<div class="dp_sb">
 						<div class="personView">
-							<div class="wid100 dp_sb m-20 m_20">
-								<div class="nameInfo">
-									<div class="dp_f dp_end m-20">
-										<p class="person">이하나<span>(37세)</span></p>
-										<span class="person_num cogrn">Ch. 123456789</span>
+							<div class="wid100 dp_sb">
+								<div>
+									<div class="nameInfo">
+										<div class="dp_f dp_end">
+											<p class="person">이하나<span>(37세)</span></p>
+											<span class="person_num cogrn">Ch. 123456789</span>
+										</div>
 									</div>
+									<ul class="perTabBtn dp_f m-20">
+										<li class="on"><a href="" title="진료">진료</a></li>
+										<li><a href="" title="처방">처방</a></li>
+										<li><a href="" title="조제/복약">조제/복약</a></li>
+									</ul>
 								</div>
+
+
 								<div class="dp_f">
 									<div class="basicInfo_tbl basicInfo_tbl01">
 										<table>
@@ -222,11 +228,6 @@
 								</div>
 							</div>
 
-							<ul class="perTabBtn dp_f m-20">
-								<li class="on"><a href="" title="진료">진료</a></li>
-								<li><a href="" title="처방">처방</a></li>
-								<li><a href="" title="조제/복약">조제/복약</a></li>
-							</ul>
 
 							<div class="popUpwrap regiPopup editPop">
 								<div class="popUpBox">
@@ -434,7 +435,7 @@
 										<div class="perTab">
 											<p class="anjinTit">체형</p>
 										
-											<ul class="bmiList dp_sb m-20 m_20">
+											<ul class="bmiList dp_sb m-10 m_10">
 												<li class="dp_f dp_cc dp_end dp_fc">
 													<div class="cirWrap"></div>
 													<div class="txtBox">
@@ -497,12 +498,30 @@
 											</script>
 										
 											<div class="halfTitWrap dp_sb">
-												<div class="wid62">
-													<p class="anjinTit dp_f dp_c">형색성정<a class="infoPopup dp_f dp_c dp_cc" href="" title="">!</a></p>
+												<div class="wid40">
+													<p class="anjinTit dp_f dp_c m-20">형색성정<a class="infoPopup dp_f dp_c dp_cc" href="" title="">!</a></p>
 										
-													<div class="degreeWrap p-20 dp_sb">
-														<div class="wid49">
-															<p class="dgSelT dp_f dp_c">면색</p>
+													<div class="degreeWrap p-10">
+														<div class="wid100">
+															<p class="dgSelT dp_f dp_c">· 성향</p>
+															<div class="degreeSel dp_f dp_c">
+																<div class="degreeTxt txt-r">양적</div>
+																<div class="degreeCirWrap">
+																	<ul class="cirsWrap dp_sb dp_c">
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="중간" style="width: 20px; height: 20px;"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
+																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
+																	</ul>
+																</div>
+																<div class="degreeTxt">음적</div>
+															</div>
+														</div>
+														<div class="wid100">
+															<p class="dgSelT dp_f dp_c">· 면색</p>
 															<div class="degreeSel dp_f dp_c">
 																<div class="degreeTxt txt-r">짙은편</div>
 																<div class="degreeCirWrap">
@@ -535,7 +554,7 @@
 																	</label>
 																</div>
 															</div>
-															<div class="degreeSel dp_f dp_c m_100">
+															<div class="degreeSel dp_f dp_c">
 																<div class="degreeTxt txt-l">기타(선택)</div>
 																<div class="checkWrap dp_f dp_c">
 																	<label for="a_box2_1">
@@ -551,24 +570,6 @@
 																		안구황색침착
 																	</label>
 																</div>
-															</div>
-														</div>
-														<div class="wid49">
-															<p class="dgSelT dp_f dp_c">성향</p>
-															<div class="degreeSel dp_f dp_c">
-																<div class="degreeTxt txt-r">양적</div>
-																<div class="degreeCirWrap">
-																	<ul class="cirsWrap dp_sb dp_c">
-																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="중간" style="width: 20px; height: 20px;"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="약간"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="그렇다"></a></li>
-																		<li class="dp_f dp_c dp_cc"><a href="" title="매우"></a></li>
-																	</ul>
-																</div>
-																<div class="degreeTxt">음적</div>
 															</div>
 														</div>
 													</div>
@@ -726,12 +727,12 @@
 													</div>
 													<!----info 창---->
 												</div>
-												<div class="wid36">
-													<div class="anjinTit dp_f dp_c dp_end02">
+												<div class="wid58">
+													<div class="anjinTit dp_f dp_c dp_end02 m-20">
 														<a class="bodyCheckBtn" href="" title="">인체도 크게보기</a>
 													</div>
 										
-													<div class="anatomyWrap p-20">
+													<div class="anatomyWrap p-10">
 														<div class="treat_detail_anjin_body_pic_box">
 															<div class="treat_detail_anjin_body_pic">
 																<div class="anjin_body_top dp_sb dp_c blue02">
@@ -786,7 +787,7 @@
 															</div>
 														</div>
 
-														<p class="dgSelT dp_f dp_c">촉진</p>
+														<p class="dgSelT dp_f dp_c">· 촉진</p>
 														<ul class="treat_detail_anjin_list_box treat_detail_anjin_list_box02 dp_sb dp_wrap">
 															<li>
 																<div class="check_star_unit dp_sb">
@@ -1294,7 +1295,7 @@
 												
 											</script>
 											<div>
-												<p class="anjinTit dp_f dp_c">
+												<p class="anjinTit dp_f dp_c m-20">
 													프로토콜 비염 불문진
 													<a class="infoPopup02 dp_f dp_c dp_cc" href="" title="">!</a>
 												</p>
@@ -2312,7 +2313,7 @@
 														<div class="p_Cont">
 															<div class="topShowWrap02">
 																<div class="topShow">
-																	<div class="p_meWrap m-20">
+																	<div class="p_meWrap m-10">
 																		<div class="dp_sb dp_c">
 																			<p>총 <span class="red">6</span>건의 검색결과</p>
 																			<div class="search_box">
@@ -2322,7 +2323,7 @@
 																				</button>
 																			</div>
 																		</div>
-																		<div class="interactBox m-20">
+																		<div class="interactBox m-10">
 																			<div class="tableWrap">
 																				<table class="plusTr">
 																					<tbody>
@@ -2577,7 +2578,7 @@
 														<div class="p_Cont">
 															<div class="topShowWrap02">
 																<div class="topShow">
-																	<div class="p_meWrap m-20">
+																	<div class="p_meWrap m-10">
 																		<div class="dp_sb dp_c">
 																			<p>총 <span class="red">6</span>건의 검색결과</p>
 																			<ul class="kind_filter_btn dp_f dp_c">
@@ -2595,7 +2596,7 @@
 																				$(this).parent().addClass("on");
 																			});
 																		</script>
-																		<div class="interactBox m-20">
+																		<div class="interactBox m-10">
 																			<div class="tableWrap">
 																				<table class="plusTr02">
 																					<tbody>
@@ -2905,9 +2906,9 @@
 											</div>
 											
 											<div class="prescriptWrap">
-												<p class="anjinTit dp_f dp_c m-20">약재</p>
-												<div class="interactBox p-20">
-													<div class="metiAmt_tit dp_sb m_20">
+												<p class="anjinTit dp_f dp_c m-10">약재</p>
+												<div class="interactBox p-10">
+													<div class="metiAmt_tit dp_sb m_10">
 														<div class="dp_f dp_c">
 															첩당약재량 
 															<div class="help_wrap">
@@ -3263,7 +3264,7 @@
 												<p class="anjinTit dp_f dp_c">조제지시</p>
 												<div class="wid100 dp_sb">
 													<div class="wid49">
-														<div class="interactBox p-20">
+														<div class="interactBox p-10">
 															<ul class="mediBtnWrap">
 																<li class="on"><a href="" title="탕전">탕전</a></li>
 																<li><a href="" title="환제">환제</a></li>
@@ -3450,7 +3451,7 @@
 														</div>
 													</div>
 													<div class="wid49">
-														<div class="p_r interactBox m-20">
+														<div class="p_r interactBox m-10">
 															<textarea style="height: 350px;"></textarea>
 															<div class="letterChk dp_f dp_c">
 																(<span>0</span>/<span>300</span>)
@@ -3473,7 +3474,7 @@
 													</div>
 													<div class="dp_sb">
 														<div class="wid49">
-															<div class="interactBox p-20">
+															<div class="interactBox p-10">
 																<div class="totalAmt dp_sb">
 																	<div class="totalAmt_tit">처방총량</div>
 																	<div class="t_tit_input">
@@ -3533,7 +3534,7 @@
 																</script>
 															</div>
 														</div>
-														<div class="wid49 p-20 interactBox">
+														<div class="wid49 p-10 interactBox">
 															<div class="textHgt03  p_r">
 																<textarea>가려야 할 음식 등 복용시 주의점을 입력해주세요.</textarea>
 																<div class="letterChk dp_f dp_c">
@@ -3547,11 +3548,11 @@
 												<div class="wid100">
 													<p class="anjinTit dp_f dp_c">배송정보확인</p>
 													<div class="dp_sb">
-														<div class="p_tabTitBox m-20 wid49">
+														<div class="p_tabTitBox m-10 wid49">
 															<p class="p_addrTit bold2 m_20 f20">주소</p>
 															<p class="p_addrDet">서울시 동작구 매봉로 99 갑을아파트 103동 101호</p>
 														</div>
-														<div class="p_tabTitBox m-20 wid49">
+														<div class="p_tabTitBox m-10 wid49">
 															<p class="p_addrTit bold2 m_20 f20">연락처</p>
 															<p class="p_addrDet">010-123-1234</p>
 														</div>
@@ -3613,8 +3614,8 @@
 												<!---추가되는 table--->
 												<table id="tblAdd" class="tbl">
 													<colgroup>
-														<col width="30%">
-														<col width="70%">
+														<col width="15%">
+														<col width="87%">
 													</colgroup>
 													<tbody>
 														<tr>
@@ -3663,13 +3664,13 @@
 												진료메모
 											</p>
 											<div class="rowCont">
-												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 20px; height: 100px;"></textarea>
+												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 10px; height: 100px;"></textarea>
 											</div>
 											<p class="anjinTit dp_sb m-20">
 												처방메모
 											</p>
 											<div class="rowCont">
-												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 20px; height: 100px;"></textarea>
+												<textarea name="" id="textBox" maxlength="2000" style="background-color: #fff; margin-top: 10px; height: 100px;"></textarea>
 											</div>
 
 											<script>
