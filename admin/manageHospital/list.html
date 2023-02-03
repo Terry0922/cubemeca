@@ -23,65 +23,89 @@
 		<script src="../js/jquery.easing.1.3.js"></script>
 
 
-		<title>큐브메카</title>
+		<title>junchart</title>
 	</head>
 	<body>
 		<style>
+
 			/*sidemenu css*/
-			#wholeWrap .sidemenu .sideList li:nth-child(3) a {
+			.wholeWrap .sidemenu .sideList li:nth-child(3) a {
 				background-color: #054391;
 				color: #fff;
 			}
-			#wholeWrap .sidemenu .sideList.sideList02 li:nth-child(3) .sideIcon {
+			.wholeWrap.active .sidemenu .sideList.sideList02 li:nth-child(3) a {
+				background-color: transparent;
+			}
+			.wholeWrap .sidemenu .sideList.sideList02 li:nth-child(3) .sideIcon {
 				background-image: url("../img/icon02_on.png");
+				background-color: #054391;
+				color: #fff;
 			}
 		</style>
 
-		<div id="wholeWrap">
+		<div id="wholeWrap" class="wholeWrap">
 
 			<!---사이드메뉴 바--->
 			<div class="sidemenu">
-				<h1 class="logo">
-					<a href="../manageMunjin/list.html" title="logo">
-						<img src="../img/logo.svg" alt="">
-					</a>
-				</h1>
+				<div class="dp_f dp_c p_r sidemenu_top">
+					<h1 class="logo">
+						<a href="../manageMunjin/list.html" title="logo">
+							<img src="../img/logo.svg" alt="">
+						</a>
+					</h1>
+					<span class="lnr lnr-menu"></span>
+				</div>
 				<ul class="sideList sideList02">
 					<li>
 						<a class="dp_f dp_c" href="../manageMunjin/list.html" title="문진항목관리">
 							<span class="sideIcon"><!--아이콘 background 처리--></span>
-							<span>문진항목관리</span>
+							<span class="sideTxt">문진항목관리</span>
 						</a>
 					</li>
 					<li>
 						<a class="dp_f dp_c" href="../manageMedicine/list.html" title="처방기준관리">
 							<span class="sideIcon"><!--아이콘 background 처리--></span>
-							<span>처방기준관리</span>
+							<span class="sideTxt">처방기준관리</span>
 						</a>
 					</li>
 					<li>
 						<a class="dp_f dp_c" href="../manageHospital/list.html" title="의료기관관리">
 							<span class="sideIcon"><!--아이콘 background 처리--></span>
-							<span>의료기관관리</span>
+							<span class="sideTxt">의료기관관리</span>
 						</a>
 					</li>
 					<li>
 						<a class="dp_f dp_c" href="../manageMember/list.html" title="회원관리">
 							<span class="sideIcon"><!--아이콘 background 처리--></span>
-							<span>회원관리</span>
+							<span class="sideTxt">회원관리</span>
 						</a>
 					</li>
 					<li>
 						<a class="dp_f dp_c" href="" title="운영자관리">
 							<span class="sideIcon"><!--아이콘 background 처리--></span>
-							<span>운영자관리</span>
+							<span class="sideTxt">운영자관리</span>
 						</a>
 					</li>
 				</ul>
+				<script>
+					var toggleside = true;
+					$(".sidemenu_top .lnr-menu").on("click",function(){
+
+						if(toggleside){
+							$(".wholeWrap").addClass("active");
+
+							toggleside= false;
+						} else {
+							$(".wholeWrap").removeClass("active");
+							toggleside= true;
+						}
+
+					});
+				</script>
 			</div>
 			<div class="rightCont">
 				<!--topNav 바---->
-				<div class="topNav dp_f dp_c">
+				<div class="topNav dp_f dp_c dp_cc">
 					<nav class="dp_sb dp_c">
 						<span class="times dp_f dp_c">
 							<img src="../img/lnr-clock.png" style="margin-right: 10px;">
