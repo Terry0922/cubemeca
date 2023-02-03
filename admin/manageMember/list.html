@@ -472,7 +472,14 @@
 									event.preventDefault();
 									$(".popUpwrap").stop().fadeOut();
 								});
-						
+								
+								// 외부영역 클릭 시 팝업 닫기
+								$(document).mouseup(function (e){
+									var LayerPopup = $(".popUpwrap");
+									if(LayerPopup.has(e.target).length === 0){
+										LayerPopup.stop().fadeOut();
+									}
+								});
 							});
 						</script>
 					</div>
