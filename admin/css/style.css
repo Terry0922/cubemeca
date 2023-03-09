@@ -1121,6 +1121,7 @@
 	padding: 20px;
 	box-sizing: border-box;
 	height: 523px;
+	overflow-y:auto;
 }
 
 #wholeWrap .verifiPop .verifiPop_left .verifiPop_left_box .tableWrap {
