@@ -1130,7 +1130,7 @@
 #wholeWrap .verifiPop .verifiPop_left .verifiPop_left_box {
 	padding: 20px;
 	box-sizing: border-box;
-	height: 523px;
+	height: 100%;
 	overflow-y:auto;
 }
 
