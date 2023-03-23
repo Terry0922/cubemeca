@@ -1109,12 +1109,22 @@
 
 #wholeWrap .verifiPop .popUpBox {
 	width: 90%;
+	height: 90%;
+}
+
+#wholeWrap .verifiPop .popUpBox .popUpBot {
+	height: calc(100% - 70px);
+	box-sizing: border-box;
+}
+
+#wholeWrap .verifiPop .popUpBox .popUpBot > div {
+	height: 100%;
 }
 
 #wholeWrap .verifiPop .verifiPop_left {
 	background-color: #f7f7f7;
     border-radius: 4px;
-	height: 560px;
+	height: 100%;
 }
 
 #wholeWrap .verifiPop .verifiPop_left .verifiPop_left_box {
@@ -1160,7 +1170,7 @@
 
 #wholeWrap .verifiPop .verifiPop_right .verifi_tbl {
 	display: none;
-	height: 523px;
+	height: 100%;
 	overflow-y: auto;
 }
 #wholeWrap .verifiPop .verifiPop_right .verifi_tbl::-webkit-scrollbar {width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */

@@ -54,7 +54,7 @@ textarea {font-size: 16px; font-family:'Pretendard'; padding: 10px; box-sizing: 
 .c_gry {color:#878787;}
 .c_gry2 {color:#666;}
 .c_gry3 {color:#2c2c2c;}
-.c_red {color:#e3200a;}
+.c_red {color:#e3200a !important;}
 .c_grn {color: #8bc34a; }
 
 .c_blue01 {color: #043677;}
